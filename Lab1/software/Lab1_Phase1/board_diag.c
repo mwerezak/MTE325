@@ -253,7 +253,7 @@ static char TopMenu( void )
     MenuItem( 'e', "JTAG UART Menu" );
 #endif  
     MenuItem( 'f', "Test DIP Switches" );
-    MenuItem( 'g', "Blink LEDs" );
+    MenuItem( 'g', "Test LED Blinking" );
     ch = MenuEnd('a', 'e');
 
   
@@ -785,6 +785,7 @@ static void TestDIPSwitches(void) {
   } while ( ch != 'q' );
 }
 
+/*
 static void BlinkLED(void) {
 	static volatile alt_u16 switchbits;
 
@@ -815,11 +816,46 @@ static void BlinkLED(void) {
 		switchbits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE);
 	} while (switchbits & 0x1);
 }
+*/
+
+static void BlinkLED(void) {
+	static volatile alt_u8 bits;
+	int i;
+
+	//turn off all LEDs
+    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x00);
+	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x00);
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
+
+	//init timers
+	init_timers();
+
+	//read from the dip switches
+	bits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0xFF;
+
+	for (i = 0; i < 8; i++){
+		//if the bit is 1, turn LED on, otherwise turn it off.
+		if (bits & 0x1) {
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x02);	//On
+		} else{
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);	//Off
+		}
+
+		//wait 1 second
+		SetTimer0(1000);
+		while(!timer0);
+
+		//go to the next bit
+		bits >> 1;
+	}
+}
 
 
-/*
+/*************************************************
+ *
  * 	Timer crap
- */
+ *
+ *************************************************/
 
 static void SetTimer0(alt_u32 milliseconds) {
 	alt_u32 timer_period = milliseconds*(TIMER_0_FREQ/1000);
