@@ -1,0 +1,21 @@
+# clk_0
+# cpu_0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
+# null
+# sysid
+# jtag_uart_0
+# sdram_0
+# lcd_display
+# led_pio
+# seven_seg_pio
+# button_pio
+# timer_0
+# timer_1
+# green_led_pio
+# red_led_pio
+# seven_seg_middle_pio
+# seven_seg_right_pio
+# switch_pio
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 10BF48BBB5F500000145D93A5E31 
+ 
