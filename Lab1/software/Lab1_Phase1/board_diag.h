@@ -56,6 +56,7 @@ static void TestLCD( void );
 /* Lab 1 Phase 1 Related Function */
 static void TestDIPSwitches( void );
 static void BlinkLED( void );
+static void Lab1Phase1Main( void );
 
 /* Define the EOT character to terminate nios2-terminal
  * upon exiting the Main Menu.
