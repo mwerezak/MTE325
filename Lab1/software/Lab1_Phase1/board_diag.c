@@ -833,10 +833,13 @@ static void BlinkLED(void) {
 	//read from the dip switches
 	bits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0xFF;
 
+	printf( "All bits: %B", bits );
+
 	for (i = 0; i < 8; i++){
+		printf( "%d", bits & 0x1 );
 		//if the bit is 1, turn LED on, otherwise turn it off.
 		if (bits & 0x1) {
-			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x02);	//On
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0xff);	//On
 		} else{
 			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);	//Off
 		}
@@ -846,8 +849,11 @@ static void BlinkLED(void) {
 		while(!timer0);
 
 		//go to the next bit
-		bits >> 1;
+		bits = bits >> 1;
 	}
+
+	//finally, turn everything off
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
 }
 
 
