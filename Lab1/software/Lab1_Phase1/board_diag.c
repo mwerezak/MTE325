@@ -62,6 +62,7 @@
 volatile int edge_capture;
 
 volatile int timer0, timer1;	//these become nonzero when timer has gone off
+volatile int push_buttons;
 
 /* *********************************************************************
  * Menu related functions 
@@ -785,38 +786,11 @@ static void TestDIPSwitches(void) {
   } while ( ch != 'q' );
 }
 
-/*
-static void BlinkLED(void) {
-	static volatile alt_u16 switchbits;
-
-	init_timers();
-
-	//get the timer going.
-	SetTimer0( 1000 );
-
-
-	//loop while SW0 is low
-	do {
-		//leds on
-	    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0xff);
-	    IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0xff);
-	    IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0xff);
-
-	    while (!timer0);
-	    timer0 = 0;
-
-		//leds off
-	    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x00);
-		IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x00);
-		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
-
-	    while (!timer0);
-	    timer0 = 0;
-
-		switchbits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE);
-	} while (switchbits & 0x1);
-}
-*/
+/*************************************************
+ *
+ * Lab 1 Phase 1
+ *
+ *************************************************/
 
 static void BlinkLED(void) {
 	static volatile alt_u8 bits;
@@ -839,7 +813,7 @@ static void BlinkLED(void) {
 		printf( "%d", bits & 0x1 );
 		//if the bit is 1, turn LED on, otherwise turn it off.
 		if (bits & 0x1) {
-			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0xff);	//On
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x02);	//On
 		} else{
 			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);	//Off
 		}
@@ -854,6 +828,30 @@ static void BlinkLED(void) {
 
 	//finally, turn everything off
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
+}
+
+static void Lab1Phase1HandleButton (void* context, alt_u32 id) {
+  volatile int buttons;
+
+  buttons = IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
+
+  /* Reset the Button's edge capture register. */
+  IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE, 0);
+
+  /*
+   * Read the PIO to delay ISR exit. This is done to prevent a spurious
+   * interrupt in systems with high processor -> pio latency and fast
+   * interrupts.
+   */
+  IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
+
+
+  //branch here.
+  switch (buttons){
+	  case 0x1:
+		  BlinkLED();
+		  break;
+  }
 }
 
 
@@ -901,7 +899,7 @@ static void SetTimer1(alt_u32 microseconds) {
 
 
 //Timer ISRs
-static void handle_timer0 (void* context, alt_u32 id) {
+static void handle_timer0_interrupt (void* context, alt_u32 id) {
 	// acknowledge the interrupt by clearing the TO bit in the status register
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0x0);
 
@@ -909,7 +907,7 @@ static void handle_timer0 (void* context, alt_u32 id) {
 	timer0 = 0xf;
 }
 
-static void handle_timer1 (void* context, alt_u32 id) {
+static void handle_timer1_interrupt (void* context, alt_u32 id) {
 	// acknowledge the interrupt by clearing the TO bit in the status register
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_1_BASE, 0x0);
 
@@ -921,8 +919,8 @@ static void init_timers(void) {
 	timer0 = 0;
 	timer1 = 0;
 
-	alt_irq_register(TIMER_0_IRQ, (void*)0, handle_timer0);
-	alt_irq_register(TIMER_1_IRQ, (void*)0, handle_timer1);
+	alt_irq_register(TIMER_0_IRQ, (void*)0, handle_timer0_interrupt);
+	alt_irq_register(TIMER_1_IRQ, (void*)0, handle_timer1_interrupt);
 }
 
 
