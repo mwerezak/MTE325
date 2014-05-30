@@ -62,6 +62,7 @@
 volatile int edge_capture;
 
 volatile int timer0, timer1;	//these become nonzero when timer has gone off
+volatile int push_buttons;
 
 /* *********************************************************************
  * Menu related functions 
@@ -253,7 +254,7 @@ static char TopMenu( void )
     MenuItem( 'e', "JTAG UART Menu" );
 #endif  
     MenuItem( 'f', "Test DIP Switches" );
-    MenuItem( 'g', "Blink LEDs" );
+    MenuItem( 'g', "Lab 1 Phase 1" );
     ch = MenuEnd('a', 'e');
 
   
@@ -275,7 +276,7 @@ static char TopMenu( void )
       MenuCase('e',DoJTAGUARTMenu);
 #endif
       MenuCase('f',TestDIPSwitches);
-      MenuCase('g',BlinkLED);
+      MenuCase('g',Lab1Phase1Main);
       case 'q':	break;
       default:	printf("\n -ERROR: %c is an invalid entry.  Please try again\n", ch); break;
     }
@@ -605,6 +606,14 @@ static void sevenseg_set_hex(alt_u8 hex)
   alt_u32 data = segments[hex & 15] | (segments[(hex >> 4) & 15] << 8);
 
   IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, data);
+  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_MIDDLE_PIO_BASE, data);
+  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_RIGHT_PIO_BASE, (data << 16) | data);
+}
+
+static void sevenseg_clear(void) {
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_MIDDLE_PIO_BASE, 0xffff);
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_RIGHT_PIO_BASE, 0xffffffff);
 }
 
 /*******************************************
@@ -785,41 +794,99 @@ static void TestDIPSwitches(void) {
   } while ( ch != 'q' );
 }
 
-static void BlinkLED(void) {
-	static volatile alt_u16 switchbits;
+/*************************************************
+ *
+ * Lab 1 Phase 1
+ *
+ *************************************************/
 
+//bit tickers
+volatile BitTicker led_ticker, seven_seg_ticker;
+
+
+static void Lab1Phase1HandleButton (void* context, alt_u32 id) {
+  volatile alt_u8 buttons;
+  volatile alt_u8 bits;
+
+  //read which push buttons were pressed
+  buttons = IORD(BUTTON_PIO_BASE, 3) & 0xf;
+
+  //read from the first 8 dip switches
+  bits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0xff;
+
+  if (buttons & 0x1) {
+	  start_ticker(&led_ticker, bits);
+  }
+  if (buttons & 0x2) {
+	  start_ticker(&seven_seg_ticker, bits);
+  }
+
+  //reset
+  IOWR(BUTTON_PIO_BASE, 3, 0x0);
+}
+
+static void Lab1Phase1Main (void) {
+	printf("Lab 1 Phase 1\n\tPress 'q' (followed by <enter>) to exit this module.");
+
+	//turn LEDs off
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
+
+	//turn 7-segment off
+	sevenseg_clear();
+
+	//init push buttons
+	alt_irq_register(BUTTON_PIO_IRQ, (void*)0, Lab1Phase1HandleButton);
+	IOWR(BUTTON_PIO_BASE, 3, 0x0);	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_PIO_BASE, 0xf);
+
+	//init timers
 	init_timers();
 
-	//get the timer going.
-	SetTimer0( 1000 );
+	//init tickers
+	init_ticker(&led_ticker);
+	init_ticker(&seven_seg_ticker);
 
+	while (1) {
 
-	//loop while SW0 is low
-	do {
-		//leds on
-	    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0xff);
-	    IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0xff);
-	    IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0xff);
+		//update outputs based on the tickers
 
-	    while (!timer0);
-	    timer0 = 0;
+		//LEDs
+		if (led_ticker.counter > 0 && led_ticker.bit_sequence & 0x1) {
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x02);	//On
+		} else {
+			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);	//Off
+		}
 
-		//leds off
-	    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x00);
-		IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x00);
-		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
+		//7-segment
+		if (seven_seg_ticker.counter > 0) {
+			if (seven_seg_ticker.bit_sequence & 0x1) {
+				sevenseg_set_hex(0x11);	//write 11 to 7-seg
+			} else {
+				sevenseg_set_hex(0x00);	//write 00 to 7-seg
+			}
+		} else {
+			sevenseg_clear();	//turn 7-seg off
+		}
 
-	    while (!timer0);
-	    timer0 = 0;
+		//sevenseg_set_hex
 
-		switchbits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE);
-	} while (switchbits & 0x1);
+		//update the tickers
+		update_ticker(&led_ticker);
+		update_ticker(&seven_seg_ticker);
+
+		//wait 1 second.
+		SetTimer0(1000);
+		while(!timer0);
+	}
 }
 
 
-/*
+/*************************************************
+ *
  * 	Timer crap
- */
+ *
+ *************************************************/
 
 static void SetTimer0(alt_u32 milliseconds) {
 	alt_u32 timer_period = milliseconds*(TIMER_0_FREQ/1000);
@@ -859,7 +926,7 @@ static void SetTimer1(alt_u32 microseconds) {
 
 
 //Timer ISRs
-static void handle_timer0 (void* context, alt_u32 id) {
+static void handle_timer0_interrupt (void* context, alt_u32 id) {
 	// acknowledge the interrupt by clearing the TO bit in the status register
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0x0);
 
@@ -867,7 +934,7 @@ static void handle_timer0 (void* context, alt_u32 id) {
 	timer0 = 0xf;
 }
 
-static void handle_timer1 (void* context, alt_u32 id) {
+static void handle_timer1_interrupt (void* context, alt_u32 id) {
 	// acknowledge the interrupt by clearing the TO bit in the status register
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_1_BASE, 0x0);
 
@@ -879,8 +946,8 @@ static void init_timers(void) {
 	timer0 = 0;
 	timer1 = 0;
 
-	alt_irq_register(TIMER_0_IRQ, (void*)0, handle_timer0);
-	alt_irq_register(TIMER_1_IRQ, (void*)0, handle_timer1);
+	alt_irq_register(TIMER_0_IRQ, (void*)0, handle_timer0_interrupt);
+	alt_irq_register(TIMER_1_IRQ, (void*)0, handle_timer1_interrupt);
 }
 
 
