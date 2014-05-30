@@ -1,4 +1,4 @@
-Quartus II 64-Bit
+Quartus II
 Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 14
 1046
@@ -19,26 +19,6 @@ VHSM_ON
 -- End Library Paths --
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
-# entity
-myESystem
-# storage
-db|myESystem.(0).cnf
-db|myESystem.(0).cnf
-# case_insensitive
-# source_file
-myesystem.bdf
-5dd44f20de888a6eca95a1e8e32f1554
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
 # entity
 sdram_pll
 # storage
@@ -1576,7 +1556,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1612,7 +1592,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1684,7 +1664,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1720,7 +1700,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1756,7 +1736,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1792,7 +1772,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -1866,7 +1846,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -2151,7 +2131,7 @@ db|myESystem.(13).cnf
 # case_insensitive
 # source_file
 db|altsyncram_qed1.tdf
-9c9c6ae086bfcc931529a77a78a98d5
+b5ec2353a359f5b9ab9bda4538b15f
 7
 # used_port {
 wren_a
@@ -2434,7 +2414,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -2719,7 +2699,7 @@ db|myESystem.(16).cnf
 # case_insensitive
 # source_file
 db|altsyncram_d5g1.tdf
-ee6ca254e941b68ec8c5d4cc8a84fc
+457dee3d18d11ab9e9bc9ebb1e6bcce
 7
 # used_port {
 wren_a
@@ -2922,7 +2902,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -3207,7 +3187,7 @@ db|myESystem.(19).cnf
 # case_insensitive
 # source_file
 db|altsyncram_irf1.tdf
-a52268c82b2623a9be2bac69d2936a2d
+92bad37ba13020bf733bf3a12e48bf59
 7
 # used_port {
 wren_a
@@ -3464,7 +3444,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -3749,7 +3729,7 @@ db|myESystem.(22).cnf
 # case_insensitive
 # source_file
 db|altsyncram_jrf1.tdf
-68dbdeec26bb7811570fc1c2669288
+c051ff545f89dd418c9c5b01ff11091
 7
 # used_port {
 wren_a
@@ -4006,7 +3986,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4044,7 +4024,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4082,7 +4062,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4120,7 +4100,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4423,7 +4403,7 @@ db|myESystem.(28).cnf
 # case_insensitive
 # source_file
 db|altsyncram_c572.tdf
-60fcd8f4bbdf6532e5f4df3db18786d5
+5bfda65ba19f33c14d79bd6245d88337
 7
 # used_port {
 wren_b
@@ -4891,7 +4871,7 @@ address_a0
 }
 # memory_file {
 cpu_0_ociram_default_contents.mif
-37f9d4210c3ee3c751435f87973bc8d
+dff87d9a9cfc9328b3464660956f1a12
 }
 # hierarchies {
 my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram|altsyncram_c572:auto_generated
@@ -4911,7 +4891,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4949,7 +4929,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -4987,7 +4967,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5025,7 +5005,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5063,7 +5043,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5101,7 +5081,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5139,7 +5119,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5177,7 +5157,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5215,7 +5195,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5253,7 +5233,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5291,7 +5271,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5365,7 +5345,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5403,7 +5383,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5441,7 +5421,7 @@ ON
 # case_sensitive
 # source_file
 cpu_0.v
-8d88c6c86b39e2d4d336183dd6794d42
+c2a0fe214178bf4ded5cac8e4a2cec65
 8
 # internal_option {
 IP_SHOW_ELABORATION_MESSAGES
@@ -5741,7 +5721,7 @@ db|myESystem.(45).cnf
 # case_insensitive
 # source_file
 db|altsyncram_e502.tdf
-bd2e22482e8ac055a3aa1f0859ef577
+58c5bf9065e674b31231c6d1f233f2
 7
 # used_port {
 wren_b
@@ -6556,7 +6536,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -6628,7 +6608,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -6856,7 +6836,7 @@ db|myESystem.(58).cnf
 # case_insensitive
 # source_file
 db|scfifo_1n21.tdf
-575970d9f7b9ed1dedbf9c284a99c710
+111c6474d998f5d995c915ddd23eb09d
 7
 # used_port {
 wrreq
@@ -6959,7 +6939,7 @@ db|myESystem.(59).cnf
 # case_insensitive
 # source_file
 db|a_dpfifo_8t21.tdf
-6d23631c6ab9a995a1aa26cc2b2cafa
+cbb9167ca925b0c65fcbe181e55c18
 7
 # used_port {
 wreq
@@ -7065,7 +7045,7 @@ db|myESystem.(60).cnf
 # case_insensitive
 # source_file
 db|a_fefifo_7cf.tdf
-27deb5c08c5f81e4ba82d184364d9
+7c9513a34fbb9f0994673717bb0a731
 7
 # used_port {
 wreq
@@ -7123,7 +7103,7 @@ db|myESystem.(61).cnf
 # case_insensitive
 # source_file
 db|cntr_rj7.tdf
-a87240a05d9fd9a0187825c56560cd6e
+7069eaac6d03f57a485b4b1d871cdd
 7
 # used_port {
 updown
@@ -7175,7 +7155,7 @@ db|myESystem.(62).cnf
 # case_insensitive
 # source_file
 db|dpram_5h21.tdf
-dc91d888177963a212556d28a0ab1e
+af775e78e8e85201359e8a26dbb3a24
 7
 # used_port {
 wren
@@ -7290,7 +7270,7 @@ db|myESystem.(63).cnf
 # case_insensitive
 # source_file
 db|altsyncram_9tl1.tdf
-b0d83624b71479110d89d39ff63e95
+50947b265719f185ff17e87d6e31907d
 7
 # used_port {
 wren_a
@@ -7405,7 +7385,7 @@ db|myESystem.(64).cnf
 # case_insensitive
 # source_file
 db|cntr_fjb.tdf
-12c894c0506d838de8954a412448997
+a71c5daf74bb5aea4e59817177bbb284
 7
 # used_port {
 sclr
@@ -7572,7 +7552,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7644,7 +7624,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7705,7 +7685,7 @@ my_controller:inst|led_pio:the_led_pio
 
 # end
 # entity
-red_led_pio_s1_arbitrator
+pio_dutycycle_s1_arbitrator
 # storage
 db|myESystem.(71).cnf
 db|myESystem.(71).cnf
@@ -7716,7 +7696,583 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_dutycycle_s1_arbitrator:the_pio_dutycycle_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_dutycycle
+# storage
+db|myESystem.(72).cnf
+db|myESystem.(72).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_dutycycle.v
+a0e1b4cd955ad059f694ce809dabf948
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_dutycycle:the_pio_dutycycle
+}
+# macro_sequence
+
+# end
+# entity
+pio_egmenable_s1_arbitrator
+# storage
+db|myESystem.(73).cnf
+db|myESystem.(73).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_egmenable_s1_arbitrator:the_pio_egmenable_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_egmenable
+# storage
+db|myESystem.(74).cnf
+db|myESystem.(74).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_egmenable.v
+22a513f27c4c0433bc2715ddf3b8d8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_egmenable:the_pio_egmenable
+}
+# macro_sequence
+
+# end
+# entity
+pio_egmreset_s1_arbitrator
+# storage
+db|myESystem.(75).cnf
+db|myESystem.(75).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_egmreset_s1_arbitrator:the_pio_egmreset_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_egmreset
+# storage
+db|myESystem.(76).cnf
+db|myESystem.(76).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_egmreset.v
+8eca10786f73e26da1d9d318ef6d5f56
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_egmreset:the_pio_egmreset
+}
+# macro_sequence
+
+# end
+# entity
+pio_latency_s1_arbitrator
+# storage
+db|myESystem.(77).cnf
+db|myESystem.(77).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_latency_s1_arbitrator:the_pio_latency_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_latency
+# storage
+db|myESystem.(78).cnf
+db|myESystem.(78).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_latency.v
+bd12a03e30d2c76492853b5678dca6fc
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_latency:the_pio_latency
+}
+# macro_sequence
+
+# end
+# entity
+pio_missed_s1_arbitrator
+# storage
+db|myESystem.(79).cnf
+db|myESystem.(79).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_missed_s1_arbitrator:the_pio_missed_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_missed
+# storage
+db|myESystem.(80).cnf
+db|myESystem.(80).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_missed.v
+49ee931ed71da79b5241bd71bf771c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_missed:the_pio_missed
+}
+# macro_sequence
+
+# end
+# entity
+pio_period_s1_arbitrator
+# storage
+db|myESystem.(81).cnf
+db|myESystem.(81).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_period_s1_arbitrator:the_pio_period_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_period
+# storage
+db|myESystem.(82).cnf
+db|myESystem.(82).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_period.v
+22bcf94e8eb5ee2c22b6682fd8aabdfc
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_period:the_pio_period
+}
+# macro_sequence
+
+# end
+# entity
+pio_pulse_s1_arbitrator
+# storage
+db|myESystem.(83).cnf
+db|myESystem.(83).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_pulse_s1_arbitrator:the_pio_pulse_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_pulse
+# storage
+db|myESystem.(84).cnf
+db|myESystem.(84).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_pulse.v
+2f832f9a3d24e87976d1f5186bb7d76
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_pulse:the_pio_pulse
+}
+# macro_sequence
+
+# end
+# entity
+pio_response_s1_arbitrator
+# storage
+db|myESystem.(85).cnf
+db|myESystem.(85).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_response_s1_arbitrator:the_pio_response_s1
+}
+# macro_sequence
+
+# end
+# entity
+pio_response
+# storage
+db|myESystem.(86).cnf
+db|myESystem.(86).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+pio_response.v
+3dc84ba93fb85d3c57afccbfbe25626
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+my_controller:inst|pio_response:the_pio_response
+}
+# macro_sequence
+
+# end
+# entity
+red_led_pio_s1_arbitrator
+# storage
+db|myESystem.(87).cnf
+db|myESystem.(87).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+my_controller.v
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7743,8 +8299,8 @@ my_controller:inst|red_led_pio_s1_arbitrator:the_red_led_pio_s1
 # entity
 red_led_pio
 # storage
-db|myESystem.(72).cnf
-db|myESystem.(72).cnf
+db|myESystem.(88).cnf
+db|myESystem.(88).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7779,8 +8335,8 @@ my_controller:inst|red_led_pio:the_red_led_pio
 # entity
 sdram_0_s1_arbitrator
 # storage
-db|myESystem.(73).cnf
-db|myESystem.(73).cnf
+db|myESystem.(89).cnf
+db|myESystem.(89).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7788,7 +8344,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7815,8 +8371,8 @@ my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1
 # entity
 rdv_fifo_for_cpu_0_data_master_to_sdram_0_s1_module
 # storage
-db|myESystem.(74).cnf
-db|myESystem.(74).cnf
+db|myESystem.(90).cnf
+db|myESystem.(90).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7824,7 +8380,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7851,8 +8407,8 @@ my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1|rdv_fifo_for_cpu_0_data_
 # entity
 rdv_fifo_for_cpu_0_instruction_master_to_sdram_0_s1_module
 # storage
-db|myESystem.(75).cnf
-db|myESystem.(75).cnf
+db|myESystem.(91).cnf
+db|myESystem.(91).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7860,7 +8416,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7887,8 +8443,8 @@ my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1|rdv_fifo_for_cpu_0_instr
 # entity
 sdram_0
 # storage
-db|myESystem.(76).cnf
-db|myESystem.(76).cnf
+db|myESystem.(92).cnf
+db|myESystem.(92).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7923,8 +8479,8 @@ my_controller:inst|sdram_0:the_sdram_0
 # entity
 sdram_0_input_efifo_module
 # storage
-db|myESystem.(77).cnf
-db|myESystem.(77).cnf
+db|myESystem.(93).cnf
+db|myESystem.(93).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7959,8 +8515,8 @@ my_controller:inst|sdram_0:the_sdram_0|sdram_0_input_efifo_module:the_sdram_0_in
 # entity
 seven_seg_middle_pio_s1_arbitrator
 # storage
-db|myESystem.(78).cnf
-db|myESystem.(78).cnf
+db|myESystem.(94).cnf
+db|myESystem.(94).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -7968,7 +8524,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -7995,8 +8551,8 @@ my_controller:inst|seven_seg_middle_pio_s1_arbitrator:the_seven_seg_middle_pio_s
 # entity
 seven_seg_middle_pio
 # storage
-db|myESystem.(79).cnf
-db|myESystem.(79).cnf
+db|myESystem.(95).cnf
+db|myESystem.(95).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8031,8 +8587,8 @@ my_controller:inst|seven_seg_middle_pio:the_seven_seg_middle_pio
 # entity
 seven_seg_pio_s1_arbitrator
 # storage
-db|myESystem.(80).cnf
-db|myESystem.(80).cnf
+db|myESystem.(96).cnf
+db|myESystem.(96).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8040,7 +8596,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8067,8 +8623,8 @@ my_controller:inst|seven_seg_pio_s1_arbitrator:the_seven_seg_pio_s1
 # entity
 seven_seg_pio
 # storage
-db|myESystem.(81).cnf
-db|myESystem.(81).cnf
+db|myESystem.(97).cnf
+db|myESystem.(97).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8103,8 +8659,8 @@ my_controller:inst|seven_seg_pio:the_seven_seg_pio
 # entity
 seven_seg_right_pio_s1_arbitrator
 # storage
-db|myESystem.(82).cnf
-db|myESystem.(82).cnf
+db|myESystem.(98).cnf
+db|myESystem.(98).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8112,7 +8668,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8139,8 +8695,8 @@ my_controller:inst|seven_seg_right_pio_s1_arbitrator:the_seven_seg_right_pio_s1
 # entity
 seven_seg_right_pio
 # storage
-db|myESystem.(83).cnf
-db|myESystem.(83).cnf
+db|myESystem.(99).cnf
+db|myESystem.(99).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8175,8 +8731,8 @@ my_controller:inst|seven_seg_right_pio:the_seven_seg_right_pio
 # entity
 switch_pio_s1_arbitrator
 # storage
-db|myESystem.(84).cnf
-db|myESystem.(84).cnf
+db|myESystem.(100).cnf
+db|myESystem.(100).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8184,7 +8740,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8211,8 +8767,8 @@ my_controller:inst|switch_pio_s1_arbitrator:the_switch_pio_s1
 # entity
 switch_pio
 # storage
-db|myESystem.(85).cnf
-db|myESystem.(85).cnf
+db|myESystem.(101).cnf
+db|myESystem.(101).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8247,8 +8803,8 @@ my_controller:inst|switch_pio:the_switch_pio
 # entity
 sysid_control_slave_arbitrator
 # storage
-db|myESystem.(86).cnf
-db|myESystem.(86).cnf
+db|myESystem.(102).cnf
+db|myESystem.(102).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8256,7 +8812,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8283,8 +8839,8 @@ my_controller:inst|sysid_control_slave_arbitrator:the_sysid_control_slave
 # entity
 sysid
 # storage
-db|myESystem.(87).cnf
-db|myESystem.(87).cnf
+db|myESystem.(103).cnf
+db|myESystem.(103).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8292,7 +8848,7 @@ ON
 # case_sensitive
 # source_file
 sysid.v
-a9f71f77b0e5a7d43b85a92f79cb9255
+3ba25464f9ab843afa011b5423bd59
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8319,8 +8875,8 @@ my_controller:inst|sysid:the_sysid
 # entity
 timer_0_s1_arbitrator
 # storage
-db|myESystem.(88).cnf
-db|myESystem.(88).cnf
+db|myESystem.(104).cnf
+db|myESystem.(104).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8328,7 +8884,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8355,8 +8911,8 @@ my_controller:inst|timer_0_s1_arbitrator:the_timer_0_s1
 # entity
 timer_0
 # storage
-db|myESystem.(89).cnf
-db|myESystem.(89).cnf
+db|myESystem.(105).cnf
+db|myESystem.(105).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8391,8 +8947,8 @@ my_controller:inst|timer_0:the_timer_0
 # entity
 timer_1_s1_arbitrator
 # storage
-db|myESystem.(90).cnf
-db|myESystem.(90).cnf
+db|myESystem.(106).cnf
+db|myESystem.(106).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8400,7 +8956,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8427,8 +8983,8 @@ my_controller:inst|timer_1_s1_arbitrator:the_timer_1_s1
 # entity
 timer_1
 # storage
-db|myESystem.(91).cnf
-db|myESystem.(91).cnf
+db|myESystem.(107).cnf
+db|myESystem.(107).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8463,8 +9019,8 @@ my_controller:inst|timer_1:the_timer_1
 # entity
 my_controller_reset_clk_0_domain_synch_module
 # storage
-db|myESystem.(92).cnf
-db|myESystem.(92).cnf
+db|myESystem.(108).cnf
+db|myESystem.(108).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8472,7 +9028,7 @@ ON
 # case_sensitive
 # source_file
 my_controller.v
-b8717dd589efde73d7e3a957fbd589
+484285f65372c593d4de7bd45b51eb2
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8497,10 +9053,149 @@ my_controller:inst|my_controller_reset_clk_0_domain_synch_module:my_controller_r
 
 # end
 # entity
+myESystem
+# storage
+db|myESystem.(0).cnf
+db|myESystem.(0).cnf
+# case_insensitive
+# source_file
+myesystem.bdf
+bbf4e7848ed83c6872ce5074809dc560
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ece324_egm
+# storage
+db|myESystem.(109).cnf
+db|myESystem.(109).cnf
+# case_insensitive
+# source_file
+files|ece324_egm.bdf
+98ed85ef805a86fce34bd3ba09f2fa9
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ece324_egm:inst6
+}
+# macro_sequence
+
+# end
+# entity
+ece324_pulse_generator
+# storage
+db|myESystem.(110).cnf
+db|myESystem.(110).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+files|ece324_pulse_generator.vhd
+0d8613c7119ddaaf439cc5224742f3d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ece324_egm:inst6|ece324_pulse_generator:inst5
+}
+# lmf
+c:|software|altera|10.1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ece324_clock_divider
+# storage
+db|myESystem.(111).cnf
+db|myESystem.(111).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+files|ece324_clock_divider.vhd
+3c6a842923b6c1288317cef11c0ece0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ece324_egm:inst6|ece324_clock_divider:inst3
+}
+# lmf
+c:|software|altera|10.1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ece324_latency_tracker
+# storage
+db|myESystem.(112).cnf
+db|myESystem.(112).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+files|ece324_latency_tracker.vhd
+3b5fcf91ea156f511740fd131e632c13
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ece324_egm:inst6|ece324_latency_tracker:inst4
+}
+# lmf
+c:|software|altera|10.1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 sld_hub
 # storage
-db|myESystem.(93).cnf
-db|myESystem.(93).cnf
+db|myESystem.(113).cnf
+db|myESystem.(113).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8577,8 +9272,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 sld_shadow_jsm
 # storage
-db|myESystem.(94).cnf
-db|myESystem.(94).cnf
+db|myESystem.(114).cnf
+db|myESystem.(114).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -8627,8 +9322,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 sld_rom_sr
 # storage
-db|myESystem.(95).cnf
-db|myESystem.(95).cnf
+db|myESystem.(115).cnf
+db|myESystem.(115).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
