@@ -254,7 +254,7 @@ static char TopMenu( void )
     MenuItem( 'e', "JTAG UART Menu" );
 #endif  
     MenuItem( 'f', "Test DIP Switches" );
-    MenuItem( 'g', "Test LED Blinking" );
+    MenuItem( 'g', "Lab 1 Phase 1" );
     ch = MenuEnd('a', 'e');
 
   
@@ -276,7 +276,7 @@ static char TopMenu( void )
       MenuCase('e',DoJTAGUARTMenu);
 #endif
       MenuCase('f',TestDIPSwitches);
-      MenuCase('g',BlinkLED);
+      MenuCase('g',Lab1Phase1Main);
       case 'q':	break;
       default:	printf("\n -ERROR: %c is an invalid entry.  Please try again\n", ch); break;
     }
@@ -792,66 +792,83 @@ static void TestDIPSwitches(void) {
  *
  *************************************************/
 
-static void BlinkLED(void) {
-	static volatile alt_u8 bits;
-	int i;
+//bit tickers
+volatile BitTicker led_ticker, seven_seg_ticker;
 
-	//turn off all LEDs
-    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x00);
-	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x00);
-	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
+
+static void Lab1Phase1HandleButton (void* context, alt_u32 id) {
+  volatile alt_u8 buttons;
+  volatile alt_u8 bits;
+
+  //read which push buttons were pressed
+  buttons = IORD(BUTTON_PIO_BASE, 3) & 0xf;
+
+  //read from the first 8 dip switches
+  bits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0xff;
+
+  if (buttons & 0x1) {
+	  start_ticker(&led_ticker, bits);
+  }
+  if (buttons & 0x2) {
+	  start_ticker(&seven_seg_ticker, bits);
+  }
+
+  //reset
+  IOWR(BUTTON_PIO_BASE, 3, 0x0);
+}
+
+static void Lab1Phase1Main (void) {
+	printf("Lab 1 Phase 1\n\tPress 'q' (followed by <enter>) to exit this module.");
+
+	//turn LEDs off
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);
+
+	//init push buttons
+	alt_irq_register(BUTTON_PIO_IRQ, (void*)0, Lab1Phase1HandleButton);
+	IOWR(BUTTON_PIO_BASE, 3, 0x0);	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_PIO_BASE, 0xf);
 
 	//init timers
 	init_timers();
 
-	//read from the dip switches
-	bits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0xFF;
+	//init tickers
+	init_ticker(&led_ticker);
+	init_ticker(&seven_seg_ticker);
 
-	printf( "All bits: %B", bits );
+	while (1) {
 
-	for (i = 0; i < 8; i++){
-		printf( "%d", bits & 0x1 );
-		//if the bit is 1, turn LED on, otherwise turn it off.
-		if (bits & 0x1) {
+		//update outputs based on the tickers
+
+		//LEDs
+		if (led_ticker.counter > 0 && led_ticker.bit_sequence & 0x1) {
 			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x02);	//On
-		} else{
+		} else {
 			IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);	//Off
 		}
 
-		//wait 1 second
+		//7-segment
+		if (seven_seg_ticker.counter > 0) {
+			if (seven_seg_ticker.bit_sequence & 0x1) {
+				sevenseg_set_hex(0x11);	//write 11 to 7-seg
+			} else {
+				sevenseg_set_hex(0x00);	//write 00 to 7-seg
+			}
+		} else {
+			IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);	//turn 7-seg off
+		}
+
+		//sevenseg_set_hex
+
+		//update the tickers
+		update_ticker(&led_ticker);
+		update_ticker(&seven_seg_ticker);
+
+		//wait 1 second.
 		SetTimer0(1000);
 		while(!timer0);
-
-		//go to the next bit
-		bits = bits >> 1;
 	}
-
-	//finally, turn everything off
-	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x00);
-}
-
-static void Lab1Phase1HandleButton (void* context, alt_u32 id) {
-  volatile int buttons;
-
-  buttons = IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
-
-  /* Reset the Button's edge capture register. */
-  IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE, 0);
-
-  /*
-   * Read the PIO to delay ISR exit. This is done to prevent a spurious
-   * interrupt in systems with high processor -> pio latency and fast
-   * interrupts.
-   */
-  IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
-
-
-  //branch here.
-  switch (buttons){
-	  case 0x1:
-		  BlinkLED();
-		  break;
-  }
 }
 
 
