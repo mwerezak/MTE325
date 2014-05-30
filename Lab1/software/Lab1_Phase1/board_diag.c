@@ -606,6 +606,14 @@ static void sevenseg_set_hex(alt_u8 hex)
   alt_u32 data = segments[hex & 15] | (segments[(hex >> 4) & 15] << 8);
 
   IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, data);
+  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_MIDDLE_PIO_BASE, data);
+  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_RIGHT_PIO_BASE, (data << 16) | data);
+}
+
+static void sevenseg_clear(void) {
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_MIDDLE_PIO_BASE, 0xffff);
+	  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_RIGHT_PIO_BASE, 0xffffffff);
 }
 
 /*******************************************
@@ -824,7 +832,9 @@ static void Lab1Phase1Main (void) {
 	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);
+
+	//turn 7-segment off
+	sevenseg_clear();
 
 	//init push buttons
 	alt_irq_register(BUTTON_PIO_IRQ, (void*)0, Lab1Phase1HandleButton);
@@ -856,7 +866,7 @@ static void Lab1Phase1Main (void) {
 				sevenseg_set_hex(0x00);	//write 00 to 7-seg
 			}
 		} else {
-			IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, 0xffff);	//turn 7-seg off
+			sevenseg_clear();	//turn 7-seg off
 		}
 
 		//sevenseg_set_hex
