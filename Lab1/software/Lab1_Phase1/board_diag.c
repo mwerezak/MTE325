@@ -861,7 +861,7 @@ static void Lab1Phase1Main (void) {
 		//7-segment
 		if (seven_seg_ticker.counter > 0) {
 			if (seven_seg_ticker.bit_sequence & 0x1) {
-				sevenseg_set_hex(0x11);	//write 11 to 7-seg
+				sevenseg_set_hex(0xff);	//write FF to 7-seg
 			} else {
 				sevenseg_set_hex(0x00);	//write 00 to 7-seg
 			}
