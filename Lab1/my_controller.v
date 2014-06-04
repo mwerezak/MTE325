@@ -750,6 +750,14 @@ module cpu_0_data_master_arbitrator (
                                        cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave,
                                        cpu_0_data_master_granted_lcd_display_control_slave,
                                        cpu_0_data_master_granted_led_pio_s1,
+                                       cpu_0_data_master_granted_pio_dutycycle_s1,
+                                       cpu_0_data_master_granted_pio_egmenable_s1,
+                                       cpu_0_data_master_granted_pio_egmreset_s1,
+                                       cpu_0_data_master_granted_pio_latency_s1,
+                                       cpu_0_data_master_granted_pio_missed_s1,
+                                       cpu_0_data_master_granted_pio_period_s1,
+                                       cpu_0_data_master_granted_pio_pulse_s1,
+                                       cpu_0_data_master_granted_pio_response_s1,
                                        cpu_0_data_master_granted_red_led_pio_s1,
                                        cpu_0_data_master_granted_sdram_0_s1,
                                        cpu_0_data_master_granted_seven_seg_middle_pio_s1,
@@ -765,6 +773,14 @@ module cpu_0_data_master_arbitrator (
                                        cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave,
                                        cpu_0_data_master_qualified_request_lcd_display_control_slave,
                                        cpu_0_data_master_qualified_request_led_pio_s1,
+                                       cpu_0_data_master_qualified_request_pio_dutycycle_s1,
+                                       cpu_0_data_master_qualified_request_pio_egmenable_s1,
+                                       cpu_0_data_master_qualified_request_pio_egmreset_s1,
+                                       cpu_0_data_master_qualified_request_pio_latency_s1,
+                                       cpu_0_data_master_qualified_request_pio_missed_s1,
+                                       cpu_0_data_master_qualified_request_pio_period_s1,
+                                       cpu_0_data_master_qualified_request_pio_pulse_s1,
+                                       cpu_0_data_master_qualified_request_pio_response_s1,
                                        cpu_0_data_master_qualified_request_red_led_pio_s1,
                                        cpu_0_data_master_qualified_request_sdram_0_s1,
                                        cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1,
@@ -781,6 +797,14 @@ module cpu_0_data_master_arbitrator (
                                        cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave,
                                        cpu_0_data_master_read_data_valid_lcd_display_control_slave,
                                        cpu_0_data_master_read_data_valid_led_pio_s1,
+                                       cpu_0_data_master_read_data_valid_pio_dutycycle_s1,
+                                       cpu_0_data_master_read_data_valid_pio_egmenable_s1,
+                                       cpu_0_data_master_read_data_valid_pio_egmreset_s1,
+                                       cpu_0_data_master_read_data_valid_pio_latency_s1,
+                                       cpu_0_data_master_read_data_valid_pio_missed_s1,
+                                       cpu_0_data_master_read_data_valid_pio_period_s1,
+                                       cpu_0_data_master_read_data_valid_pio_pulse_s1,
+                                       cpu_0_data_master_read_data_valid_pio_response_s1,
                                        cpu_0_data_master_read_data_valid_red_led_pio_s1,
                                        cpu_0_data_master_read_data_valid_sdram_0_s1,
                                        cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register,
@@ -797,6 +821,14 @@ module cpu_0_data_master_arbitrator (
                                        cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave,
                                        cpu_0_data_master_requests_lcd_display_control_slave,
                                        cpu_0_data_master_requests_led_pio_s1,
+                                       cpu_0_data_master_requests_pio_dutycycle_s1,
+                                       cpu_0_data_master_requests_pio_egmenable_s1,
+                                       cpu_0_data_master_requests_pio_egmreset_s1,
+                                       cpu_0_data_master_requests_pio_latency_s1,
+                                       cpu_0_data_master_requests_pio_missed_s1,
+                                       cpu_0_data_master_requests_pio_period_s1,
+                                       cpu_0_data_master_requests_pio_pulse_s1,
+                                       cpu_0_data_master_requests_pio_response_s1,
                                        cpu_0_data_master_requests_red_led_pio_s1,
                                        cpu_0_data_master_requests_sdram_0_s1,
                                        cpu_0_data_master_requests_seven_seg_middle_pio_s1,
@@ -815,6 +847,14 @@ module cpu_0_data_master_arbitrator (
                                        d1_jtag_uart_0_avalon_jtag_slave_end_xfer,
                                        d1_lcd_display_control_slave_end_xfer,
                                        d1_led_pio_s1_end_xfer,
+                                       d1_pio_dutycycle_s1_end_xfer,
+                                       d1_pio_egmenable_s1_end_xfer,
+                                       d1_pio_egmreset_s1_end_xfer,
+                                       d1_pio_latency_s1_end_xfer,
+                                       d1_pio_missed_s1_end_xfer,
+                                       d1_pio_period_s1_end_xfer,
+                                       d1_pio_pulse_s1_end_xfer,
+                                       d1_pio_response_s1_end_xfer,
                                        d1_red_led_pio_s1_end_xfer,
                                        d1_sdram_0_s1_end_xfer,
                                        d1_seven_seg_middle_pio_s1_end_xfer,
@@ -832,6 +872,15 @@ module cpu_0_data_master_arbitrator (
                                        lcd_display_control_slave_wait_counter_eq_0,
                                        lcd_display_control_slave_wait_counter_eq_1,
                                        led_pio_s1_readdata_from_sa,
+                                       pio_dutycycle_s1_readdata_from_sa,
+                                       pio_egmenable_s1_readdata_from_sa,
+                                       pio_egmreset_s1_readdata_from_sa,
+                                       pio_latency_s1_readdata_from_sa,
+                                       pio_missed_s1_readdata_from_sa,
+                                       pio_period_s1_readdata_from_sa,
+                                       pio_pulse_s1_irq_from_sa,
+                                       pio_pulse_s1_readdata_from_sa,
+                                       pio_response_s1_readdata_from_sa,
                                        red_led_pio_s1_readdata_from_sa,
                                        reset_n,
                                        sdram_0_s1_readdata_from_sa,
@@ -875,6 +924,14 @@ module cpu_0_data_master_arbitrator (
   input            cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave;
   input            cpu_0_data_master_granted_lcd_display_control_slave;
   input            cpu_0_data_master_granted_led_pio_s1;
+  input            cpu_0_data_master_granted_pio_dutycycle_s1;
+  input            cpu_0_data_master_granted_pio_egmenable_s1;
+  input            cpu_0_data_master_granted_pio_egmreset_s1;
+  input            cpu_0_data_master_granted_pio_latency_s1;
+  input            cpu_0_data_master_granted_pio_missed_s1;
+  input            cpu_0_data_master_granted_pio_period_s1;
+  input            cpu_0_data_master_granted_pio_pulse_s1;
+  input            cpu_0_data_master_granted_pio_response_s1;
   input            cpu_0_data_master_granted_red_led_pio_s1;
   input            cpu_0_data_master_granted_sdram_0_s1;
   input            cpu_0_data_master_granted_seven_seg_middle_pio_s1;
@@ -890,6 +947,14 @@ module cpu_0_data_master_arbitrator (
   input            cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave;
   input            cpu_0_data_master_qualified_request_lcd_display_control_slave;
   input            cpu_0_data_master_qualified_request_led_pio_s1;
+  input            cpu_0_data_master_qualified_request_pio_dutycycle_s1;
+  input            cpu_0_data_master_qualified_request_pio_egmenable_s1;
+  input            cpu_0_data_master_qualified_request_pio_egmreset_s1;
+  input            cpu_0_data_master_qualified_request_pio_latency_s1;
+  input            cpu_0_data_master_qualified_request_pio_missed_s1;
+  input            cpu_0_data_master_qualified_request_pio_period_s1;
+  input            cpu_0_data_master_qualified_request_pio_pulse_s1;
+  input            cpu_0_data_master_qualified_request_pio_response_s1;
   input            cpu_0_data_master_qualified_request_red_led_pio_s1;
   input            cpu_0_data_master_qualified_request_sdram_0_s1;
   input            cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1;
@@ -906,6 +971,14 @@ module cpu_0_data_master_arbitrator (
   input            cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave;
   input            cpu_0_data_master_read_data_valid_lcd_display_control_slave;
   input            cpu_0_data_master_read_data_valid_led_pio_s1;
+  input            cpu_0_data_master_read_data_valid_pio_dutycycle_s1;
+  input            cpu_0_data_master_read_data_valid_pio_egmenable_s1;
+  input            cpu_0_data_master_read_data_valid_pio_egmreset_s1;
+  input            cpu_0_data_master_read_data_valid_pio_latency_s1;
+  input            cpu_0_data_master_read_data_valid_pio_missed_s1;
+  input            cpu_0_data_master_read_data_valid_pio_period_s1;
+  input            cpu_0_data_master_read_data_valid_pio_pulse_s1;
+  input            cpu_0_data_master_read_data_valid_pio_response_s1;
   input            cpu_0_data_master_read_data_valid_red_led_pio_s1;
   input            cpu_0_data_master_read_data_valid_sdram_0_s1;
   input            cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register;
@@ -922,6 +995,14 @@ module cpu_0_data_master_arbitrator (
   input            cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave;
   input            cpu_0_data_master_requests_lcd_display_control_slave;
   input            cpu_0_data_master_requests_led_pio_s1;
+  input            cpu_0_data_master_requests_pio_dutycycle_s1;
+  input            cpu_0_data_master_requests_pio_egmenable_s1;
+  input            cpu_0_data_master_requests_pio_egmreset_s1;
+  input            cpu_0_data_master_requests_pio_latency_s1;
+  input            cpu_0_data_master_requests_pio_missed_s1;
+  input            cpu_0_data_master_requests_pio_period_s1;
+  input            cpu_0_data_master_requests_pio_pulse_s1;
+  input            cpu_0_data_master_requests_pio_response_s1;
   input            cpu_0_data_master_requests_red_led_pio_s1;
   input            cpu_0_data_master_requests_sdram_0_s1;
   input            cpu_0_data_master_requests_seven_seg_middle_pio_s1;
@@ -940,6 +1021,14 @@ module cpu_0_data_master_arbitrator (
   input            d1_jtag_uart_0_avalon_jtag_slave_end_xfer;
   input            d1_lcd_display_control_slave_end_xfer;
   input            d1_led_pio_s1_end_xfer;
+  input            d1_pio_dutycycle_s1_end_xfer;
+  input            d1_pio_egmenable_s1_end_xfer;
+  input            d1_pio_egmreset_s1_end_xfer;
+  input            d1_pio_latency_s1_end_xfer;
+  input            d1_pio_missed_s1_end_xfer;
+  input            d1_pio_period_s1_end_xfer;
+  input            d1_pio_pulse_s1_end_xfer;
+  input            d1_pio_response_s1_end_xfer;
   input            d1_red_led_pio_s1_end_xfer;
   input            d1_sdram_0_s1_end_xfer;
   input            d1_seven_seg_middle_pio_s1_end_xfer;
@@ -957,6 +1046,15 @@ module cpu_0_data_master_arbitrator (
   input            lcd_display_control_slave_wait_counter_eq_0;
   input            lcd_display_control_slave_wait_counter_eq_1;
   input   [  7: 0] led_pio_s1_readdata_from_sa;
+  input   [  3: 0] pio_dutycycle_s1_readdata_from_sa;
+  input            pio_egmenable_s1_readdata_from_sa;
+  input            pio_egmreset_s1_readdata_from_sa;
+  input   [ 15: 0] pio_latency_s1_readdata_from_sa;
+  input   [ 15: 0] pio_missed_s1_readdata_from_sa;
+  input   [  3: 0] pio_period_s1_readdata_from_sa;
+  input            pio_pulse_s1_irq_from_sa;
+  input            pio_pulse_s1_readdata_from_sa;
+  input            pio_response_s1_readdata_from_sa;
   input   [  7: 0] red_led_pio_s1_readdata_from_sa;
   input            reset_n;
   input   [ 15: 0] sdram_0_s1_readdata_from_sa;
@@ -991,18 +1089,26 @@ module cpu_0_data_master_arbitrator (
   wire             r_0;
   wire             r_1;
   wire             r_2;
+  wire             r_3;
+  wire             r_4;
   reg     [ 31: 0] registered_cpu_0_data_master_readdata;
   //r_0 master_run cascaded wait assignment, which is an e_assign
   assign r_0 = 1 & (cpu_0_data_master_qualified_request_button_pio_s1 | ~cpu_0_data_master_requests_button_pio_s1) & ((~cpu_0_data_master_qualified_request_button_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_button_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module | ~cpu_0_data_master_requests_cpu_0_jtag_debug_module) & (cpu_0_data_master_granted_cpu_0_jtag_debug_module | ~cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module) & ((~cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_green_led_pio_s1 | ~cpu_0_data_master_requests_green_led_pio_s1) & ((~cpu_0_data_master_qualified_request_green_led_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_green_led_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave | ~cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave) & ((~cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave | ~(cpu_0_data_master_read | cpu_0_data_master_write) | (1 & ~jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa & (cpu_0_data_master_read | cpu_0_data_master_write)))) & ((~cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave | ~(cpu_0_data_master_read | cpu_0_data_master_write) | (1 & ~jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa & (cpu_0_data_master_read | cpu_0_data_master_write)))) & 1 & ((~cpu_0_data_master_qualified_request_lcd_display_control_slave | ~cpu_0_data_master_read | (1 & lcd_display_control_slave_wait_counter_eq_1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_lcd_display_control_slave | ~cpu_0_data_master_write | (1 & lcd_display_control_slave_wait_counter_eq_1 & cpu_0_data_master_write)));
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu_0_data_master_run = r_0 & r_1 & r_2;
+  assign cpu_0_data_master_run = r_0 & r_1 & r_2 & r_3 & r_4;
 
   //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = 1 & (cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_requests_led_pio_s1) & ((~cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_requests_red_led_pio_s1) & ((~cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_sdram_0_s1 | (cpu_0_data_master_read_data_valid_sdram_0_s1 & cpu_0_data_master_dbs_address[1]) | (cpu_0_data_master_write & !cpu_0_data_master_byteenable_sdram_0_s1 & cpu_0_data_master_dbs_address[1]) | ~cpu_0_data_master_requests_sdram_0_s1) & (cpu_0_data_master_granted_sdram_0_s1 | ~cpu_0_data_master_qualified_request_sdram_0_s1) & ((~cpu_0_data_master_qualified_request_sdram_0_s1 | ~cpu_0_data_master_read | (cpu_0_data_master_read_data_valid_sdram_0_s1 & (cpu_0_data_master_dbs_address[1]) & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_sdram_0_s1 | ~cpu_0_data_master_write | (1 & ~sdram_0_s1_waitrequest_from_sa & (cpu_0_data_master_dbs_address[1]) & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_requests_seven_seg_middle_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_requests_seven_seg_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read)));
+  assign r_1 = 1 & (cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_requests_led_pio_s1) & ((~cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_led_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_dutycycle_s1 | ~cpu_0_data_master_requests_pio_dutycycle_s1) & ((~cpu_0_data_master_qualified_request_pio_dutycycle_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_dutycycle_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_egmenable_s1 | ~cpu_0_data_master_requests_pio_egmenable_s1) & ((~cpu_0_data_master_qualified_request_pio_egmenable_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_egmenable_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_egmreset_s1 | ~cpu_0_data_master_requests_pio_egmreset_s1) & ((~cpu_0_data_master_qualified_request_pio_egmreset_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_egmreset_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & ((~cpu_0_data_master_qualified_request_pio_latency_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_latency_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1;
 
   //r_2 master_run cascaded wait assignment, which is an e_assign
-  assign r_2 = ((~cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_requests_seven_seg_right_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & ((~cpu_0_data_master_qualified_request_switch_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_switch_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & ((~cpu_0_data_master_qualified_request_sysid_control_slave | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_sysid_control_slave | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_requests_timer_0_s1) & ((~cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_requests_timer_1_s1) & ((~cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write)));
+  assign r_2 = ((~cpu_0_data_master_qualified_request_pio_missed_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_missed_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_period_s1 | ~cpu_0_data_master_requests_pio_period_s1) & ((~cpu_0_data_master_qualified_request_pio_period_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_period_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_pulse_s1 | ~cpu_0_data_master_requests_pio_pulse_s1) & ((~cpu_0_data_master_qualified_request_pio_pulse_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_pulse_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_pio_response_s1 | ~cpu_0_data_master_requests_pio_response_s1) & ((~cpu_0_data_master_qualified_request_pio_response_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_pio_response_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_requests_red_led_pio_s1) & ((~cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_red_led_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_sdram_0_s1 | (cpu_0_data_master_read_data_valid_sdram_0_s1 & cpu_0_data_master_dbs_address[1]) | (cpu_0_data_master_write & !cpu_0_data_master_byteenable_sdram_0_s1 & cpu_0_data_master_dbs_address[1]) | ~cpu_0_data_master_requests_sdram_0_s1);
+
+  //r_3 master_run cascaded wait assignment, which is an e_assign
+  assign r_3 = (cpu_0_data_master_granted_sdram_0_s1 | ~cpu_0_data_master_qualified_request_sdram_0_s1) & ((~cpu_0_data_master_qualified_request_sdram_0_s1 | ~cpu_0_data_master_read | (cpu_0_data_master_read_data_valid_sdram_0_s1 & (cpu_0_data_master_dbs_address[1]) & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_sdram_0_s1 | ~cpu_0_data_master_write | (1 & ~sdram_0_s1_waitrequest_from_sa & (cpu_0_data_master_dbs_address[1]) & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_requests_seven_seg_middle_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_requests_seven_seg_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_seven_seg_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_requests_seven_seg_right_pio_s1) & ((~cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_seven_seg_right_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & ((~cpu_0_data_master_qualified_request_switch_pio_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_switch_pio_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & ((~cpu_0_data_master_qualified_request_sysid_control_slave | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read)));
+
+  //r_4 master_run cascaded wait assignment, which is an e_assign
+  assign r_4 = ((~cpu_0_data_master_qualified_request_sysid_control_slave | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_requests_timer_0_s1) & ((~cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_timer_0_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write))) & 1 & (cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_requests_timer_1_s1) & ((~cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_read | (1 & 1 & cpu_0_data_master_read))) & ((~cpu_0_data_master_qualified_request_timer_1_s1 | ~cpu_0_data_master_write | (1 & cpu_0_data_master_write)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu_0_data_master_address_to_slave = cpu_0_data_master_address[24 : 0];
@@ -1014,6 +1120,14 @@ module cpu_0_data_master_arbitrator (
     ({32 {~cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave}} | registered_cpu_0_data_master_readdata) &
     ({32 {~cpu_0_data_master_requests_lcd_display_control_slave}} | lcd_display_control_slave_readdata_from_sa) &
     ({32 {~cpu_0_data_master_requests_led_pio_s1}} | led_pio_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_dutycycle_s1}} | pio_dutycycle_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_egmenable_s1}} | pio_egmenable_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_egmreset_s1}} | pio_egmreset_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_latency_s1}} | pio_latency_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_missed_s1}} | pio_missed_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_period_s1}} | pio_period_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_pulse_s1}} | pio_pulse_s1_readdata_from_sa) &
+    ({32 {~cpu_0_data_master_requests_pio_response_s1}} | pio_response_s1_readdata_from_sa) &
     ({32 {~cpu_0_data_master_requests_red_led_pio_s1}} | red_led_pio_s1_readdata_from_sa) &
     ({32 {~cpu_0_data_master_requests_sdram_0_s1}} | registered_cpu_0_data_master_readdata) &
     ({32 {~cpu_0_data_master_requests_seven_seg_middle_pio_s1}} | seven_seg_middle_pio_s1_readdata_from_sa) &
@@ -1062,7 +1176,7 @@ module cpu_0_data_master_arbitrator (
     1'b0,
     1'b0,
     1'b0,
-    1'b0,
+    pio_pulse_s1_irq_from_sa,
     timer_1_s1_irq_from_sa,
     timer_0_s1_irq_from_sa,
     button_pio_s1_irq_from_sa,
@@ -1235,15 +1349,15 @@ module cpu_0_instruction_master_arbitrator (
   wire             pre_dbs_count_enable;
   wire             pre_flush_cpu_0_instruction_master_readdatavalid;
   wire             r_0;
-  wire             r_1;
+  wire             r_3;
   //r_0 master_run cascaded wait assignment, which is an e_assign
   assign r_0 = 1 & (cpu_0_instruction_master_qualified_request_cpu_0_jtag_debug_module | ~cpu_0_instruction_master_requests_cpu_0_jtag_debug_module) & (cpu_0_instruction_master_granted_cpu_0_jtag_debug_module | ~cpu_0_instruction_master_qualified_request_cpu_0_jtag_debug_module) & ((~cpu_0_instruction_master_qualified_request_cpu_0_jtag_debug_module | ~cpu_0_instruction_master_read | (1 & ~d1_cpu_0_jtag_debug_module_end_xfer & cpu_0_instruction_master_read)));
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu_0_instruction_master_run = r_0 & r_1;
+  assign cpu_0_instruction_master_run = r_0 & r_3;
 
-  //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = 1 & (cpu_0_instruction_master_qualified_request_sdram_0_s1 | ~cpu_0_instruction_master_requests_sdram_0_s1) & (cpu_0_instruction_master_granted_sdram_0_s1 | ~cpu_0_instruction_master_qualified_request_sdram_0_s1) & ((~cpu_0_instruction_master_qualified_request_sdram_0_s1 | ~cpu_0_instruction_master_read | (1 & ~sdram_0_s1_waitrequest_from_sa & (cpu_0_instruction_master_dbs_address[1]) & cpu_0_instruction_master_read)));
+  //r_3 master_run cascaded wait assignment, which is an e_assign
+  assign r_3 = 1 & (cpu_0_instruction_master_qualified_request_sdram_0_s1 | ~cpu_0_instruction_master_requests_sdram_0_s1) & (cpu_0_instruction_master_granted_sdram_0_s1 | ~cpu_0_instruction_master_qualified_request_sdram_0_s1) & ((~cpu_0_instruction_master_qualified_request_sdram_0_s1 | ~cpu_0_instruction_master_read | (1 & ~sdram_0_s1_waitrequest_from_sa & (cpu_0_instruction_master_dbs_address[1]) & cpu_0_instruction_master_read)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu_0_instruction_master_address_to_slave = cpu_0_instruction_master_address[24 : 0];
@@ -1829,7 +1943,7 @@ module jtag_uart_0_avalon_jtag_slave_arbitrator (
   //assign jtag_uart_0_avalon_jtag_slave_readdata_from_sa = jtag_uart_0_avalon_jtag_slave_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign jtag_uart_0_avalon_jtag_slave_readdata_from_sa = jtag_uart_0_avalon_jtag_slave_readdata;
 
-  assign cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave = ({cpu_0_data_master_address_to_slave[24 : 3] , 3'b0} == 25'h10010d8) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  assign cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave = ({cpu_0_data_master_address_to_slave[24 : 3] , 3'b0} == 25'h1001158) & (cpu_0_data_master_read | cpu_0_data_master_write);
   //assign jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa = jtag_uart_0_avalon_jtag_slave_dataavailable so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa = jtag_uart_0_avalon_jtag_slave_dataavailable;
 
@@ -2560,6 +2674,2118 @@ module led_pio_s1_arbitrator (
 //synthesis translate_off
 //////////////// SIMULATION-ONLY CONTENTS
   //led_pio/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_dutycycle_s1_arbitrator (
+                                     // inputs:
+                                      clk,
+                                      cpu_0_data_master_address_to_slave,
+                                      cpu_0_data_master_read,
+                                      cpu_0_data_master_waitrequest,
+                                      cpu_0_data_master_write,
+                                      cpu_0_data_master_writedata,
+                                      pio_dutycycle_s1_readdata,
+                                      reset_n,
+
+                                     // outputs:
+                                      cpu_0_data_master_granted_pio_dutycycle_s1,
+                                      cpu_0_data_master_qualified_request_pio_dutycycle_s1,
+                                      cpu_0_data_master_read_data_valid_pio_dutycycle_s1,
+                                      cpu_0_data_master_requests_pio_dutycycle_s1,
+                                      d1_pio_dutycycle_s1_end_xfer,
+                                      pio_dutycycle_s1_address,
+                                      pio_dutycycle_s1_chipselect,
+                                      pio_dutycycle_s1_readdata_from_sa,
+                                      pio_dutycycle_s1_reset_n,
+                                      pio_dutycycle_s1_write_n,
+                                      pio_dutycycle_s1_writedata
+                                   )
+;
+
+  output           cpu_0_data_master_granted_pio_dutycycle_s1;
+  output           cpu_0_data_master_qualified_request_pio_dutycycle_s1;
+  output           cpu_0_data_master_read_data_valid_pio_dutycycle_s1;
+  output           cpu_0_data_master_requests_pio_dutycycle_s1;
+  output           d1_pio_dutycycle_s1_end_xfer;
+  output  [  1: 0] pio_dutycycle_s1_address;
+  output           pio_dutycycle_s1_chipselect;
+  output  [  3: 0] pio_dutycycle_s1_readdata_from_sa;
+  output           pio_dutycycle_s1_reset_n;
+  output           pio_dutycycle_s1_write_n;
+  output  [  3: 0] pio_dutycycle_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input   [  3: 0] pio_dutycycle_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_dutycycle_s1;
+  wire             cpu_0_data_master_qualified_request_pio_dutycycle_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_dutycycle_s1;
+  wire             cpu_0_data_master_requests_pio_dutycycle_s1;
+  wire             cpu_0_data_master_saved_grant_pio_dutycycle_s1;
+  reg              d1_pio_dutycycle_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_dutycycle_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_dutycycle_s1_address;
+  wire             pio_dutycycle_s1_allgrants;
+  wire             pio_dutycycle_s1_allow_new_arb_cycle;
+  wire             pio_dutycycle_s1_any_bursting_master_saved_grant;
+  wire             pio_dutycycle_s1_any_continuerequest;
+  wire             pio_dutycycle_s1_arb_counter_enable;
+  reg     [  1: 0] pio_dutycycle_s1_arb_share_counter;
+  wire    [  1: 0] pio_dutycycle_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_dutycycle_s1_arb_share_set_values;
+  wire             pio_dutycycle_s1_beginbursttransfer_internal;
+  wire             pio_dutycycle_s1_begins_xfer;
+  wire             pio_dutycycle_s1_chipselect;
+  wire             pio_dutycycle_s1_end_xfer;
+  wire             pio_dutycycle_s1_firsttransfer;
+  wire             pio_dutycycle_s1_grant_vector;
+  wire             pio_dutycycle_s1_in_a_read_cycle;
+  wire             pio_dutycycle_s1_in_a_write_cycle;
+  wire             pio_dutycycle_s1_master_qreq_vector;
+  wire             pio_dutycycle_s1_non_bursting_master_requests;
+  wire    [  3: 0] pio_dutycycle_s1_readdata_from_sa;
+  reg              pio_dutycycle_s1_reg_firsttransfer;
+  wire             pio_dutycycle_s1_reset_n;
+  reg              pio_dutycycle_s1_slavearbiterlockenable;
+  wire             pio_dutycycle_s1_slavearbiterlockenable2;
+  wire             pio_dutycycle_s1_unreg_firsttransfer;
+  wire             pio_dutycycle_s1_waits_for_read;
+  wire             pio_dutycycle_s1_waits_for_write;
+  wire             pio_dutycycle_s1_write_n;
+  wire    [  3: 0] pio_dutycycle_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_dutycycle_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_dutycycle_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_dutycycle_s1_end_xfer;
+    end
+
+
+  assign pio_dutycycle_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_dutycycle_s1));
+  //assign pio_dutycycle_s1_readdata_from_sa = pio_dutycycle_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_dutycycle_s1_readdata_from_sa = pio_dutycycle_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_dutycycle_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h1001100) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_dutycycle_s1_arb_share_counter set values, which is an e_mux
+  assign pio_dutycycle_s1_arb_share_set_values = 1;
+
+  //pio_dutycycle_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_dutycycle_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_dutycycle_s1;
+
+  //pio_dutycycle_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_dutycycle_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_dutycycle_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_dutycycle_s1_arb_share_counter_next_value = pio_dutycycle_s1_firsttransfer ? (pio_dutycycle_s1_arb_share_set_values - 1) : |pio_dutycycle_s1_arb_share_counter ? (pio_dutycycle_s1_arb_share_counter - 1) : 0;
+
+  //pio_dutycycle_s1_allgrants all slave grants, which is an e_mux
+  assign pio_dutycycle_s1_allgrants = |pio_dutycycle_s1_grant_vector;
+
+  //pio_dutycycle_s1_end_xfer assignment, which is an e_assign
+  assign pio_dutycycle_s1_end_xfer = ~(pio_dutycycle_s1_waits_for_read | pio_dutycycle_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_dutycycle_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_dutycycle_s1 = pio_dutycycle_s1_end_xfer & (~pio_dutycycle_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_dutycycle_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_dutycycle_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_dutycycle_s1 & pio_dutycycle_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_dutycycle_s1 & ~pio_dutycycle_s1_non_bursting_master_requests);
+
+  //pio_dutycycle_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_dutycycle_s1_arb_share_counter <= 0;
+      else if (pio_dutycycle_s1_arb_counter_enable)
+          pio_dutycycle_s1_arb_share_counter <= pio_dutycycle_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_dutycycle_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_dutycycle_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_dutycycle_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_dutycycle_s1) | (end_xfer_arb_share_counter_term_pio_dutycycle_s1 & ~pio_dutycycle_s1_non_bursting_master_requests))
+          pio_dutycycle_s1_slavearbiterlockenable <= |pio_dutycycle_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_dutycycle/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_dutycycle_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_dutycycle_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_dutycycle_s1_slavearbiterlockenable2 = |pio_dutycycle_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_dutycycle/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_dutycycle_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_dutycycle_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_dutycycle_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_dutycycle_s1 = cpu_0_data_master_requests_pio_dutycycle_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_dutycycle_s1_writedata mux, which is an e_mux
+  assign pio_dutycycle_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_dutycycle_s1 = cpu_0_data_master_qualified_request_pio_dutycycle_s1;
+
+  //cpu_0/data_master saved-grant pio_dutycycle/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_dutycycle_s1 = cpu_0_data_master_requests_pio_dutycycle_s1;
+
+  //allow new arb cycle for pio_dutycycle/s1, which is an e_assign
+  assign pio_dutycycle_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_dutycycle_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_dutycycle_s1_master_qreq_vector = 1;
+
+  //pio_dutycycle_s1_reset_n assignment, which is an e_assign
+  assign pio_dutycycle_s1_reset_n = reset_n;
+
+  assign pio_dutycycle_s1_chipselect = cpu_0_data_master_granted_pio_dutycycle_s1;
+  //pio_dutycycle_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_dutycycle_s1_firsttransfer = pio_dutycycle_s1_begins_xfer ? pio_dutycycle_s1_unreg_firsttransfer : pio_dutycycle_s1_reg_firsttransfer;
+
+  //pio_dutycycle_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_dutycycle_s1_unreg_firsttransfer = ~(pio_dutycycle_s1_slavearbiterlockenable & pio_dutycycle_s1_any_continuerequest);
+
+  //pio_dutycycle_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_dutycycle_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_dutycycle_s1_begins_xfer)
+          pio_dutycycle_s1_reg_firsttransfer <= pio_dutycycle_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_dutycycle_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_dutycycle_s1_beginbursttransfer_internal = pio_dutycycle_s1_begins_xfer;
+
+  //~pio_dutycycle_s1_write_n assignment, which is an e_mux
+  assign pio_dutycycle_s1_write_n = ~(cpu_0_data_master_granted_pio_dutycycle_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_dutycycle_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_dutycycle_s1_address mux, which is an e_mux
+  assign pio_dutycycle_s1_address = shifted_address_to_pio_dutycycle_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_dutycycle_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_dutycycle_s1_end_xfer <= 1;
+      else 
+        d1_pio_dutycycle_s1_end_xfer <= pio_dutycycle_s1_end_xfer;
+    end
+
+
+  //pio_dutycycle_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_dutycycle_s1_waits_for_read = pio_dutycycle_s1_in_a_read_cycle & pio_dutycycle_s1_begins_xfer;
+
+  //pio_dutycycle_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_dutycycle_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_dutycycle_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_dutycycle_s1_in_a_read_cycle;
+
+  //pio_dutycycle_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_dutycycle_s1_waits_for_write = pio_dutycycle_s1_in_a_write_cycle & 0;
+
+  //pio_dutycycle_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_dutycycle_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_dutycycle_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_dutycycle_s1_in_a_write_cycle;
+
+  assign wait_for_pio_dutycycle_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_dutycycle/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_egmenable_s1_arbitrator (
+                                     // inputs:
+                                      clk,
+                                      cpu_0_data_master_address_to_slave,
+                                      cpu_0_data_master_read,
+                                      cpu_0_data_master_waitrequest,
+                                      cpu_0_data_master_write,
+                                      cpu_0_data_master_writedata,
+                                      pio_egmenable_s1_readdata,
+                                      reset_n,
+
+                                     // outputs:
+                                      cpu_0_data_master_granted_pio_egmenable_s1,
+                                      cpu_0_data_master_qualified_request_pio_egmenable_s1,
+                                      cpu_0_data_master_read_data_valid_pio_egmenable_s1,
+                                      cpu_0_data_master_requests_pio_egmenable_s1,
+                                      d1_pio_egmenable_s1_end_xfer,
+                                      pio_egmenable_s1_address,
+                                      pio_egmenable_s1_chipselect,
+                                      pio_egmenable_s1_readdata_from_sa,
+                                      pio_egmenable_s1_reset_n,
+                                      pio_egmenable_s1_write_n,
+                                      pio_egmenable_s1_writedata
+                                   )
+;
+
+  output           cpu_0_data_master_granted_pio_egmenable_s1;
+  output           cpu_0_data_master_qualified_request_pio_egmenable_s1;
+  output           cpu_0_data_master_read_data_valid_pio_egmenable_s1;
+  output           cpu_0_data_master_requests_pio_egmenable_s1;
+  output           d1_pio_egmenable_s1_end_xfer;
+  output  [  1: 0] pio_egmenable_s1_address;
+  output           pio_egmenable_s1_chipselect;
+  output           pio_egmenable_s1_readdata_from_sa;
+  output           pio_egmenable_s1_reset_n;
+  output           pio_egmenable_s1_write_n;
+  output           pio_egmenable_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input            pio_egmenable_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_egmenable_s1;
+  wire             cpu_0_data_master_qualified_request_pio_egmenable_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_egmenable_s1;
+  wire             cpu_0_data_master_requests_pio_egmenable_s1;
+  wire             cpu_0_data_master_saved_grant_pio_egmenable_s1;
+  reg              d1_pio_egmenable_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_egmenable_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_egmenable_s1_address;
+  wire             pio_egmenable_s1_allgrants;
+  wire             pio_egmenable_s1_allow_new_arb_cycle;
+  wire             pio_egmenable_s1_any_bursting_master_saved_grant;
+  wire             pio_egmenable_s1_any_continuerequest;
+  wire             pio_egmenable_s1_arb_counter_enable;
+  reg     [  1: 0] pio_egmenable_s1_arb_share_counter;
+  wire    [  1: 0] pio_egmenable_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_egmenable_s1_arb_share_set_values;
+  wire             pio_egmenable_s1_beginbursttransfer_internal;
+  wire             pio_egmenable_s1_begins_xfer;
+  wire             pio_egmenable_s1_chipselect;
+  wire             pio_egmenable_s1_end_xfer;
+  wire             pio_egmenable_s1_firsttransfer;
+  wire             pio_egmenable_s1_grant_vector;
+  wire             pio_egmenable_s1_in_a_read_cycle;
+  wire             pio_egmenable_s1_in_a_write_cycle;
+  wire             pio_egmenable_s1_master_qreq_vector;
+  wire             pio_egmenable_s1_non_bursting_master_requests;
+  wire             pio_egmenable_s1_readdata_from_sa;
+  reg              pio_egmenable_s1_reg_firsttransfer;
+  wire             pio_egmenable_s1_reset_n;
+  reg              pio_egmenable_s1_slavearbiterlockenable;
+  wire             pio_egmenable_s1_slavearbiterlockenable2;
+  wire             pio_egmenable_s1_unreg_firsttransfer;
+  wire             pio_egmenable_s1_waits_for_read;
+  wire             pio_egmenable_s1_waits_for_write;
+  wire             pio_egmenable_s1_write_n;
+  wire             pio_egmenable_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_egmenable_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_egmenable_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_egmenable_s1_end_xfer;
+    end
+
+
+  assign pio_egmenable_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_egmenable_s1));
+  //assign pio_egmenable_s1_readdata_from_sa = pio_egmenable_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_egmenable_s1_readdata_from_sa = pio_egmenable_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_egmenable_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h1001130) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_egmenable_s1_arb_share_counter set values, which is an e_mux
+  assign pio_egmenable_s1_arb_share_set_values = 1;
+
+  //pio_egmenable_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_egmenable_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_egmenable_s1;
+
+  //pio_egmenable_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_egmenable_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_egmenable_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_egmenable_s1_arb_share_counter_next_value = pio_egmenable_s1_firsttransfer ? (pio_egmenable_s1_arb_share_set_values - 1) : |pio_egmenable_s1_arb_share_counter ? (pio_egmenable_s1_arb_share_counter - 1) : 0;
+
+  //pio_egmenable_s1_allgrants all slave grants, which is an e_mux
+  assign pio_egmenable_s1_allgrants = |pio_egmenable_s1_grant_vector;
+
+  //pio_egmenable_s1_end_xfer assignment, which is an e_assign
+  assign pio_egmenable_s1_end_xfer = ~(pio_egmenable_s1_waits_for_read | pio_egmenable_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_egmenable_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_egmenable_s1 = pio_egmenable_s1_end_xfer & (~pio_egmenable_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_egmenable_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_egmenable_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_egmenable_s1 & pio_egmenable_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_egmenable_s1 & ~pio_egmenable_s1_non_bursting_master_requests);
+
+  //pio_egmenable_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmenable_s1_arb_share_counter <= 0;
+      else if (pio_egmenable_s1_arb_counter_enable)
+          pio_egmenable_s1_arb_share_counter <= pio_egmenable_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_egmenable_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmenable_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_egmenable_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_egmenable_s1) | (end_xfer_arb_share_counter_term_pio_egmenable_s1 & ~pio_egmenable_s1_non_bursting_master_requests))
+          pio_egmenable_s1_slavearbiterlockenable <= |pio_egmenable_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_egmenable/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_egmenable_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_egmenable_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_egmenable_s1_slavearbiterlockenable2 = |pio_egmenable_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_egmenable/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_egmenable_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_egmenable_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_egmenable_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_egmenable_s1 = cpu_0_data_master_requests_pio_egmenable_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_egmenable_s1_writedata mux, which is an e_mux
+  assign pio_egmenable_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_egmenable_s1 = cpu_0_data_master_qualified_request_pio_egmenable_s1;
+
+  //cpu_0/data_master saved-grant pio_egmenable/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_egmenable_s1 = cpu_0_data_master_requests_pio_egmenable_s1;
+
+  //allow new arb cycle for pio_egmenable/s1, which is an e_assign
+  assign pio_egmenable_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_egmenable_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_egmenable_s1_master_qreq_vector = 1;
+
+  //pio_egmenable_s1_reset_n assignment, which is an e_assign
+  assign pio_egmenable_s1_reset_n = reset_n;
+
+  assign pio_egmenable_s1_chipselect = cpu_0_data_master_granted_pio_egmenable_s1;
+  //pio_egmenable_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_egmenable_s1_firsttransfer = pio_egmenable_s1_begins_xfer ? pio_egmenable_s1_unreg_firsttransfer : pio_egmenable_s1_reg_firsttransfer;
+
+  //pio_egmenable_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_egmenable_s1_unreg_firsttransfer = ~(pio_egmenable_s1_slavearbiterlockenable & pio_egmenable_s1_any_continuerequest);
+
+  //pio_egmenable_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmenable_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_egmenable_s1_begins_xfer)
+          pio_egmenable_s1_reg_firsttransfer <= pio_egmenable_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_egmenable_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_egmenable_s1_beginbursttransfer_internal = pio_egmenable_s1_begins_xfer;
+
+  //~pio_egmenable_s1_write_n assignment, which is an e_mux
+  assign pio_egmenable_s1_write_n = ~(cpu_0_data_master_granted_pio_egmenable_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_egmenable_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_egmenable_s1_address mux, which is an e_mux
+  assign pio_egmenable_s1_address = shifted_address_to_pio_egmenable_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_egmenable_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_egmenable_s1_end_xfer <= 1;
+      else 
+        d1_pio_egmenable_s1_end_xfer <= pio_egmenable_s1_end_xfer;
+    end
+
+
+  //pio_egmenable_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_egmenable_s1_waits_for_read = pio_egmenable_s1_in_a_read_cycle & pio_egmenable_s1_begins_xfer;
+
+  //pio_egmenable_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_egmenable_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_egmenable_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_egmenable_s1_in_a_read_cycle;
+
+  //pio_egmenable_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_egmenable_s1_waits_for_write = pio_egmenable_s1_in_a_write_cycle & 0;
+
+  //pio_egmenable_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_egmenable_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_egmenable_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_egmenable_s1_in_a_write_cycle;
+
+  assign wait_for_pio_egmenable_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_egmenable/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_egmreset_s1_arbitrator (
+                                    // inputs:
+                                     clk,
+                                     cpu_0_data_master_address_to_slave,
+                                     cpu_0_data_master_read,
+                                     cpu_0_data_master_waitrequest,
+                                     cpu_0_data_master_write,
+                                     cpu_0_data_master_writedata,
+                                     pio_egmreset_s1_readdata,
+                                     reset_n,
+
+                                    // outputs:
+                                     cpu_0_data_master_granted_pio_egmreset_s1,
+                                     cpu_0_data_master_qualified_request_pio_egmreset_s1,
+                                     cpu_0_data_master_read_data_valid_pio_egmreset_s1,
+                                     cpu_0_data_master_requests_pio_egmreset_s1,
+                                     d1_pio_egmreset_s1_end_xfer,
+                                     pio_egmreset_s1_address,
+                                     pio_egmreset_s1_chipselect,
+                                     pio_egmreset_s1_readdata_from_sa,
+                                     pio_egmreset_s1_reset_n,
+                                     pio_egmreset_s1_write_n,
+                                     pio_egmreset_s1_writedata
+                                  )
+;
+
+  output           cpu_0_data_master_granted_pio_egmreset_s1;
+  output           cpu_0_data_master_qualified_request_pio_egmreset_s1;
+  output           cpu_0_data_master_read_data_valid_pio_egmreset_s1;
+  output           cpu_0_data_master_requests_pio_egmreset_s1;
+  output           d1_pio_egmreset_s1_end_xfer;
+  output  [  1: 0] pio_egmreset_s1_address;
+  output           pio_egmreset_s1_chipselect;
+  output           pio_egmreset_s1_readdata_from_sa;
+  output           pio_egmreset_s1_reset_n;
+  output           pio_egmreset_s1_write_n;
+  output           pio_egmreset_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input            pio_egmreset_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_egmreset_s1;
+  wire             cpu_0_data_master_qualified_request_pio_egmreset_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_egmreset_s1;
+  wire             cpu_0_data_master_requests_pio_egmreset_s1;
+  wire             cpu_0_data_master_saved_grant_pio_egmreset_s1;
+  reg              d1_pio_egmreset_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_egmreset_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_egmreset_s1_address;
+  wire             pio_egmreset_s1_allgrants;
+  wire             pio_egmreset_s1_allow_new_arb_cycle;
+  wire             pio_egmreset_s1_any_bursting_master_saved_grant;
+  wire             pio_egmreset_s1_any_continuerequest;
+  wire             pio_egmreset_s1_arb_counter_enable;
+  reg     [  1: 0] pio_egmreset_s1_arb_share_counter;
+  wire    [  1: 0] pio_egmreset_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_egmreset_s1_arb_share_set_values;
+  wire             pio_egmreset_s1_beginbursttransfer_internal;
+  wire             pio_egmreset_s1_begins_xfer;
+  wire             pio_egmreset_s1_chipselect;
+  wire             pio_egmreset_s1_end_xfer;
+  wire             pio_egmreset_s1_firsttransfer;
+  wire             pio_egmreset_s1_grant_vector;
+  wire             pio_egmreset_s1_in_a_read_cycle;
+  wire             pio_egmreset_s1_in_a_write_cycle;
+  wire             pio_egmreset_s1_master_qreq_vector;
+  wire             pio_egmreset_s1_non_bursting_master_requests;
+  wire             pio_egmreset_s1_readdata_from_sa;
+  reg              pio_egmreset_s1_reg_firsttransfer;
+  wire             pio_egmreset_s1_reset_n;
+  reg              pio_egmreset_s1_slavearbiterlockenable;
+  wire             pio_egmreset_s1_slavearbiterlockenable2;
+  wire             pio_egmreset_s1_unreg_firsttransfer;
+  wire             pio_egmreset_s1_waits_for_read;
+  wire             pio_egmreset_s1_waits_for_write;
+  wire             pio_egmreset_s1_write_n;
+  wire             pio_egmreset_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_egmreset_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_egmreset_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_egmreset_s1_end_xfer;
+    end
+
+
+  assign pio_egmreset_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_egmreset_s1));
+  //assign pio_egmreset_s1_readdata_from_sa = pio_egmreset_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_egmreset_s1_readdata_from_sa = pio_egmreset_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_egmreset_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h1001140) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_egmreset_s1_arb_share_counter set values, which is an e_mux
+  assign pio_egmreset_s1_arb_share_set_values = 1;
+
+  //pio_egmreset_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_egmreset_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_egmreset_s1;
+
+  //pio_egmreset_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_egmreset_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_egmreset_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_egmreset_s1_arb_share_counter_next_value = pio_egmreset_s1_firsttransfer ? (pio_egmreset_s1_arb_share_set_values - 1) : |pio_egmreset_s1_arb_share_counter ? (pio_egmreset_s1_arb_share_counter - 1) : 0;
+
+  //pio_egmreset_s1_allgrants all slave grants, which is an e_mux
+  assign pio_egmreset_s1_allgrants = |pio_egmreset_s1_grant_vector;
+
+  //pio_egmreset_s1_end_xfer assignment, which is an e_assign
+  assign pio_egmreset_s1_end_xfer = ~(pio_egmreset_s1_waits_for_read | pio_egmreset_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_egmreset_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_egmreset_s1 = pio_egmreset_s1_end_xfer & (~pio_egmreset_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_egmreset_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_egmreset_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_egmreset_s1 & pio_egmreset_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_egmreset_s1 & ~pio_egmreset_s1_non_bursting_master_requests);
+
+  //pio_egmreset_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmreset_s1_arb_share_counter <= 0;
+      else if (pio_egmreset_s1_arb_counter_enable)
+          pio_egmreset_s1_arb_share_counter <= pio_egmreset_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_egmreset_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmreset_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_egmreset_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_egmreset_s1) | (end_xfer_arb_share_counter_term_pio_egmreset_s1 & ~pio_egmreset_s1_non_bursting_master_requests))
+          pio_egmreset_s1_slavearbiterlockenable <= |pio_egmreset_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_egmreset/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_egmreset_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_egmreset_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_egmreset_s1_slavearbiterlockenable2 = |pio_egmreset_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_egmreset/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_egmreset_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_egmreset_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_egmreset_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_egmreset_s1 = cpu_0_data_master_requests_pio_egmreset_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_egmreset_s1_writedata mux, which is an e_mux
+  assign pio_egmreset_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_egmreset_s1 = cpu_0_data_master_qualified_request_pio_egmreset_s1;
+
+  //cpu_0/data_master saved-grant pio_egmreset/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_egmreset_s1 = cpu_0_data_master_requests_pio_egmreset_s1;
+
+  //allow new arb cycle for pio_egmreset/s1, which is an e_assign
+  assign pio_egmreset_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_egmreset_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_egmreset_s1_master_qreq_vector = 1;
+
+  //pio_egmreset_s1_reset_n assignment, which is an e_assign
+  assign pio_egmreset_s1_reset_n = reset_n;
+
+  assign pio_egmreset_s1_chipselect = cpu_0_data_master_granted_pio_egmreset_s1;
+  //pio_egmreset_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_egmreset_s1_firsttransfer = pio_egmreset_s1_begins_xfer ? pio_egmreset_s1_unreg_firsttransfer : pio_egmreset_s1_reg_firsttransfer;
+
+  //pio_egmreset_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_egmreset_s1_unreg_firsttransfer = ~(pio_egmreset_s1_slavearbiterlockenable & pio_egmreset_s1_any_continuerequest);
+
+  //pio_egmreset_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_egmreset_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_egmreset_s1_begins_xfer)
+          pio_egmreset_s1_reg_firsttransfer <= pio_egmreset_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_egmreset_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_egmreset_s1_beginbursttransfer_internal = pio_egmreset_s1_begins_xfer;
+
+  //~pio_egmreset_s1_write_n assignment, which is an e_mux
+  assign pio_egmreset_s1_write_n = ~(cpu_0_data_master_granted_pio_egmreset_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_egmreset_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_egmreset_s1_address mux, which is an e_mux
+  assign pio_egmreset_s1_address = shifted_address_to_pio_egmreset_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_egmreset_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_egmreset_s1_end_xfer <= 1;
+      else 
+        d1_pio_egmreset_s1_end_xfer <= pio_egmreset_s1_end_xfer;
+    end
+
+
+  //pio_egmreset_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_egmreset_s1_waits_for_read = pio_egmreset_s1_in_a_read_cycle & pio_egmreset_s1_begins_xfer;
+
+  //pio_egmreset_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_egmreset_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_egmreset_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_egmreset_s1_in_a_read_cycle;
+
+  //pio_egmreset_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_egmreset_s1_waits_for_write = pio_egmreset_s1_in_a_write_cycle & 0;
+
+  //pio_egmreset_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_egmreset_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_egmreset_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_egmreset_s1_in_a_write_cycle;
+
+  assign wait_for_pio_egmreset_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_egmreset/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_latency_s1_arbitrator (
+                                   // inputs:
+                                    clk,
+                                    cpu_0_data_master_address_to_slave,
+                                    cpu_0_data_master_read,
+                                    cpu_0_data_master_write,
+                                    pio_latency_s1_readdata,
+                                    reset_n,
+
+                                   // outputs:
+                                    cpu_0_data_master_granted_pio_latency_s1,
+                                    cpu_0_data_master_qualified_request_pio_latency_s1,
+                                    cpu_0_data_master_read_data_valid_pio_latency_s1,
+                                    cpu_0_data_master_requests_pio_latency_s1,
+                                    d1_pio_latency_s1_end_xfer,
+                                    pio_latency_s1_address,
+                                    pio_latency_s1_readdata_from_sa,
+                                    pio_latency_s1_reset_n
+                                 )
+;
+
+  output           cpu_0_data_master_granted_pio_latency_s1;
+  output           cpu_0_data_master_qualified_request_pio_latency_s1;
+  output           cpu_0_data_master_read_data_valid_pio_latency_s1;
+  output           cpu_0_data_master_requests_pio_latency_s1;
+  output           d1_pio_latency_s1_end_xfer;
+  output  [  1: 0] pio_latency_s1_address;
+  output  [ 15: 0] pio_latency_s1_readdata_from_sa;
+  output           pio_latency_s1_reset_n;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_write;
+  input   [ 15: 0] pio_latency_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_latency_s1;
+  wire             cpu_0_data_master_qualified_request_pio_latency_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_latency_s1;
+  wire             cpu_0_data_master_requests_pio_latency_s1;
+  wire             cpu_0_data_master_saved_grant_pio_latency_s1;
+  reg              d1_pio_latency_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_latency_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_latency_s1_address;
+  wire             pio_latency_s1_allgrants;
+  wire             pio_latency_s1_allow_new_arb_cycle;
+  wire             pio_latency_s1_any_bursting_master_saved_grant;
+  wire             pio_latency_s1_any_continuerequest;
+  wire             pio_latency_s1_arb_counter_enable;
+  reg     [  1: 0] pio_latency_s1_arb_share_counter;
+  wire    [  1: 0] pio_latency_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_latency_s1_arb_share_set_values;
+  wire             pio_latency_s1_beginbursttransfer_internal;
+  wire             pio_latency_s1_begins_xfer;
+  wire             pio_latency_s1_end_xfer;
+  wire             pio_latency_s1_firsttransfer;
+  wire             pio_latency_s1_grant_vector;
+  wire             pio_latency_s1_in_a_read_cycle;
+  wire             pio_latency_s1_in_a_write_cycle;
+  wire             pio_latency_s1_master_qreq_vector;
+  wire             pio_latency_s1_non_bursting_master_requests;
+  wire    [ 15: 0] pio_latency_s1_readdata_from_sa;
+  reg              pio_latency_s1_reg_firsttransfer;
+  wire             pio_latency_s1_reset_n;
+  reg              pio_latency_s1_slavearbiterlockenable;
+  wire             pio_latency_s1_slavearbiterlockenable2;
+  wire             pio_latency_s1_unreg_firsttransfer;
+  wire             pio_latency_s1_waits_for_read;
+  wire             pio_latency_s1_waits_for_write;
+  wire    [ 24: 0] shifted_address_to_pio_latency_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_latency_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_latency_s1_end_xfer;
+    end
+
+
+  assign pio_latency_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_latency_s1));
+  //assign pio_latency_s1_readdata_from_sa = pio_latency_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_latency_s1_readdata_from_sa = pio_latency_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_latency_s1 = (({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h10010e0) & (cpu_0_data_master_read | cpu_0_data_master_write)) & cpu_0_data_master_read;
+  //pio_latency_s1_arb_share_counter set values, which is an e_mux
+  assign pio_latency_s1_arb_share_set_values = 1;
+
+  //pio_latency_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_latency_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_latency_s1;
+
+  //pio_latency_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_latency_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_latency_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_latency_s1_arb_share_counter_next_value = pio_latency_s1_firsttransfer ? (pio_latency_s1_arb_share_set_values - 1) : |pio_latency_s1_arb_share_counter ? (pio_latency_s1_arb_share_counter - 1) : 0;
+
+  //pio_latency_s1_allgrants all slave grants, which is an e_mux
+  assign pio_latency_s1_allgrants = |pio_latency_s1_grant_vector;
+
+  //pio_latency_s1_end_xfer assignment, which is an e_assign
+  assign pio_latency_s1_end_xfer = ~(pio_latency_s1_waits_for_read | pio_latency_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_latency_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_latency_s1 = pio_latency_s1_end_xfer & (~pio_latency_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_latency_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_latency_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_latency_s1 & pio_latency_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_latency_s1 & ~pio_latency_s1_non_bursting_master_requests);
+
+  //pio_latency_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_latency_s1_arb_share_counter <= 0;
+      else if (pio_latency_s1_arb_counter_enable)
+          pio_latency_s1_arb_share_counter <= pio_latency_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_latency_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_latency_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_latency_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_latency_s1) | (end_xfer_arb_share_counter_term_pio_latency_s1 & ~pio_latency_s1_non_bursting_master_requests))
+          pio_latency_s1_slavearbiterlockenable <= |pio_latency_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_latency/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_latency_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_latency_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_latency_s1_slavearbiterlockenable2 = |pio_latency_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_latency/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_latency_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_latency_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_latency_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_latency_s1 = cpu_0_data_master_requests_pio_latency_s1;
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_latency_s1 = cpu_0_data_master_qualified_request_pio_latency_s1;
+
+  //cpu_0/data_master saved-grant pio_latency/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_latency_s1 = cpu_0_data_master_requests_pio_latency_s1;
+
+  //allow new arb cycle for pio_latency/s1, which is an e_assign
+  assign pio_latency_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_latency_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_latency_s1_master_qreq_vector = 1;
+
+  //pio_latency_s1_reset_n assignment, which is an e_assign
+  assign pio_latency_s1_reset_n = reset_n;
+
+  //pio_latency_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_latency_s1_firsttransfer = pio_latency_s1_begins_xfer ? pio_latency_s1_unreg_firsttransfer : pio_latency_s1_reg_firsttransfer;
+
+  //pio_latency_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_latency_s1_unreg_firsttransfer = ~(pio_latency_s1_slavearbiterlockenable & pio_latency_s1_any_continuerequest);
+
+  //pio_latency_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_latency_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_latency_s1_begins_xfer)
+          pio_latency_s1_reg_firsttransfer <= pio_latency_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_latency_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_latency_s1_beginbursttransfer_internal = pio_latency_s1_begins_xfer;
+
+  assign shifted_address_to_pio_latency_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_latency_s1_address mux, which is an e_mux
+  assign pio_latency_s1_address = shifted_address_to_pio_latency_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_latency_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_latency_s1_end_xfer <= 1;
+      else 
+        d1_pio_latency_s1_end_xfer <= pio_latency_s1_end_xfer;
+    end
+
+
+  //pio_latency_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_latency_s1_waits_for_read = pio_latency_s1_in_a_read_cycle & pio_latency_s1_begins_xfer;
+
+  //pio_latency_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_latency_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_latency_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_latency_s1_in_a_read_cycle;
+
+  //pio_latency_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_latency_s1_waits_for_write = pio_latency_s1_in_a_write_cycle & 0;
+
+  //pio_latency_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_latency_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_latency_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_latency_s1_in_a_write_cycle;
+
+  assign wait_for_pio_latency_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_latency/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_missed_s1_arbitrator (
+                                  // inputs:
+                                   clk,
+                                   cpu_0_data_master_address_to_slave,
+                                   cpu_0_data_master_read,
+                                   cpu_0_data_master_write,
+                                   pio_missed_s1_readdata,
+                                   reset_n,
+
+                                  // outputs:
+                                   cpu_0_data_master_granted_pio_missed_s1,
+                                   cpu_0_data_master_qualified_request_pio_missed_s1,
+                                   cpu_0_data_master_read_data_valid_pio_missed_s1,
+                                   cpu_0_data_master_requests_pio_missed_s1,
+                                   d1_pio_missed_s1_end_xfer,
+                                   pio_missed_s1_address,
+                                   pio_missed_s1_readdata_from_sa,
+                                   pio_missed_s1_reset_n
+                                )
+;
+
+  output           cpu_0_data_master_granted_pio_missed_s1;
+  output           cpu_0_data_master_qualified_request_pio_missed_s1;
+  output           cpu_0_data_master_read_data_valid_pio_missed_s1;
+  output           cpu_0_data_master_requests_pio_missed_s1;
+  output           d1_pio_missed_s1_end_xfer;
+  output  [  1: 0] pio_missed_s1_address;
+  output  [ 15: 0] pio_missed_s1_readdata_from_sa;
+  output           pio_missed_s1_reset_n;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_write;
+  input   [ 15: 0] pio_missed_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_missed_s1;
+  wire             cpu_0_data_master_qualified_request_pio_missed_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_missed_s1;
+  wire             cpu_0_data_master_requests_pio_missed_s1;
+  wire             cpu_0_data_master_saved_grant_pio_missed_s1;
+  reg              d1_pio_missed_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_missed_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_missed_s1_address;
+  wire             pio_missed_s1_allgrants;
+  wire             pio_missed_s1_allow_new_arb_cycle;
+  wire             pio_missed_s1_any_bursting_master_saved_grant;
+  wire             pio_missed_s1_any_continuerequest;
+  wire             pio_missed_s1_arb_counter_enable;
+  reg     [  1: 0] pio_missed_s1_arb_share_counter;
+  wire    [  1: 0] pio_missed_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_missed_s1_arb_share_set_values;
+  wire             pio_missed_s1_beginbursttransfer_internal;
+  wire             pio_missed_s1_begins_xfer;
+  wire             pio_missed_s1_end_xfer;
+  wire             pio_missed_s1_firsttransfer;
+  wire             pio_missed_s1_grant_vector;
+  wire             pio_missed_s1_in_a_read_cycle;
+  wire             pio_missed_s1_in_a_write_cycle;
+  wire             pio_missed_s1_master_qreq_vector;
+  wire             pio_missed_s1_non_bursting_master_requests;
+  wire    [ 15: 0] pio_missed_s1_readdata_from_sa;
+  reg              pio_missed_s1_reg_firsttransfer;
+  wire             pio_missed_s1_reset_n;
+  reg              pio_missed_s1_slavearbiterlockenable;
+  wire             pio_missed_s1_slavearbiterlockenable2;
+  wire             pio_missed_s1_unreg_firsttransfer;
+  wire             pio_missed_s1_waits_for_read;
+  wire             pio_missed_s1_waits_for_write;
+  wire    [ 24: 0] shifted_address_to_pio_missed_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_missed_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_missed_s1_end_xfer;
+    end
+
+
+  assign pio_missed_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_missed_s1));
+  //assign pio_missed_s1_readdata_from_sa = pio_missed_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_missed_s1_readdata_from_sa = pio_missed_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_missed_s1 = (({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h10010f0) & (cpu_0_data_master_read | cpu_0_data_master_write)) & cpu_0_data_master_read;
+  //pio_missed_s1_arb_share_counter set values, which is an e_mux
+  assign pio_missed_s1_arb_share_set_values = 1;
+
+  //pio_missed_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_missed_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_missed_s1;
+
+  //pio_missed_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_missed_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_missed_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_missed_s1_arb_share_counter_next_value = pio_missed_s1_firsttransfer ? (pio_missed_s1_arb_share_set_values - 1) : |pio_missed_s1_arb_share_counter ? (pio_missed_s1_arb_share_counter - 1) : 0;
+
+  //pio_missed_s1_allgrants all slave grants, which is an e_mux
+  assign pio_missed_s1_allgrants = |pio_missed_s1_grant_vector;
+
+  //pio_missed_s1_end_xfer assignment, which is an e_assign
+  assign pio_missed_s1_end_xfer = ~(pio_missed_s1_waits_for_read | pio_missed_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_missed_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_missed_s1 = pio_missed_s1_end_xfer & (~pio_missed_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_missed_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_missed_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_missed_s1 & pio_missed_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_missed_s1 & ~pio_missed_s1_non_bursting_master_requests);
+
+  //pio_missed_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_missed_s1_arb_share_counter <= 0;
+      else if (pio_missed_s1_arb_counter_enable)
+          pio_missed_s1_arb_share_counter <= pio_missed_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_missed_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_missed_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_missed_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_missed_s1) | (end_xfer_arb_share_counter_term_pio_missed_s1 & ~pio_missed_s1_non_bursting_master_requests))
+          pio_missed_s1_slavearbiterlockenable <= |pio_missed_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_missed/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_missed_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_missed_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_missed_s1_slavearbiterlockenable2 = |pio_missed_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_missed/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_missed_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_missed_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_missed_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_missed_s1 = cpu_0_data_master_requests_pio_missed_s1;
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_missed_s1 = cpu_0_data_master_qualified_request_pio_missed_s1;
+
+  //cpu_0/data_master saved-grant pio_missed/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_missed_s1 = cpu_0_data_master_requests_pio_missed_s1;
+
+  //allow new arb cycle for pio_missed/s1, which is an e_assign
+  assign pio_missed_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_missed_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_missed_s1_master_qreq_vector = 1;
+
+  //pio_missed_s1_reset_n assignment, which is an e_assign
+  assign pio_missed_s1_reset_n = reset_n;
+
+  //pio_missed_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_missed_s1_firsttransfer = pio_missed_s1_begins_xfer ? pio_missed_s1_unreg_firsttransfer : pio_missed_s1_reg_firsttransfer;
+
+  //pio_missed_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_missed_s1_unreg_firsttransfer = ~(pio_missed_s1_slavearbiterlockenable & pio_missed_s1_any_continuerequest);
+
+  //pio_missed_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_missed_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_missed_s1_begins_xfer)
+          pio_missed_s1_reg_firsttransfer <= pio_missed_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_missed_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_missed_s1_beginbursttransfer_internal = pio_missed_s1_begins_xfer;
+
+  assign shifted_address_to_pio_missed_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_missed_s1_address mux, which is an e_mux
+  assign pio_missed_s1_address = shifted_address_to_pio_missed_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_missed_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_missed_s1_end_xfer <= 1;
+      else 
+        d1_pio_missed_s1_end_xfer <= pio_missed_s1_end_xfer;
+    end
+
+
+  //pio_missed_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_missed_s1_waits_for_read = pio_missed_s1_in_a_read_cycle & pio_missed_s1_begins_xfer;
+
+  //pio_missed_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_missed_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_missed_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_missed_s1_in_a_read_cycle;
+
+  //pio_missed_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_missed_s1_waits_for_write = pio_missed_s1_in_a_write_cycle & 0;
+
+  //pio_missed_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_missed_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_missed_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_missed_s1_in_a_write_cycle;
+
+  assign wait_for_pio_missed_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_missed/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_period_s1_arbitrator (
+                                  // inputs:
+                                   clk,
+                                   cpu_0_data_master_address_to_slave,
+                                   cpu_0_data_master_read,
+                                   cpu_0_data_master_waitrequest,
+                                   cpu_0_data_master_write,
+                                   cpu_0_data_master_writedata,
+                                   pio_period_s1_readdata,
+                                   reset_n,
+
+                                  // outputs:
+                                   cpu_0_data_master_granted_pio_period_s1,
+                                   cpu_0_data_master_qualified_request_pio_period_s1,
+                                   cpu_0_data_master_read_data_valid_pio_period_s1,
+                                   cpu_0_data_master_requests_pio_period_s1,
+                                   d1_pio_period_s1_end_xfer,
+                                   pio_period_s1_address,
+                                   pio_period_s1_chipselect,
+                                   pio_period_s1_readdata_from_sa,
+                                   pio_period_s1_reset_n,
+                                   pio_period_s1_write_n,
+                                   pio_period_s1_writedata
+                                )
+;
+
+  output           cpu_0_data_master_granted_pio_period_s1;
+  output           cpu_0_data_master_qualified_request_pio_period_s1;
+  output           cpu_0_data_master_read_data_valid_pio_period_s1;
+  output           cpu_0_data_master_requests_pio_period_s1;
+  output           d1_pio_period_s1_end_xfer;
+  output  [  1: 0] pio_period_s1_address;
+  output           pio_period_s1_chipselect;
+  output  [  3: 0] pio_period_s1_readdata_from_sa;
+  output           pio_period_s1_reset_n;
+  output           pio_period_s1_write_n;
+  output  [  3: 0] pio_period_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input   [  3: 0] pio_period_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_period_s1;
+  wire             cpu_0_data_master_qualified_request_pio_period_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_period_s1;
+  wire             cpu_0_data_master_requests_pio_period_s1;
+  wire             cpu_0_data_master_saved_grant_pio_period_s1;
+  reg              d1_pio_period_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_period_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_period_s1_address;
+  wire             pio_period_s1_allgrants;
+  wire             pio_period_s1_allow_new_arb_cycle;
+  wire             pio_period_s1_any_bursting_master_saved_grant;
+  wire             pio_period_s1_any_continuerequest;
+  wire             pio_period_s1_arb_counter_enable;
+  reg     [  1: 0] pio_period_s1_arb_share_counter;
+  wire    [  1: 0] pio_period_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_period_s1_arb_share_set_values;
+  wire             pio_period_s1_beginbursttransfer_internal;
+  wire             pio_period_s1_begins_xfer;
+  wire             pio_period_s1_chipselect;
+  wire             pio_period_s1_end_xfer;
+  wire             pio_period_s1_firsttransfer;
+  wire             pio_period_s1_grant_vector;
+  wire             pio_period_s1_in_a_read_cycle;
+  wire             pio_period_s1_in_a_write_cycle;
+  wire             pio_period_s1_master_qreq_vector;
+  wire             pio_period_s1_non_bursting_master_requests;
+  wire    [  3: 0] pio_period_s1_readdata_from_sa;
+  reg              pio_period_s1_reg_firsttransfer;
+  wire             pio_period_s1_reset_n;
+  reg              pio_period_s1_slavearbiterlockenable;
+  wire             pio_period_s1_slavearbiterlockenable2;
+  wire             pio_period_s1_unreg_firsttransfer;
+  wire             pio_period_s1_waits_for_read;
+  wire             pio_period_s1_waits_for_write;
+  wire             pio_period_s1_write_n;
+  wire    [  3: 0] pio_period_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_period_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_period_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_period_s1_end_xfer;
+    end
+
+
+  assign pio_period_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_period_s1));
+  //assign pio_period_s1_readdata_from_sa = pio_period_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_period_s1_readdata_from_sa = pio_period_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_period_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h1001110) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_period_s1_arb_share_counter set values, which is an e_mux
+  assign pio_period_s1_arb_share_set_values = 1;
+
+  //pio_period_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_period_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_period_s1;
+
+  //pio_period_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_period_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_period_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_period_s1_arb_share_counter_next_value = pio_period_s1_firsttransfer ? (pio_period_s1_arb_share_set_values - 1) : |pio_period_s1_arb_share_counter ? (pio_period_s1_arb_share_counter - 1) : 0;
+
+  //pio_period_s1_allgrants all slave grants, which is an e_mux
+  assign pio_period_s1_allgrants = |pio_period_s1_grant_vector;
+
+  //pio_period_s1_end_xfer assignment, which is an e_assign
+  assign pio_period_s1_end_xfer = ~(pio_period_s1_waits_for_read | pio_period_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_period_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_period_s1 = pio_period_s1_end_xfer & (~pio_period_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_period_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_period_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_period_s1 & pio_period_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_period_s1 & ~pio_period_s1_non_bursting_master_requests);
+
+  //pio_period_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_period_s1_arb_share_counter <= 0;
+      else if (pio_period_s1_arb_counter_enable)
+          pio_period_s1_arb_share_counter <= pio_period_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_period_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_period_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_period_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_period_s1) | (end_xfer_arb_share_counter_term_pio_period_s1 & ~pio_period_s1_non_bursting_master_requests))
+          pio_period_s1_slavearbiterlockenable <= |pio_period_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_period/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_period_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_period_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_period_s1_slavearbiterlockenable2 = |pio_period_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_period/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_period_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_period_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_period_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_period_s1 = cpu_0_data_master_requests_pio_period_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_period_s1_writedata mux, which is an e_mux
+  assign pio_period_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_period_s1 = cpu_0_data_master_qualified_request_pio_period_s1;
+
+  //cpu_0/data_master saved-grant pio_period/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_period_s1 = cpu_0_data_master_requests_pio_period_s1;
+
+  //allow new arb cycle for pio_period/s1, which is an e_assign
+  assign pio_period_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_period_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_period_s1_master_qreq_vector = 1;
+
+  //pio_period_s1_reset_n assignment, which is an e_assign
+  assign pio_period_s1_reset_n = reset_n;
+
+  assign pio_period_s1_chipselect = cpu_0_data_master_granted_pio_period_s1;
+  //pio_period_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_period_s1_firsttransfer = pio_period_s1_begins_xfer ? pio_period_s1_unreg_firsttransfer : pio_period_s1_reg_firsttransfer;
+
+  //pio_period_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_period_s1_unreg_firsttransfer = ~(pio_period_s1_slavearbiterlockenable & pio_period_s1_any_continuerequest);
+
+  //pio_period_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_period_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_period_s1_begins_xfer)
+          pio_period_s1_reg_firsttransfer <= pio_period_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_period_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_period_s1_beginbursttransfer_internal = pio_period_s1_begins_xfer;
+
+  //~pio_period_s1_write_n assignment, which is an e_mux
+  assign pio_period_s1_write_n = ~(cpu_0_data_master_granted_pio_period_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_period_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_period_s1_address mux, which is an e_mux
+  assign pio_period_s1_address = shifted_address_to_pio_period_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_period_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_period_s1_end_xfer <= 1;
+      else 
+        d1_pio_period_s1_end_xfer <= pio_period_s1_end_xfer;
+    end
+
+
+  //pio_period_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_period_s1_waits_for_read = pio_period_s1_in_a_read_cycle & pio_period_s1_begins_xfer;
+
+  //pio_period_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_period_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_period_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_period_s1_in_a_read_cycle;
+
+  //pio_period_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_period_s1_waits_for_write = pio_period_s1_in_a_write_cycle & 0;
+
+  //pio_period_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_period_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_period_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_period_s1_in_a_write_cycle;
+
+  assign wait_for_pio_period_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_period/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_pulse_s1_arbitrator (
+                                 // inputs:
+                                  clk,
+                                  cpu_0_data_master_address_to_slave,
+                                  cpu_0_data_master_read,
+                                  cpu_0_data_master_waitrequest,
+                                  cpu_0_data_master_write,
+                                  cpu_0_data_master_writedata,
+                                  pio_pulse_s1_irq,
+                                  pio_pulse_s1_readdata,
+                                  reset_n,
+
+                                 // outputs:
+                                  cpu_0_data_master_granted_pio_pulse_s1,
+                                  cpu_0_data_master_qualified_request_pio_pulse_s1,
+                                  cpu_0_data_master_read_data_valid_pio_pulse_s1,
+                                  cpu_0_data_master_requests_pio_pulse_s1,
+                                  d1_pio_pulse_s1_end_xfer,
+                                  pio_pulse_s1_address,
+                                  pio_pulse_s1_chipselect,
+                                  pio_pulse_s1_irq_from_sa,
+                                  pio_pulse_s1_readdata_from_sa,
+                                  pio_pulse_s1_reset_n,
+                                  pio_pulse_s1_write_n,
+                                  pio_pulse_s1_writedata
+                               )
+;
+
+  output           cpu_0_data_master_granted_pio_pulse_s1;
+  output           cpu_0_data_master_qualified_request_pio_pulse_s1;
+  output           cpu_0_data_master_read_data_valid_pio_pulse_s1;
+  output           cpu_0_data_master_requests_pio_pulse_s1;
+  output           d1_pio_pulse_s1_end_xfer;
+  output  [  1: 0] pio_pulse_s1_address;
+  output           pio_pulse_s1_chipselect;
+  output           pio_pulse_s1_irq_from_sa;
+  output           pio_pulse_s1_readdata_from_sa;
+  output           pio_pulse_s1_reset_n;
+  output           pio_pulse_s1_write_n;
+  output           pio_pulse_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input            pio_pulse_s1_irq;
+  input            pio_pulse_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_pulse_s1;
+  wire             cpu_0_data_master_qualified_request_pio_pulse_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_pulse_s1;
+  wire             cpu_0_data_master_requests_pio_pulse_s1;
+  wire             cpu_0_data_master_saved_grant_pio_pulse_s1;
+  reg              d1_pio_pulse_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_pulse_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_pulse_s1_address;
+  wire             pio_pulse_s1_allgrants;
+  wire             pio_pulse_s1_allow_new_arb_cycle;
+  wire             pio_pulse_s1_any_bursting_master_saved_grant;
+  wire             pio_pulse_s1_any_continuerequest;
+  wire             pio_pulse_s1_arb_counter_enable;
+  reg     [  1: 0] pio_pulse_s1_arb_share_counter;
+  wire    [  1: 0] pio_pulse_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_pulse_s1_arb_share_set_values;
+  wire             pio_pulse_s1_beginbursttransfer_internal;
+  wire             pio_pulse_s1_begins_xfer;
+  wire             pio_pulse_s1_chipselect;
+  wire             pio_pulse_s1_end_xfer;
+  wire             pio_pulse_s1_firsttransfer;
+  wire             pio_pulse_s1_grant_vector;
+  wire             pio_pulse_s1_in_a_read_cycle;
+  wire             pio_pulse_s1_in_a_write_cycle;
+  wire             pio_pulse_s1_irq_from_sa;
+  wire             pio_pulse_s1_master_qreq_vector;
+  wire             pio_pulse_s1_non_bursting_master_requests;
+  wire             pio_pulse_s1_readdata_from_sa;
+  reg              pio_pulse_s1_reg_firsttransfer;
+  wire             pio_pulse_s1_reset_n;
+  reg              pio_pulse_s1_slavearbiterlockenable;
+  wire             pio_pulse_s1_slavearbiterlockenable2;
+  wire             pio_pulse_s1_unreg_firsttransfer;
+  wire             pio_pulse_s1_waits_for_read;
+  wire             pio_pulse_s1_waits_for_write;
+  wire             pio_pulse_s1_write_n;
+  wire             pio_pulse_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_pulse_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_pulse_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_pulse_s1_end_xfer;
+    end
+
+
+  assign pio_pulse_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_pulse_s1));
+  //assign pio_pulse_s1_readdata_from_sa = pio_pulse_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_pulse_s1_readdata_from_sa = pio_pulse_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_pulse_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h10010d0) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_pulse_s1_arb_share_counter set values, which is an e_mux
+  assign pio_pulse_s1_arb_share_set_values = 1;
+
+  //pio_pulse_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_pulse_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_pulse_s1;
+
+  //pio_pulse_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_pulse_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_pulse_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_pulse_s1_arb_share_counter_next_value = pio_pulse_s1_firsttransfer ? (pio_pulse_s1_arb_share_set_values - 1) : |pio_pulse_s1_arb_share_counter ? (pio_pulse_s1_arb_share_counter - 1) : 0;
+
+  //pio_pulse_s1_allgrants all slave grants, which is an e_mux
+  assign pio_pulse_s1_allgrants = |pio_pulse_s1_grant_vector;
+
+  //pio_pulse_s1_end_xfer assignment, which is an e_assign
+  assign pio_pulse_s1_end_xfer = ~(pio_pulse_s1_waits_for_read | pio_pulse_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_pulse_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_pulse_s1 = pio_pulse_s1_end_xfer & (~pio_pulse_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_pulse_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_pulse_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_pulse_s1 & pio_pulse_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_pulse_s1 & ~pio_pulse_s1_non_bursting_master_requests);
+
+  //pio_pulse_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_pulse_s1_arb_share_counter <= 0;
+      else if (pio_pulse_s1_arb_counter_enable)
+          pio_pulse_s1_arb_share_counter <= pio_pulse_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_pulse_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_pulse_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_pulse_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_pulse_s1) | (end_xfer_arb_share_counter_term_pio_pulse_s1 & ~pio_pulse_s1_non_bursting_master_requests))
+          pio_pulse_s1_slavearbiterlockenable <= |pio_pulse_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_pulse/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_pulse_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_pulse_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_pulse_s1_slavearbiterlockenable2 = |pio_pulse_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_pulse/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_pulse_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_pulse_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_pulse_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_pulse_s1 = cpu_0_data_master_requests_pio_pulse_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_pulse_s1_writedata mux, which is an e_mux
+  assign pio_pulse_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_pulse_s1 = cpu_0_data_master_qualified_request_pio_pulse_s1;
+
+  //cpu_0/data_master saved-grant pio_pulse/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_pulse_s1 = cpu_0_data_master_requests_pio_pulse_s1;
+
+  //allow new arb cycle for pio_pulse/s1, which is an e_assign
+  assign pio_pulse_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_pulse_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_pulse_s1_master_qreq_vector = 1;
+
+  //pio_pulse_s1_reset_n assignment, which is an e_assign
+  assign pio_pulse_s1_reset_n = reset_n;
+
+  assign pio_pulse_s1_chipselect = cpu_0_data_master_granted_pio_pulse_s1;
+  //pio_pulse_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_pulse_s1_firsttransfer = pio_pulse_s1_begins_xfer ? pio_pulse_s1_unreg_firsttransfer : pio_pulse_s1_reg_firsttransfer;
+
+  //pio_pulse_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_pulse_s1_unreg_firsttransfer = ~(pio_pulse_s1_slavearbiterlockenable & pio_pulse_s1_any_continuerequest);
+
+  //pio_pulse_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_pulse_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_pulse_s1_begins_xfer)
+          pio_pulse_s1_reg_firsttransfer <= pio_pulse_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_pulse_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_pulse_s1_beginbursttransfer_internal = pio_pulse_s1_begins_xfer;
+
+  //~pio_pulse_s1_write_n assignment, which is an e_mux
+  assign pio_pulse_s1_write_n = ~(cpu_0_data_master_granted_pio_pulse_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_pulse_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_pulse_s1_address mux, which is an e_mux
+  assign pio_pulse_s1_address = shifted_address_to_pio_pulse_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_pulse_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_pulse_s1_end_xfer <= 1;
+      else 
+        d1_pio_pulse_s1_end_xfer <= pio_pulse_s1_end_xfer;
+    end
+
+
+  //pio_pulse_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_pulse_s1_waits_for_read = pio_pulse_s1_in_a_read_cycle & pio_pulse_s1_begins_xfer;
+
+  //pio_pulse_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_pulse_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_pulse_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_pulse_s1_in_a_read_cycle;
+
+  //pio_pulse_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_pulse_s1_waits_for_write = pio_pulse_s1_in_a_write_cycle & 0;
+
+  //pio_pulse_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_pulse_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_pulse_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_pulse_s1_in_a_write_cycle;
+
+  assign wait_for_pio_pulse_s1_counter = 0;
+  //assign pio_pulse_s1_irq_from_sa = pio_pulse_s1_irq so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_pulse_s1_irq_from_sa = pio_pulse_s1_irq;
+
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_pulse/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+module pio_response_s1_arbitrator (
+                                    // inputs:
+                                     clk,
+                                     cpu_0_data_master_address_to_slave,
+                                     cpu_0_data_master_read,
+                                     cpu_0_data_master_waitrequest,
+                                     cpu_0_data_master_write,
+                                     cpu_0_data_master_writedata,
+                                     pio_response_s1_readdata,
+                                     reset_n,
+
+                                    // outputs:
+                                     cpu_0_data_master_granted_pio_response_s1,
+                                     cpu_0_data_master_qualified_request_pio_response_s1,
+                                     cpu_0_data_master_read_data_valid_pio_response_s1,
+                                     cpu_0_data_master_requests_pio_response_s1,
+                                     d1_pio_response_s1_end_xfer,
+                                     pio_response_s1_address,
+                                     pio_response_s1_chipselect,
+                                     pio_response_s1_readdata_from_sa,
+                                     pio_response_s1_reset_n,
+                                     pio_response_s1_write_n,
+                                     pio_response_s1_writedata
+                                  )
+;
+
+  output           cpu_0_data_master_granted_pio_response_s1;
+  output           cpu_0_data_master_qualified_request_pio_response_s1;
+  output           cpu_0_data_master_read_data_valid_pio_response_s1;
+  output           cpu_0_data_master_requests_pio_response_s1;
+  output           d1_pio_response_s1_end_xfer;
+  output  [  1: 0] pio_response_s1_address;
+  output           pio_response_s1_chipselect;
+  output           pio_response_s1_readdata_from_sa;
+  output           pio_response_s1_reset_n;
+  output           pio_response_s1_write_n;
+  output           pio_response_s1_writedata;
+  input            clk;
+  input   [ 24: 0] cpu_0_data_master_address_to_slave;
+  input            cpu_0_data_master_read;
+  input            cpu_0_data_master_waitrequest;
+  input            cpu_0_data_master_write;
+  input   [ 31: 0] cpu_0_data_master_writedata;
+  input            pio_response_s1_readdata;
+  input            reset_n;
+
+  wire             cpu_0_data_master_arbiterlock;
+  wire             cpu_0_data_master_arbiterlock2;
+  wire             cpu_0_data_master_continuerequest;
+  wire             cpu_0_data_master_granted_pio_response_s1;
+  wire             cpu_0_data_master_qualified_request_pio_response_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_response_s1;
+  wire             cpu_0_data_master_requests_pio_response_s1;
+  wire             cpu_0_data_master_saved_grant_pio_response_s1;
+  reg              d1_pio_response_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_response_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  1: 0] pio_response_s1_address;
+  wire             pio_response_s1_allgrants;
+  wire             pio_response_s1_allow_new_arb_cycle;
+  wire             pio_response_s1_any_bursting_master_saved_grant;
+  wire             pio_response_s1_any_continuerequest;
+  wire             pio_response_s1_arb_counter_enable;
+  reg     [  1: 0] pio_response_s1_arb_share_counter;
+  wire    [  1: 0] pio_response_s1_arb_share_counter_next_value;
+  wire    [  1: 0] pio_response_s1_arb_share_set_values;
+  wire             pio_response_s1_beginbursttransfer_internal;
+  wire             pio_response_s1_begins_xfer;
+  wire             pio_response_s1_chipselect;
+  wire             pio_response_s1_end_xfer;
+  wire             pio_response_s1_firsttransfer;
+  wire             pio_response_s1_grant_vector;
+  wire             pio_response_s1_in_a_read_cycle;
+  wire             pio_response_s1_in_a_write_cycle;
+  wire             pio_response_s1_master_qreq_vector;
+  wire             pio_response_s1_non_bursting_master_requests;
+  wire             pio_response_s1_readdata_from_sa;
+  reg              pio_response_s1_reg_firsttransfer;
+  wire             pio_response_s1_reset_n;
+  reg              pio_response_s1_slavearbiterlockenable;
+  wire             pio_response_s1_slavearbiterlockenable2;
+  wire             pio_response_s1_unreg_firsttransfer;
+  wire             pio_response_s1_waits_for_read;
+  wire             pio_response_s1_waits_for_write;
+  wire             pio_response_s1_write_n;
+  wire             pio_response_s1_writedata;
+  wire    [ 24: 0] shifted_address_to_pio_response_s1_from_cpu_0_data_master;
+  wire             wait_for_pio_response_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_response_s1_end_xfer;
+    end
+
+
+  assign pio_response_s1_begins_xfer = ~d1_reasons_to_wait & ((cpu_0_data_master_qualified_request_pio_response_s1));
+  //assign pio_response_s1_readdata_from_sa = pio_response_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_response_s1_readdata_from_sa = pio_response_s1_readdata;
+
+  assign cpu_0_data_master_requests_pio_response_s1 = ({cpu_0_data_master_address_to_slave[24 : 4] , 4'b0} == 25'h1001120) & (cpu_0_data_master_read | cpu_0_data_master_write);
+  //pio_response_s1_arb_share_counter set values, which is an e_mux
+  assign pio_response_s1_arb_share_set_values = 1;
+
+  //pio_response_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_response_s1_non_bursting_master_requests = cpu_0_data_master_requests_pio_response_s1;
+
+  //pio_response_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_response_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_response_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_response_s1_arb_share_counter_next_value = pio_response_s1_firsttransfer ? (pio_response_s1_arb_share_set_values - 1) : |pio_response_s1_arb_share_counter ? (pio_response_s1_arb_share_counter - 1) : 0;
+
+  //pio_response_s1_allgrants all slave grants, which is an e_mux
+  assign pio_response_s1_allgrants = |pio_response_s1_grant_vector;
+
+  //pio_response_s1_end_xfer assignment, which is an e_assign
+  assign pio_response_s1_end_xfer = ~(pio_response_s1_waits_for_read | pio_response_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_response_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_response_s1 = pio_response_s1_end_xfer & (~pio_response_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_response_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_response_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_response_s1 & pio_response_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_response_s1 & ~pio_response_s1_non_bursting_master_requests);
+
+  //pio_response_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_response_s1_arb_share_counter <= 0;
+      else if (pio_response_s1_arb_counter_enable)
+          pio_response_s1_arb_share_counter <= pio_response_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_response_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_response_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_response_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_response_s1) | (end_xfer_arb_share_counter_term_pio_response_s1 & ~pio_response_s1_non_bursting_master_requests))
+          pio_response_s1_slavearbiterlockenable <= |pio_response_s1_arb_share_counter_next_value;
+    end
+
+
+  //cpu_0/data_master pio_response/s1 arbiterlock, which is an e_assign
+  assign cpu_0_data_master_arbiterlock = pio_response_s1_slavearbiterlockenable & cpu_0_data_master_continuerequest;
+
+  //pio_response_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_response_s1_slavearbiterlockenable2 = |pio_response_s1_arb_share_counter_next_value;
+
+  //cpu_0/data_master pio_response/s1 arbiterlock2, which is an e_assign
+  assign cpu_0_data_master_arbiterlock2 = pio_response_s1_slavearbiterlockenable2 & cpu_0_data_master_continuerequest;
+
+  //pio_response_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_response_s1_any_continuerequest = 1;
+
+  //cpu_0_data_master_continuerequest continued request, which is an e_assign
+  assign cpu_0_data_master_continuerequest = 1;
+
+  assign cpu_0_data_master_qualified_request_pio_response_s1 = cpu_0_data_master_requests_pio_response_s1 & ~(((~cpu_0_data_master_waitrequest) & cpu_0_data_master_write));
+  //pio_response_s1_writedata mux, which is an e_mux
+  assign pio_response_s1_writedata = cpu_0_data_master_writedata;
+
+  //master is always granted when requested
+  assign cpu_0_data_master_granted_pio_response_s1 = cpu_0_data_master_qualified_request_pio_response_s1;
+
+  //cpu_0/data_master saved-grant pio_response/s1, which is an e_assign
+  assign cpu_0_data_master_saved_grant_pio_response_s1 = cpu_0_data_master_requests_pio_response_s1;
+
+  //allow new arb cycle for pio_response/s1, which is an e_assign
+  assign pio_response_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_response_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_response_s1_master_qreq_vector = 1;
+
+  //pio_response_s1_reset_n assignment, which is an e_assign
+  assign pio_response_s1_reset_n = reset_n;
+
+  assign pio_response_s1_chipselect = cpu_0_data_master_granted_pio_response_s1;
+  //pio_response_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_response_s1_firsttransfer = pio_response_s1_begins_xfer ? pio_response_s1_unreg_firsttransfer : pio_response_s1_reg_firsttransfer;
+
+  //pio_response_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_response_s1_unreg_firsttransfer = ~(pio_response_s1_slavearbiterlockenable & pio_response_s1_any_continuerequest);
+
+  //pio_response_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_response_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_response_s1_begins_xfer)
+          pio_response_s1_reg_firsttransfer <= pio_response_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_response_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_response_s1_beginbursttransfer_internal = pio_response_s1_begins_xfer;
+
+  //~pio_response_s1_write_n assignment, which is an e_mux
+  assign pio_response_s1_write_n = ~(cpu_0_data_master_granted_pio_response_s1 & cpu_0_data_master_write);
+
+  assign shifted_address_to_pio_response_s1_from_cpu_0_data_master = cpu_0_data_master_address_to_slave;
+  //pio_response_s1_address mux, which is an e_mux
+  assign pio_response_s1_address = shifted_address_to_pio_response_s1_from_cpu_0_data_master >> 2;
+
+  //d1_pio_response_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_response_s1_end_xfer <= 1;
+      else 
+        d1_pio_response_s1_end_xfer <= pio_response_s1_end_xfer;
+    end
+
+
+  //pio_response_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_response_s1_waits_for_read = pio_response_s1_in_a_read_cycle & pio_response_s1_begins_xfer;
+
+  //pio_response_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_response_s1_in_a_read_cycle = cpu_0_data_master_granted_pio_response_s1 & cpu_0_data_master_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_response_s1_in_a_read_cycle;
+
+  //pio_response_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_response_s1_waits_for_write = pio_response_s1_in_a_write_cycle & 0;
+
+  //pio_response_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_response_s1_in_a_write_cycle = cpu_0_data_master_granted_pio_response_s1 & cpu_0_data_master_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_response_s1_in_a_write_cycle;
+
+  assign wait_for_pio_response_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_response/s1 enable non-zero assertions, which is an e_register
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
@@ -5208,7 +7434,7 @@ module sysid_control_slave_arbitrator (
   //assign sysid_control_slave_readdata_from_sa = sysid_control_slave_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sysid_control_slave_readdata_from_sa = sysid_control_slave_readdata;
 
-  assign cpu_0_data_master_requests_sysid_control_slave = (({cpu_0_data_master_address_to_slave[24 : 3] , 3'b0} == 25'h10010d0) & (cpu_0_data_master_read | cpu_0_data_master_write)) & cpu_0_data_master_read;
+  assign cpu_0_data_master_requests_sysid_control_slave = (({cpu_0_data_master_address_to_slave[24 : 3] , 3'b0} == 25'h1001150) & (cpu_0_data_master_read | cpu_0_data_master_write)) & cpu_0_data_master_read;
   //sysid_control_slave_arb_share_counter set values, which is an e_mux
   assign sysid_control_slave_arb_share_set_values = 1;
 
@@ -5982,6 +8208,30 @@ module my_controller (
                        // the_led_pio
                         out_port_from_the_led_pio,
 
+                       // the_pio_dutycycle
+                        out_port_from_the_pio_dutycycle,
+
+                       // the_pio_egmenable
+                        out_port_from_the_pio_egmenable,
+
+                       // the_pio_egmreset
+                        out_port_from_the_pio_egmreset,
+
+                       // the_pio_latency
+                        in_port_to_the_pio_latency,
+
+                       // the_pio_missed
+                        in_port_to_the_pio_missed,
+
+                       // the_pio_period
+                        out_port_from_the_pio_period,
+
+                       // the_pio_pulse
+                        in_port_to_the_pio_pulse,
+
+                       // the_pio_response
+                        out_port_from_the_pio_response,
+
                        // the_red_led_pio
                         out_port_from_the_red_led_pio,
 
@@ -6016,6 +8266,11 @@ module my_controller (
   inout   [  7: 0] LCD_data_to_and_from_the_lcd_display;
   output  [  7: 0] out_port_from_the_green_led_pio;
   output  [  7: 0] out_port_from_the_led_pio;
+  output  [  3: 0] out_port_from_the_pio_dutycycle;
+  output           out_port_from_the_pio_egmenable;
+  output           out_port_from_the_pio_egmreset;
+  output  [  3: 0] out_port_from_the_pio_period;
+  output           out_port_from_the_pio_response;
   output  [  7: 0] out_port_from_the_red_led_pio;
   output  [ 15: 0] out_port_from_the_seven_seg_middle_pio;
   output  [ 15: 0] out_port_from_the_seven_seg_pio;
@@ -6031,6 +8286,9 @@ module my_controller (
   output           zs_we_n_from_the_sdram_0;
   input            clk_0;
   input   [  3: 0] in_port_to_the_button_pio;
+  input   [ 15: 0] in_port_to_the_pio_latency;
+  input   [ 15: 0] in_port_to_the_pio_missed;
+  input            in_port_to_the_pio_pulse;
   input   [ 15: 0] in_port_to_the_switch_pio;
   input            reset_n;
 
@@ -6061,6 +8319,14 @@ module my_controller (
   wire             cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave;
   wire             cpu_0_data_master_granted_lcd_display_control_slave;
   wire             cpu_0_data_master_granted_led_pio_s1;
+  wire             cpu_0_data_master_granted_pio_dutycycle_s1;
+  wire             cpu_0_data_master_granted_pio_egmenable_s1;
+  wire             cpu_0_data_master_granted_pio_egmreset_s1;
+  wire             cpu_0_data_master_granted_pio_latency_s1;
+  wire             cpu_0_data_master_granted_pio_missed_s1;
+  wire             cpu_0_data_master_granted_pio_period_s1;
+  wire             cpu_0_data_master_granted_pio_pulse_s1;
+  wire             cpu_0_data_master_granted_pio_response_s1;
   wire             cpu_0_data_master_granted_red_led_pio_s1;
   wire             cpu_0_data_master_granted_sdram_0_s1;
   wire             cpu_0_data_master_granted_seven_seg_middle_pio_s1;
@@ -6078,6 +8344,14 @@ module my_controller (
   wire             cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave;
   wire             cpu_0_data_master_qualified_request_lcd_display_control_slave;
   wire             cpu_0_data_master_qualified_request_led_pio_s1;
+  wire             cpu_0_data_master_qualified_request_pio_dutycycle_s1;
+  wire             cpu_0_data_master_qualified_request_pio_egmenable_s1;
+  wire             cpu_0_data_master_qualified_request_pio_egmreset_s1;
+  wire             cpu_0_data_master_qualified_request_pio_latency_s1;
+  wire             cpu_0_data_master_qualified_request_pio_missed_s1;
+  wire             cpu_0_data_master_qualified_request_pio_period_s1;
+  wire             cpu_0_data_master_qualified_request_pio_pulse_s1;
+  wire             cpu_0_data_master_qualified_request_pio_response_s1;
   wire             cpu_0_data_master_qualified_request_red_led_pio_s1;
   wire             cpu_0_data_master_qualified_request_sdram_0_s1;
   wire             cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1;
@@ -6094,6 +8368,14 @@ module my_controller (
   wire             cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave;
   wire             cpu_0_data_master_read_data_valid_lcd_display_control_slave;
   wire             cpu_0_data_master_read_data_valid_led_pio_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_dutycycle_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_egmenable_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_egmreset_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_latency_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_missed_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_period_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_pulse_s1;
+  wire             cpu_0_data_master_read_data_valid_pio_response_s1;
   wire             cpu_0_data_master_read_data_valid_red_led_pio_s1;
   wire             cpu_0_data_master_read_data_valid_sdram_0_s1;
   wire             cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register;
@@ -6111,6 +8393,14 @@ module my_controller (
   wire             cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave;
   wire             cpu_0_data_master_requests_lcd_display_control_slave;
   wire             cpu_0_data_master_requests_led_pio_s1;
+  wire             cpu_0_data_master_requests_pio_dutycycle_s1;
+  wire             cpu_0_data_master_requests_pio_egmenable_s1;
+  wire             cpu_0_data_master_requests_pio_egmreset_s1;
+  wire             cpu_0_data_master_requests_pio_latency_s1;
+  wire             cpu_0_data_master_requests_pio_missed_s1;
+  wire             cpu_0_data_master_requests_pio_period_s1;
+  wire             cpu_0_data_master_requests_pio_pulse_s1;
+  wire             cpu_0_data_master_requests_pio_response_s1;
   wire             cpu_0_data_master_requests_red_led_pio_s1;
   wire             cpu_0_data_master_requests_sdram_0_s1;
   wire             cpu_0_data_master_requests_seven_seg_middle_pio_s1;
@@ -6158,6 +8448,14 @@ module my_controller (
   wire             d1_jtag_uart_0_avalon_jtag_slave_end_xfer;
   wire             d1_lcd_display_control_slave_end_xfer;
   wire             d1_led_pio_s1_end_xfer;
+  wire             d1_pio_dutycycle_s1_end_xfer;
+  wire             d1_pio_egmenable_s1_end_xfer;
+  wire             d1_pio_egmreset_s1_end_xfer;
+  wire             d1_pio_latency_s1_end_xfer;
+  wire             d1_pio_missed_s1_end_xfer;
+  wire             d1_pio_period_s1_end_xfer;
+  wire             d1_pio_pulse_s1_end_xfer;
+  wire             d1_pio_response_s1_end_xfer;
   wire             d1_red_led_pio_s1_end_xfer;
   wire             d1_sdram_0_s1_end_xfer;
   wire             d1_seven_seg_middle_pio_s1_end_xfer;
@@ -6208,10 +8506,67 @@ module my_controller (
   wire    [  7: 0] led_pio_s1_writedata;
   wire    [  7: 0] out_port_from_the_green_led_pio;
   wire    [  7: 0] out_port_from_the_led_pio;
+  wire    [  3: 0] out_port_from_the_pio_dutycycle;
+  wire             out_port_from_the_pio_egmenable;
+  wire             out_port_from_the_pio_egmreset;
+  wire    [  3: 0] out_port_from_the_pio_period;
+  wire             out_port_from_the_pio_response;
   wire    [  7: 0] out_port_from_the_red_led_pio;
   wire    [ 15: 0] out_port_from_the_seven_seg_middle_pio;
   wire    [ 15: 0] out_port_from_the_seven_seg_pio;
   wire    [ 31: 0] out_port_from_the_seven_seg_right_pio;
+  wire    [  1: 0] pio_dutycycle_s1_address;
+  wire             pio_dutycycle_s1_chipselect;
+  wire    [  3: 0] pio_dutycycle_s1_readdata;
+  wire    [  3: 0] pio_dutycycle_s1_readdata_from_sa;
+  wire             pio_dutycycle_s1_reset_n;
+  wire             pio_dutycycle_s1_write_n;
+  wire    [  3: 0] pio_dutycycle_s1_writedata;
+  wire    [  1: 0] pio_egmenable_s1_address;
+  wire             pio_egmenable_s1_chipselect;
+  wire             pio_egmenable_s1_readdata;
+  wire             pio_egmenable_s1_readdata_from_sa;
+  wire             pio_egmenable_s1_reset_n;
+  wire             pio_egmenable_s1_write_n;
+  wire             pio_egmenable_s1_writedata;
+  wire    [  1: 0] pio_egmreset_s1_address;
+  wire             pio_egmreset_s1_chipselect;
+  wire             pio_egmreset_s1_readdata;
+  wire             pio_egmreset_s1_readdata_from_sa;
+  wire             pio_egmreset_s1_reset_n;
+  wire             pio_egmreset_s1_write_n;
+  wire             pio_egmreset_s1_writedata;
+  wire    [  1: 0] pio_latency_s1_address;
+  wire    [ 15: 0] pio_latency_s1_readdata;
+  wire    [ 15: 0] pio_latency_s1_readdata_from_sa;
+  wire             pio_latency_s1_reset_n;
+  wire    [  1: 0] pio_missed_s1_address;
+  wire    [ 15: 0] pio_missed_s1_readdata;
+  wire    [ 15: 0] pio_missed_s1_readdata_from_sa;
+  wire             pio_missed_s1_reset_n;
+  wire    [  1: 0] pio_period_s1_address;
+  wire             pio_period_s1_chipselect;
+  wire    [  3: 0] pio_period_s1_readdata;
+  wire    [  3: 0] pio_period_s1_readdata_from_sa;
+  wire             pio_period_s1_reset_n;
+  wire             pio_period_s1_write_n;
+  wire    [  3: 0] pio_period_s1_writedata;
+  wire    [  1: 0] pio_pulse_s1_address;
+  wire             pio_pulse_s1_chipselect;
+  wire             pio_pulse_s1_irq;
+  wire             pio_pulse_s1_irq_from_sa;
+  wire             pio_pulse_s1_readdata;
+  wire             pio_pulse_s1_readdata_from_sa;
+  wire             pio_pulse_s1_reset_n;
+  wire             pio_pulse_s1_write_n;
+  wire             pio_pulse_s1_writedata;
+  wire    [  1: 0] pio_response_s1_address;
+  wire             pio_response_s1_chipselect;
+  wire             pio_response_s1_readdata;
+  wire             pio_response_s1_readdata_from_sa;
+  wire             pio_response_s1_reset_n;
+  wire             pio_response_s1_write_n;
+  wire             pio_response_s1_writedata;
   wire    [  1: 0] red_led_pio_s1_address;
   wire             red_led_pio_s1_chipselect;
   wire    [  7: 0] red_led_pio_s1_readdata;
@@ -6381,6 +8736,14 @@ module my_controller (
       .cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave           (cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave),
       .cpu_0_data_master_granted_lcd_display_control_slave               (cpu_0_data_master_granted_lcd_display_control_slave),
       .cpu_0_data_master_granted_led_pio_s1                              (cpu_0_data_master_granted_led_pio_s1),
+      .cpu_0_data_master_granted_pio_dutycycle_s1                        (cpu_0_data_master_granted_pio_dutycycle_s1),
+      .cpu_0_data_master_granted_pio_egmenable_s1                        (cpu_0_data_master_granted_pio_egmenable_s1),
+      .cpu_0_data_master_granted_pio_egmreset_s1                         (cpu_0_data_master_granted_pio_egmreset_s1),
+      .cpu_0_data_master_granted_pio_latency_s1                          (cpu_0_data_master_granted_pio_latency_s1),
+      .cpu_0_data_master_granted_pio_missed_s1                           (cpu_0_data_master_granted_pio_missed_s1),
+      .cpu_0_data_master_granted_pio_period_s1                           (cpu_0_data_master_granted_pio_period_s1),
+      .cpu_0_data_master_granted_pio_pulse_s1                            (cpu_0_data_master_granted_pio_pulse_s1),
+      .cpu_0_data_master_granted_pio_response_s1                         (cpu_0_data_master_granted_pio_response_s1),
       .cpu_0_data_master_granted_red_led_pio_s1                          (cpu_0_data_master_granted_red_led_pio_s1),
       .cpu_0_data_master_granted_sdram_0_s1                              (cpu_0_data_master_granted_sdram_0_s1),
       .cpu_0_data_master_granted_seven_seg_middle_pio_s1                 (cpu_0_data_master_granted_seven_seg_middle_pio_s1),
@@ -6398,6 +8761,14 @@ module my_controller (
       .cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave (cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave),
       .cpu_0_data_master_qualified_request_lcd_display_control_slave     (cpu_0_data_master_qualified_request_lcd_display_control_slave),
       .cpu_0_data_master_qualified_request_led_pio_s1                    (cpu_0_data_master_qualified_request_led_pio_s1),
+      .cpu_0_data_master_qualified_request_pio_dutycycle_s1              (cpu_0_data_master_qualified_request_pio_dutycycle_s1),
+      .cpu_0_data_master_qualified_request_pio_egmenable_s1              (cpu_0_data_master_qualified_request_pio_egmenable_s1),
+      .cpu_0_data_master_qualified_request_pio_egmreset_s1               (cpu_0_data_master_qualified_request_pio_egmreset_s1),
+      .cpu_0_data_master_qualified_request_pio_latency_s1                (cpu_0_data_master_qualified_request_pio_latency_s1),
+      .cpu_0_data_master_qualified_request_pio_missed_s1                 (cpu_0_data_master_qualified_request_pio_missed_s1),
+      .cpu_0_data_master_qualified_request_pio_period_s1                 (cpu_0_data_master_qualified_request_pio_period_s1),
+      .cpu_0_data_master_qualified_request_pio_pulse_s1                  (cpu_0_data_master_qualified_request_pio_pulse_s1),
+      .cpu_0_data_master_qualified_request_pio_response_s1               (cpu_0_data_master_qualified_request_pio_response_s1),
       .cpu_0_data_master_qualified_request_red_led_pio_s1                (cpu_0_data_master_qualified_request_red_led_pio_s1),
       .cpu_0_data_master_qualified_request_sdram_0_s1                    (cpu_0_data_master_qualified_request_sdram_0_s1),
       .cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1       (cpu_0_data_master_qualified_request_seven_seg_middle_pio_s1),
@@ -6414,6 +8785,14 @@ module my_controller (
       .cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave   (cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave),
       .cpu_0_data_master_read_data_valid_lcd_display_control_slave       (cpu_0_data_master_read_data_valid_lcd_display_control_slave),
       .cpu_0_data_master_read_data_valid_led_pio_s1                      (cpu_0_data_master_read_data_valid_led_pio_s1),
+      .cpu_0_data_master_read_data_valid_pio_dutycycle_s1                (cpu_0_data_master_read_data_valid_pio_dutycycle_s1),
+      .cpu_0_data_master_read_data_valid_pio_egmenable_s1                (cpu_0_data_master_read_data_valid_pio_egmenable_s1),
+      .cpu_0_data_master_read_data_valid_pio_egmreset_s1                 (cpu_0_data_master_read_data_valid_pio_egmreset_s1),
+      .cpu_0_data_master_read_data_valid_pio_latency_s1                  (cpu_0_data_master_read_data_valid_pio_latency_s1),
+      .cpu_0_data_master_read_data_valid_pio_missed_s1                   (cpu_0_data_master_read_data_valid_pio_missed_s1),
+      .cpu_0_data_master_read_data_valid_pio_period_s1                   (cpu_0_data_master_read_data_valid_pio_period_s1),
+      .cpu_0_data_master_read_data_valid_pio_pulse_s1                    (cpu_0_data_master_read_data_valid_pio_pulse_s1),
+      .cpu_0_data_master_read_data_valid_pio_response_s1                 (cpu_0_data_master_read_data_valid_pio_response_s1),
       .cpu_0_data_master_read_data_valid_red_led_pio_s1                  (cpu_0_data_master_read_data_valid_red_led_pio_s1),
       .cpu_0_data_master_read_data_valid_sdram_0_s1                      (cpu_0_data_master_read_data_valid_sdram_0_s1),
       .cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register       (cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register),
@@ -6431,6 +8810,14 @@ module my_controller (
       .cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave          (cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave),
       .cpu_0_data_master_requests_lcd_display_control_slave              (cpu_0_data_master_requests_lcd_display_control_slave),
       .cpu_0_data_master_requests_led_pio_s1                             (cpu_0_data_master_requests_led_pio_s1),
+      .cpu_0_data_master_requests_pio_dutycycle_s1                       (cpu_0_data_master_requests_pio_dutycycle_s1),
+      .cpu_0_data_master_requests_pio_egmenable_s1                       (cpu_0_data_master_requests_pio_egmenable_s1),
+      .cpu_0_data_master_requests_pio_egmreset_s1                        (cpu_0_data_master_requests_pio_egmreset_s1),
+      .cpu_0_data_master_requests_pio_latency_s1                         (cpu_0_data_master_requests_pio_latency_s1),
+      .cpu_0_data_master_requests_pio_missed_s1                          (cpu_0_data_master_requests_pio_missed_s1),
+      .cpu_0_data_master_requests_pio_period_s1                          (cpu_0_data_master_requests_pio_period_s1),
+      .cpu_0_data_master_requests_pio_pulse_s1                           (cpu_0_data_master_requests_pio_pulse_s1),
+      .cpu_0_data_master_requests_pio_response_s1                        (cpu_0_data_master_requests_pio_response_s1),
       .cpu_0_data_master_requests_red_led_pio_s1                         (cpu_0_data_master_requests_red_led_pio_s1),
       .cpu_0_data_master_requests_sdram_0_s1                             (cpu_0_data_master_requests_sdram_0_s1),
       .cpu_0_data_master_requests_seven_seg_middle_pio_s1                (cpu_0_data_master_requests_seven_seg_middle_pio_s1),
@@ -6450,6 +8837,14 @@ module my_controller (
       .d1_jtag_uart_0_avalon_jtag_slave_end_xfer                         (d1_jtag_uart_0_avalon_jtag_slave_end_xfer),
       .d1_lcd_display_control_slave_end_xfer                             (d1_lcd_display_control_slave_end_xfer),
       .d1_led_pio_s1_end_xfer                                            (d1_led_pio_s1_end_xfer),
+      .d1_pio_dutycycle_s1_end_xfer                                      (d1_pio_dutycycle_s1_end_xfer),
+      .d1_pio_egmenable_s1_end_xfer                                      (d1_pio_egmenable_s1_end_xfer),
+      .d1_pio_egmreset_s1_end_xfer                                       (d1_pio_egmreset_s1_end_xfer),
+      .d1_pio_latency_s1_end_xfer                                        (d1_pio_latency_s1_end_xfer),
+      .d1_pio_missed_s1_end_xfer                                         (d1_pio_missed_s1_end_xfer),
+      .d1_pio_period_s1_end_xfer                                         (d1_pio_period_s1_end_xfer),
+      .d1_pio_pulse_s1_end_xfer                                          (d1_pio_pulse_s1_end_xfer),
+      .d1_pio_response_s1_end_xfer                                       (d1_pio_response_s1_end_xfer),
       .d1_red_led_pio_s1_end_xfer                                        (d1_red_led_pio_s1_end_xfer),
       .d1_sdram_0_s1_end_xfer                                            (d1_sdram_0_s1_end_xfer),
       .d1_seven_seg_middle_pio_s1_end_xfer                               (d1_seven_seg_middle_pio_s1_end_xfer),
@@ -6467,6 +8862,15 @@ module my_controller (
       .lcd_display_control_slave_wait_counter_eq_0                       (lcd_display_control_slave_wait_counter_eq_0),
       .lcd_display_control_slave_wait_counter_eq_1                       (lcd_display_control_slave_wait_counter_eq_1),
       .led_pio_s1_readdata_from_sa                                       (led_pio_s1_readdata_from_sa),
+      .pio_dutycycle_s1_readdata_from_sa                                 (pio_dutycycle_s1_readdata_from_sa),
+      .pio_egmenable_s1_readdata_from_sa                                 (pio_egmenable_s1_readdata_from_sa),
+      .pio_egmreset_s1_readdata_from_sa                                  (pio_egmreset_s1_readdata_from_sa),
+      .pio_latency_s1_readdata_from_sa                                   (pio_latency_s1_readdata_from_sa),
+      .pio_missed_s1_readdata_from_sa                                    (pio_missed_s1_readdata_from_sa),
+      .pio_period_s1_readdata_from_sa                                    (pio_period_s1_readdata_from_sa),
+      .pio_pulse_s1_irq_from_sa                                          (pio_pulse_s1_irq_from_sa),
+      .pio_pulse_s1_readdata_from_sa                                     (pio_pulse_s1_readdata_from_sa),
+      .pio_response_s1_readdata_from_sa                                  (pio_response_s1_readdata_from_sa),
       .red_led_pio_s1_readdata_from_sa                                   (red_led_pio_s1_readdata_from_sa),
       .reset_n                                                           (clk_0_reset_n),
       .sdram_0_s1_readdata_from_sa                                       (sdram_0_s1_readdata_from_sa),
@@ -6696,6 +9100,273 @@ module my_controller (
       .reset_n    (led_pio_s1_reset_n),
       .write_n    (led_pio_s1_write_n),
       .writedata  (led_pio_s1_writedata)
+    );
+
+  pio_dutycycle_s1_arbitrator the_pio_dutycycle_s1
+    (
+      .clk                                                  (clk_0),
+      .cpu_0_data_master_address_to_slave                   (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_dutycycle_s1           (cpu_0_data_master_granted_pio_dutycycle_s1),
+      .cpu_0_data_master_qualified_request_pio_dutycycle_s1 (cpu_0_data_master_qualified_request_pio_dutycycle_s1),
+      .cpu_0_data_master_read                               (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_dutycycle_s1   (cpu_0_data_master_read_data_valid_pio_dutycycle_s1),
+      .cpu_0_data_master_requests_pio_dutycycle_s1          (cpu_0_data_master_requests_pio_dutycycle_s1),
+      .cpu_0_data_master_waitrequest                        (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                              (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                          (cpu_0_data_master_writedata),
+      .d1_pio_dutycycle_s1_end_xfer                         (d1_pio_dutycycle_s1_end_xfer),
+      .pio_dutycycle_s1_address                             (pio_dutycycle_s1_address),
+      .pio_dutycycle_s1_chipselect                          (pio_dutycycle_s1_chipselect),
+      .pio_dutycycle_s1_readdata                            (pio_dutycycle_s1_readdata),
+      .pio_dutycycle_s1_readdata_from_sa                    (pio_dutycycle_s1_readdata_from_sa),
+      .pio_dutycycle_s1_reset_n                             (pio_dutycycle_s1_reset_n),
+      .pio_dutycycle_s1_write_n                             (pio_dutycycle_s1_write_n),
+      .pio_dutycycle_s1_writedata                           (pio_dutycycle_s1_writedata),
+      .reset_n                                              (clk_0_reset_n)
+    );
+
+  pio_dutycycle the_pio_dutycycle
+    (
+      .address    (pio_dutycycle_s1_address),
+      .chipselect (pio_dutycycle_s1_chipselect),
+      .clk        (clk_0),
+      .out_port   (out_port_from_the_pio_dutycycle),
+      .readdata   (pio_dutycycle_s1_readdata),
+      .reset_n    (pio_dutycycle_s1_reset_n),
+      .write_n    (pio_dutycycle_s1_write_n),
+      .writedata  (pio_dutycycle_s1_writedata)
+    );
+
+  pio_egmenable_s1_arbitrator the_pio_egmenable_s1
+    (
+      .clk                                                  (clk_0),
+      .cpu_0_data_master_address_to_slave                   (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_egmenable_s1           (cpu_0_data_master_granted_pio_egmenable_s1),
+      .cpu_0_data_master_qualified_request_pio_egmenable_s1 (cpu_0_data_master_qualified_request_pio_egmenable_s1),
+      .cpu_0_data_master_read                               (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_egmenable_s1   (cpu_0_data_master_read_data_valid_pio_egmenable_s1),
+      .cpu_0_data_master_requests_pio_egmenable_s1          (cpu_0_data_master_requests_pio_egmenable_s1),
+      .cpu_0_data_master_waitrequest                        (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                              (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                          (cpu_0_data_master_writedata),
+      .d1_pio_egmenable_s1_end_xfer                         (d1_pio_egmenable_s1_end_xfer),
+      .pio_egmenable_s1_address                             (pio_egmenable_s1_address),
+      .pio_egmenable_s1_chipselect                          (pio_egmenable_s1_chipselect),
+      .pio_egmenable_s1_readdata                            (pio_egmenable_s1_readdata),
+      .pio_egmenable_s1_readdata_from_sa                    (pio_egmenable_s1_readdata_from_sa),
+      .pio_egmenable_s1_reset_n                             (pio_egmenable_s1_reset_n),
+      .pio_egmenable_s1_write_n                             (pio_egmenable_s1_write_n),
+      .pio_egmenable_s1_writedata                           (pio_egmenable_s1_writedata),
+      .reset_n                                              (clk_0_reset_n)
+    );
+
+  pio_egmenable the_pio_egmenable
+    (
+      .address    (pio_egmenable_s1_address),
+      .chipselect (pio_egmenable_s1_chipselect),
+      .clk        (clk_0),
+      .out_port   (out_port_from_the_pio_egmenable),
+      .readdata   (pio_egmenable_s1_readdata),
+      .reset_n    (pio_egmenable_s1_reset_n),
+      .write_n    (pio_egmenable_s1_write_n),
+      .writedata  (pio_egmenable_s1_writedata)
+    );
+
+  pio_egmreset_s1_arbitrator the_pio_egmreset_s1
+    (
+      .clk                                                 (clk_0),
+      .cpu_0_data_master_address_to_slave                  (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_egmreset_s1           (cpu_0_data_master_granted_pio_egmreset_s1),
+      .cpu_0_data_master_qualified_request_pio_egmreset_s1 (cpu_0_data_master_qualified_request_pio_egmreset_s1),
+      .cpu_0_data_master_read                              (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_egmreset_s1   (cpu_0_data_master_read_data_valid_pio_egmreset_s1),
+      .cpu_0_data_master_requests_pio_egmreset_s1          (cpu_0_data_master_requests_pio_egmreset_s1),
+      .cpu_0_data_master_waitrequest                       (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                             (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                         (cpu_0_data_master_writedata),
+      .d1_pio_egmreset_s1_end_xfer                         (d1_pio_egmreset_s1_end_xfer),
+      .pio_egmreset_s1_address                             (pio_egmreset_s1_address),
+      .pio_egmreset_s1_chipselect                          (pio_egmreset_s1_chipselect),
+      .pio_egmreset_s1_readdata                            (pio_egmreset_s1_readdata),
+      .pio_egmreset_s1_readdata_from_sa                    (pio_egmreset_s1_readdata_from_sa),
+      .pio_egmreset_s1_reset_n                             (pio_egmreset_s1_reset_n),
+      .pio_egmreset_s1_write_n                             (pio_egmreset_s1_write_n),
+      .pio_egmreset_s1_writedata                           (pio_egmreset_s1_writedata),
+      .reset_n                                             (clk_0_reset_n)
+    );
+
+  pio_egmreset the_pio_egmreset
+    (
+      .address    (pio_egmreset_s1_address),
+      .chipselect (pio_egmreset_s1_chipselect),
+      .clk        (clk_0),
+      .out_port   (out_port_from_the_pio_egmreset),
+      .readdata   (pio_egmreset_s1_readdata),
+      .reset_n    (pio_egmreset_s1_reset_n),
+      .write_n    (pio_egmreset_s1_write_n),
+      .writedata  (pio_egmreset_s1_writedata)
+    );
+
+  pio_latency_s1_arbitrator the_pio_latency_s1
+    (
+      .clk                                                (clk_0),
+      .cpu_0_data_master_address_to_slave                 (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_latency_s1           (cpu_0_data_master_granted_pio_latency_s1),
+      .cpu_0_data_master_qualified_request_pio_latency_s1 (cpu_0_data_master_qualified_request_pio_latency_s1),
+      .cpu_0_data_master_read                             (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_latency_s1   (cpu_0_data_master_read_data_valid_pio_latency_s1),
+      .cpu_0_data_master_requests_pio_latency_s1          (cpu_0_data_master_requests_pio_latency_s1),
+      .cpu_0_data_master_write                            (cpu_0_data_master_write),
+      .d1_pio_latency_s1_end_xfer                         (d1_pio_latency_s1_end_xfer),
+      .pio_latency_s1_address                             (pio_latency_s1_address),
+      .pio_latency_s1_readdata                            (pio_latency_s1_readdata),
+      .pio_latency_s1_readdata_from_sa                    (pio_latency_s1_readdata_from_sa),
+      .pio_latency_s1_reset_n                             (pio_latency_s1_reset_n),
+      .reset_n                                            (clk_0_reset_n)
+    );
+
+  pio_latency the_pio_latency
+    (
+      .address  (pio_latency_s1_address),
+      .clk      (clk_0),
+      .in_port  (in_port_to_the_pio_latency),
+      .readdata (pio_latency_s1_readdata),
+      .reset_n  (pio_latency_s1_reset_n)
+    );
+
+  pio_missed_s1_arbitrator the_pio_missed_s1
+    (
+      .clk                                               (clk_0),
+      .cpu_0_data_master_address_to_slave                (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_missed_s1           (cpu_0_data_master_granted_pio_missed_s1),
+      .cpu_0_data_master_qualified_request_pio_missed_s1 (cpu_0_data_master_qualified_request_pio_missed_s1),
+      .cpu_0_data_master_read                            (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_missed_s1   (cpu_0_data_master_read_data_valid_pio_missed_s1),
+      .cpu_0_data_master_requests_pio_missed_s1          (cpu_0_data_master_requests_pio_missed_s1),
+      .cpu_0_data_master_write                           (cpu_0_data_master_write),
+      .d1_pio_missed_s1_end_xfer                         (d1_pio_missed_s1_end_xfer),
+      .pio_missed_s1_address                             (pio_missed_s1_address),
+      .pio_missed_s1_readdata                            (pio_missed_s1_readdata),
+      .pio_missed_s1_readdata_from_sa                    (pio_missed_s1_readdata_from_sa),
+      .pio_missed_s1_reset_n                             (pio_missed_s1_reset_n),
+      .reset_n                                           (clk_0_reset_n)
+    );
+
+  pio_missed the_pio_missed
+    (
+      .address  (pio_missed_s1_address),
+      .clk      (clk_0),
+      .in_port  (in_port_to_the_pio_missed),
+      .readdata (pio_missed_s1_readdata),
+      .reset_n  (pio_missed_s1_reset_n)
+    );
+
+  pio_period_s1_arbitrator the_pio_period_s1
+    (
+      .clk                                               (clk_0),
+      .cpu_0_data_master_address_to_slave                (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_period_s1           (cpu_0_data_master_granted_pio_period_s1),
+      .cpu_0_data_master_qualified_request_pio_period_s1 (cpu_0_data_master_qualified_request_pio_period_s1),
+      .cpu_0_data_master_read                            (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_period_s1   (cpu_0_data_master_read_data_valid_pio_period_s1),
+      .cpu_0_data_master_requests_pio_period_s1          (cpu_0_data_master_requests_pio_period_s1),
+      .cpu_0_data_master_waitrequest                     (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                           (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                       (cpu_0_data_master_writedata),
+      .d1_pio_period_s1_end_xfer                         (d1_pio_period_s1_end_xfer),
+      .pio_period_s1_address                             (pio_period_s1_address),
+      .pio_period_s1_chipselect                          (pio_period_s1_chipselect),
+      .pio_period_s1_readdata                            (pio_period_s1_readdata),
+      .pio_period_s1_readdata_from_sa                    (pio_period_s1_readdata_from_sa),
+      .pio_period_s1_reset_n                             (pio_period_s1_reset_n),
+      .pio_period_s1_write_n                             (pio_period_s1_write_n),
+      .pio_period_s1_writedata                           (pio_period_s1_writedata),
+      .reset_n                                           (clk_0_reset_n)
+    );
+
+  pio_period the_pio_period
+    (
+      .address    (pio_period_s1_address),
+      .chipselect (pio_period_s1_chipselect),
+      .clk        (clk_0),
+      .out_port   (out_port_from_the_pio_period),
+      .readdata   (pio_period_s1_readdata),
+      .reset_n    (pio_period_s1_reset_n),
+      .write_n    (pio_period_s1_write_n),
+      .writedata  (pio_period_s1_writedata)
+    );
+
+  pio_pulse_s1_arbitrator the_pio_pulse_s1
+    (
+      .clk                                              (clk_0),
+      .cpu_0_data_master_address_to_slave               (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_pulse_s1           (cpu_0_data_master_granted_pio_pulse_s1),
+      .cpu_0_data_master_qualified_request_pio_pulse_s1 (cpu_0_data_master_qualified_request_pio_pulse_s1),
+      .cpu_0_data_master_read                           (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_pulse_s1   (cpu_0_data_master_read_data_valid_pio_pulse_s1),
+      .cpu_0_data_master_requests_pio_pulse_s1          (cpu_0_data_master_requests_pio_pulse_s1),
+      .cpu_0_data_master_waitrequest                    (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                          (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                      (cpu_0_data_master_writedata),
+      .d1_pio_pulse_s1_end_xfer                         (d1_pio_pulse_s1_end_xfer),
+      .pio_pulse_s1_address                             (pio_pulse_s1_address),
+      .pio_pulse_s1_chipselect                          (pio_pulse_s1_chipselect),
+      .pio_pulse_s1_irq                                 (pio_pulse_s1_irq),
+      .pio_pulse_s1_irq_from_sa                         (pio_pulse_s1_irq_from_sa),
+      .pio_pulse_s1_readdata                            (pio_pulse_s1_readdata),
+      .pio_pulse_s1_readdata_from_sa                    (pio_pulse_s1_readdata_from_sa),
+      .pio_pulse_s1_reset_n                             (pio_pulse_s1_reset_n),
+      .pio_pulse_s1_write_n                             (pio_pulse_s1_write_n),
+      .pio_pulse_s1_writedata                           (pio_pulse_s1_writedata),
+      .reset_n                                          (clk_0_reset_n)
+    );
+
+  pio_pulse the_pio_pulse
+    (
+      .address    (pio_pulse_s1_address),
+      .chipselect (pio_pulse_s1_chipselect),
+      .clk        (clk_0),
+      .in_port    (in_port_to_the_pio_pulse),
+      .irq        (pio_pulse_s1_irq),
+      .readdata   (pio_pulse_s1_readdata),
+      .reset_n    (pio_pulse_s1_reset_n),
+      .write_n    (pio_pulse_s1_write_n),
+      .writedata  (pio_pulse_s1_writedata)
+    );
+
+  pio_response_s1_arbitrator the_pio_response_s1
+    (
+      .clk                                                 (clk_0),
+      .cpu_0_data_master_address_to_slave                  (cpu_0_data_master_address_to_slave),
+      .cpu_0_data_master_granted_pio_response_s1           (cpu_0_data_master_granted_pio_response_s1),
+      .cpu_0_data_master_qualified_request_pio_response_s1 (cpu_0_data_master_qualified_request_pio_response_s1),
+      .cpu_0_data_master_read                              (cpu_0_data_master_read),
+      .cpu_0_data_master_read_data_valid_pio_response_s1   (cpu_0_data_master_read_data_valid_pio_response_s1),
+      .cpu_0_data_master_requests_pio_response_s1          (cpu_0_data_master_requests_pio_response_s1),
+      .cpu_0_data_master_waitrequest                       (cpu_0_data_master_waitrequest),
+      .cpu_0_data_master_write                             (cpu_0_data_master_write),
+      .cpu_0_data_master_writedata                         (cpu_0_data_master_writedata),
+      .d1_pio_response_s1_end_xfer                         (d1_pio_response_s1_end_xfer),
+      .pio_response_s1_address                             (pio_response_s1_address),
+      .pio_response_s1_chipselect                          (pio_response_s1_chipselect),
+      .pio_response_s1_readdata                            (pio_response_s1_readdata),
+      .pio_response_s1_readdata_from_sa                    (pio_response_s1_readdata_from_sa),
+      .pio_response_s1_reset_n                             (pio_response_s1_reset_n),
+      .pio_response_s1_write_n                             (pio_response_s1_write_n),
+      .pio_response_s1_writedata                           (pio_response_s1_writedata),
+      .reset_n                                             (clk_0_reset_n)
+    );
+
+  pio_response the_pio_response
+    (
+      .address    (pio_response_s1_address),
+      .chipselect (pio_response_s1_chipselect),
+      .clk        (clk_0),
+      .out_port   (out_port_from_the_pio_response),
+      .readdata   (pio_response_s1_readdata),
+      .reset_n    (pio_response_s1_reset_n),
+      .write_n    (pio_response_s1_write_n),
+      .writedata  (pio_response_s1_writedata)
     );
 
   red_led_pio_s1_arbitrator the_red_led_pio_s1
@@ -7074,9 +9745,10 @@ endmodule
 `include "c:/software/altera/10.1/quartus/eda/sim_lib/altera_mf.v"
 `include "c:/software/altera/10.1/quartus/eda/sim_lib/220model.v"
 `include "c:/software/altera/10.1/quartus/eda/sim_lib/sgate.v"
-`include "red_led_pio.v"
+`include "pio_latency.v"
 `include "seven_seg_right_pio.v"
-`include "sdram_0.v"
+`include "pio_period.v"
+`include "pio_pulse.v"
 `include "timer_0.v"
 `include "lcd_display.v"
 `include "sysid.v"
@@ -7086,14 +9758,21 @@ endmodule
 `include "cpu_0_jtag_debug_module_sysclk.v"
 `include "cpu_0_jtag_debug_module_wrapper.v"
 `include "cpu_0.v"
+`include "pio_egmenable.v"
 `include "switch_pio.v"
 `include "timer_1.v"
 `include "button_pio.v"
-`include "seven_seg_pio.v"
 `include "green_led_pio.v"
 `include "seven_seg_middle_pio.v"
 `include "led_pio.v"
 `include "jtag_uart_0.v"
+`include "pio_missed.v"
+`include "red_led_pio.v"
+`include "sdram_0.v"
+`include "seven_seg_pio.v"
+`include "pio_response.v"
+`include "pio_egmreset.v"
+`include "pio_dutycycle.v"
 
 `timescale 1ns / 1ps
 
@@ -7108,11 +9787,19 @@ module test_bench
   wire             clk;
   reg              clk_0;
   wire    [  3: 0] in_port_to_the_button_pio;
+  wire    [ 15: 0] in_port_to_the_pio_latency;
+  wire    [ 15: 0] in_port_to_the_pio_missed;
+  wire             in_port_to_the_pio_pulse;
   wire    [ 15: 0] in_port_to_the_switch_pio;
   wire             jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa;
   wire             jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa;
   wire    [  7: 0] out_port_from_the_green_led_pio;
   wire    [  7: 0] out_port_from_the_led_pio;
+  wire    [  3: 0] out_port_from_the_pio_dutycycle;
+  wire             out_port_from_the_pio_egmenable;
+  wire             out_port_from_the_pio_egmreset;
+  wire    [  3: 0] out_port_from_the_pio_period;
+  wire             out_port_from_the_pio_response;
   wire    [  7: 0] out_port_from_the_red_led_pio;
   wire    [ 15: 0] out_port_from_the_seven_seg_middle_pio;
   wire    [ 15: 0] out_port_from_the_seven_seg_pio;
@@ -7143,9 +9830,17 @@ module test_bench
       .LCD_data_to_and_from_the_lcd_display   (LCD_data_to_and_from_the_lcd_display),
       .clk_0                                  (clk_0),
       .in_port_to_the_button_pio              (in_port_to_the_button_pio),
+      .in_port_to_the_pio_latency             (in_port_to_the_pio_latency),
+      .in_port_to_the_pio_missed              (in_port_to_the_pio_missed),
+      .in_port_to_the_pio_pulse               (in_port_to_the_pio_pulse),
       .in_port_to_the_switch_pio              (in_port_to_the_switch_pio),
       .out_port_from_the_green_led_pio        (out_port_from_the_green_led_pio),
       .out_port_from_the_led_pio              (out_port_from_the_led_pio),
+      .out_port_from_the_pio_dutycycle        (out_port_from_the_pio_dutycycle),
+      .out_port_from_the_pio_egmenable        (out_port_from_the_pio_egmenable),
+      .out_port_from_the_pio_egmreset         (out_port_from_the_pio_egmreset),
+      .out_port_from_the_pio_period           (out_port_from_the_pio_period),
+      .out_port_from_the_pio_response         (out_port_from_the_pio_response),
       .out_port_from_the_red_led_pio          (out_port_from_the_red_led_pio),
       .out_port_from_the_seven_seg_middle_pio (out_port_from_the_seven_seg_middle_pio),
       .out_port_from_the_seven_seg_pio        (out_port_from_the_seven_seg_pio),

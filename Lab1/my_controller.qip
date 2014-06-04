@@ -2,7 +2,6 @@
 # cpu_0
 set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
 set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
-# null
 # sysid
 # jtag_uart_0
 # sdram_0
@@ -17,5 +16,14 @@ set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.oc
 # seven_seg_middle_pio
 # seven_seg_right_pio
 # switch_pio
-set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 10BF48BBB5F500000145D93A5E31 
+# null
+# pio_pulse
+# pio_latency
+# pio_missed
+# pio_dutycycle
+# pio_period
+# pio_response
+# pio_egmenable
+# pio_egmreset
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 60A44C53E38F000001464EBD1139 
  
