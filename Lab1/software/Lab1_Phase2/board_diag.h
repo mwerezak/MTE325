@@ -12,6 +12,8 @@
 #include "system.h"
 #include "sys/alt_irq.h"
 #include "altera_avalon_pio_regs.h"
+#include "altera_avalon_timer.h"
+#include "altera_avalon_timer_regs.h"  // timer register constants
 
 /*  Macros to clear the LCD screen. */
 
@@ -54,6 +56,47 @@ static void TestLCD( void );
 /* Define the EOT character to terminate nios2-terminal
  * upon exiting the Main Menu.
  */
+
+/*
+ * Timers
+ */
+static void SetTimer0(alt_u32);
+static void SetTimer1(alt_u32);
+static void init_timers(void);
+
+
+/*************************************************
+ *
+ * Lab 1 Phase 1
+ *
+ *************************************************/
+
+typedef struct BitTicker {
+	alt_u8 bit_sequence;
+	alt_u8 counter;	//when zero there are no bits left
+} BitTicker;
+
+static void init_ticker(BitTicker* t) {
+	t->counter = 0;
+}
+
+static void start_ticker(BitTicker* t, alt_u8 new_sequence) {
+	t->bit_sequence = new_sequence;
+	t->counter = 8;
+}
+
+static void update_ticker(BitTicker* t) {
+	if (t->counter > 0){
+		t->bit_sequence = (t->bit_sequence) >> 1;
+		(t->counter)--;
+	}
+}
+
+
+static void TestDIPSwitches( void );
+static void Lab1Phase1Main( void );
+
+
 
 #define EOT 0x4
 
