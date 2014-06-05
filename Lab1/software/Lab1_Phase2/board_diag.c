@@ -255,6 +255,8 @@ static char TopMenu( void )
 #endif  
     MenuItem( 'f', "Test DIP Switches" );
     MenuItem( 'g', "Lab 1 Phase 1" );
+    MenuItem( 'h', "Test EGM" );
+
     ch = MenuEnd('a', 'e');
 
   
@@ -277,6 +279,7 @@ static char TopMenu( void )
 #endif
       MenuCase('f',TestDIPSwitches);
       MenuCase('g',Lab1Phase1Main);
+      MenuCase('h',TestEGM);
       case 'q':	break;
       default:	printf("\n -ERROR: %c is an invalid entry.  Please try again\n", ch); break;
     }
@@ -826,7 +829,7 @@ static void Lab1Phase1HandleButton (void* context, alt_u32 id) {
 }
 
 static void Lab1Phase1Main (void) {
-	printf("Lab 1 Phase 1\n\tPress 'q' (followed by <enter>) to exit this module.");
+	printf("Lab 1 Phase 1");
 
 	//turn LEDs off
 	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
@@ -882,10 +885,64 @@ static void Lab1Phase1Main (void) {
 	}
 }
 
+/*************************************************
+ *
+ * Lab 1 Phase 2
+ *
+ *************************************************/
+
+//make sure we are receiving events from the EGM by lighting up the LEDs.
+static void TestEGM (void) {
+    alt_u8 egm_pulse;
+
+    printf("Press 'q' (followed by <enter>) to exit this test.\n\n");
+    init(0, 50);
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
+
+    while(1) {
+		//read EGM stuff and output it somewhere
+    	egm_pulse = IORD(PIO_PULSE_BASE, 0);
+
+    	if (egm_pulse) {
+    		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0xff);
+    		IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0xff);
+    		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0xff);
+    	} else {
+    		IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
+    		IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
+    		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
+    	}
+
+    	//see if we should stop
+    	if (IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0x1)
+			break;
+    }
+
+    finalize();
+
+}
+
+static void Lab1Phase2Main (void) {
+	//TODO - change this.
+	int i;
+	init(6, 8);
+	for(i=0; i<100; i++)
+	{
+		while(IORD(PIO_PULSE_BASE, 0) == 0) {}
+		IOWR(PIO_RESPONSE_BASE, 0, 1);
+		background(20);
+		while(IORD(PIO_PULSE_BASE, 0) == 1) {}
+		IOWR(PIO_RESPONSE_BASE, 0, 0);
+		background(20);
+	}
+	finalize();
+}
 
 /*************************************************
  *
- * 	Timer crap
+ * 	Timer
  *
  *************************************************/
 
