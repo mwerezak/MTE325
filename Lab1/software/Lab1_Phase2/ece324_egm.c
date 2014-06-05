@@ -36,7 +36,7 @@ extern np_pio* latency;
 extern np_pio* missed;*/
 
 // this function is called immediately upon entering your main program to setup the test conditions and reset the EGM
-void init(int in_period, int in_dutyCycle)
+void init(int in_period, int in_dutyCycle, TestStatistics *test_stats)
 {
 	int nPeriod; // the period (in milliseconds)
 	int nDutyCycle; // the duty cycle (in %)
@@ -53,8 +53,11 @@ void init(int in_period, int in_dutyCycle)
 	nResolution = nPeriod * 1000 / 1024;
 
 	// print out some friendly data for the user
-	printf("Beginning test.\n");
-	printf("Test specifications:\n  period = %d microseconds\n  duty cycle = %d%%\n  latency resolution = %d nanoseconds\n\n", nPeriod, nDutyCycle, nResolution);
+	//printf("Beginning test.\n");
+	//printf("Test specifications:\n  period = %d microseconds\n  duty cycle = %d%%\n  latency resolution = %d nanoseconds\n\n", nPeriod, nDutyCycle, nResolution);
+	test_stats->period = nPeriod;
+	test_stats->duty_cycle = nDutyCycle;
+	test_stats->latency_res = nResolution;
 
 	// make sure the 324EGM is disabled before we attempt to set it up
 	IOWR(PIO_EGMENABLE_BASE, 0, 0);
@@ -84,7 +87,7 @@ void init(int in_period, int in_dutyCycle)
 }
 
 // this function is called immediately upon exiting your main program to softly shut down the 324EGM and report test details
-void finalize(void)
+void finalize(TestStatistics *test_stats)
 {
 	int nMissed; // missed events
 	int nLatency; // maximum latency (in 1024ths of a period)
@@ -112,8 +115,13 @@ void finalize(void)
 	printf("  task units processed = %d units\n\n", g_taskProcessed);
 	printf("Exiting...\n");
 	*/
+	test_stats->tasks_compelete = g_taskProcessed;
+	test_stats->latency = nLatency_ms;
+	test_stats->rel_latency = nLatency;
+	test_stats->events_missed = nMissed;
+
 	//print the results in a CSV-friendly format
-	printf("%4d/1024, %6d us, %8d, %8d", nLatency, nLatency_ms, nMissed, g_taskProcessed);
+	//printf("%4d/1024, %6d us, %8d, %8d", nLatency, nLatency_ms, nMissed, g_taskProcessed);
 
 	// this tells the program that we're done
 	// removed to allow looping.
