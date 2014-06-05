@@ -897,7 +897,7 @@ static void TestEGM (void) {
     alt_u16 switchbits;
 
     printf("Press 'q' (followed by <enter>) to exit this test.\n\n");
-    init(0, 8);
+    init(14, 8);
 	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
@@ -927,6 +927,24 @@ static void TestEGM (void) {
     }
 
     finalize();
+}
+
+static void RunPeriodicPolling (void) {
+	TestStatistics stats;
+	int period, duty, grain;
+	const int grain_sizes[] = {20, 200, 400, 800, 1600};
+
+	//vary grain size: 20, 200, 400, 800, 1600
+	//vary period from 1-14
+	//vary duty cycle: 2, 5, 8, 11, 14
+
+	for (grain = 0; grain < 5; grain++) {
+		for (period = 1; period <= 14; period++) {
+			for (duty = 2; duty <= 14; duty += 2) {
+				//do stuff
+			}
+		}
+	}
 
 }
 

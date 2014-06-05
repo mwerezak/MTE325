@@ -97,6 +97,13 @@ static void update_ticker(BitTicker* t) {
 static void TestDIPSwitches( void );
 static void Lab1Phase1Main( void );
 
+/*************************************************
+ *
+ * Lab 1 Phase 2
+ *
+ *************************************************/
+
+
 static void TestEGM( void );
 static void Lab1Phase2Main( void );
 
