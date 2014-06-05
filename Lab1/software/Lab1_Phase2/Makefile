@@ -140,7 +140,8 @@ ACDS_VERSION := 10.1sp1
 ELF := Lab1_Phase2.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := board_diag.c
+C_SRCS += board_diag.c
+C_SRCS += ece324_egm.c
 CXX_SRCS :=
 ASM_SRCS :=
 
