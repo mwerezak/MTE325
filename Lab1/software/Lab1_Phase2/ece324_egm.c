@@ -103,6 +103,7 @@ void finalize(void)
 	nLatency_ms = nLatency * (g_period + 1) * 3 / 25;
 
 	// print the results
+	/*
 	printf("Test complete.\n");
 	printf("Results:\n");
 	printf("  missed = %d pulse(s)\n", nMissed);
@@ -110,6 +111,9 @@ void finalize(void)
 	printf("  max latency = %d microsecond(s)\n", nLatency_ms);
 	printf("  task units processed = %d units\n\n", g_taskProcessed);
 	printf("Exiting...\n");
+	*/
+	//print the results in a CSV-friendly format
+	printf("%4d/1024, %6d us, %8d, %8d", nLatency, nLatency_ms, nMissed, g_taskProcessed);
 
 	// this tells the program that we're done
 	// removed to allow looping.
