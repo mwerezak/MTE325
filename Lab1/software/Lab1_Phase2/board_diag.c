@@ -894,14 +894,20 @@ static void Lab1Phase1Main (void) {
 //make sure we are receiving events from the EGM by lighting up the LEDs.
 static void TestEGM (void) {
     alt_u8 egm_pulse;
+    alt_u16 switchbits;
 
     printf("Press 'q' (followed by <enter>) to exit this test.\n\n");
-    init(0, 50);
+    init(0, 8);
 	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
 
     while(1) {
+    	switchbits = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE);
+
+    	//Send SW0 to pio_response
+    	IOWR_ALTERA_AVALON_PIO_DATA(PIO_RESPONSE_BASE, switchbits & 0x1);
+
 		//read EGM stuff and output it somewhere
     	egm_pulse = IORD(PIO_PULSE_BASE, 0);
 
@@ -916,7 +922,7 @@ static void TestEGM (void) {
     	}
 
     	//see if we should stop
-    	if (IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0x1)
+    	if (switchbits & 0x8000)
 			break;
     }
 
