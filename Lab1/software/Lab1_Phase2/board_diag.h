@@ -14,6 +14,7 @@
 #include "altera_avalon_pio_regs.h"
 #include "altera_avalon_timer.h"
 #include "altera_avalon_timer_regs.h"  // timer register constants
+#include "sys/alt_alarm.h"	//for measuring elapsed time
 #include "ece324_egm.h"
 
 /*  Macros to clear the LCD screen. */
@@ -103,8 +104,11 @@ static void Lab1Phase1Main( void );
  *
  *************************************************/
 
+static void Respond(int period);
 
 static void TestEGM( void );
+static void RunTightPolling( void );
+
 static void Lab1Phase2Main( void );
 
 

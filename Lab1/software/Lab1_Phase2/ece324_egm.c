@@ -4,12 +4,7 @@
 
 //int nr_printf(const char *fmt,...);
 
-//#include "alt_types.h"
-#include <stdio.h>
-#include <unistd.h>
-#include "system.h"
-//#include "sys/alt_irq.h"
-#include <io.h>
+#include "ece324_egm.h"
 
 typedef volatile struct
 {
@@ -36,7 +31,7 @@ extern np_pio* latency;
 extern np_pio* missed;*/
 
 // this function is called immediately upon entering your main program to setup the test conditions and reset the EGM
-void init(int in_period, int in_dutyCycle, TestStatistics *test_stats)
+void init(int in_period, int in_dutyCycle, TestStatistics* test_stats)
 {
 	int nPeriod; // the period (in milliseconds)
 	int nDutyCycle; // the duty cycle (in %)
