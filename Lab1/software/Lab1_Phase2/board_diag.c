@@ -1120,23 +1120,6 @@ static void Respond(int period) {
 	IOWR(PIO_RESPONSE_BASE, 0, 0);
 }
 
-static void Lab1Phase2Main (void) {
-	//TODO - change this.
-	/*
-	int i;
-	init(6, 8);
-	for(i=0; i<100; i++)
-	{
-		while(IORD(PIO_PULSE_BASE, 0) == 0) {}
-		IOWR(PIO_RESPONSE_BASE, 0, 1);
-		background(20);
-		while(IORD(PIO_PULSE_BASE, 0) == 1) {}
-		IOWR(PIO_RESPONSE_BASE, 0, 0);
-		background(20);
-	}
-	finalize();
-	*/
-}
 
 /*************************************************
  *

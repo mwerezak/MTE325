@@ -123,15 +123,10 @@ static void Lab1Phase1Main( void );
  *
  *************************************************/
 
-static void Respond(int period);
-
 static void TestEGM( void );
 static void RunTightPolling( void );
 static void RunPeriodicPolling( void );
 static void RunInterruptSynchro( void );
-
-static void Lab1Phase2Main( void );
-
 
 #define EOT 0x4
 
