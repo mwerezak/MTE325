@@ -1008,7 +1008,7 @@ static void RunPeriodicPolling (void) {
 	printf("PERIODIC POLLING\n\n");
 	//printf("grain size, period, duty | rel latency,   latency ( lat res),   missed events, tasks completed\n");
 	//for CSV
-	printf("grain size, period, duty cycle, rel latency, latency, lat res, missed events, time elapsed, tasks completed\n");
+	printf("grain size, period [us], duty cycle, relative latency (1/1024 periods), latency [us], latency resolution [us], missed events, time elapsed [ms], tasks completed\n");
 
 	for (grain = 0; grain < 5; grain++) {
 		for (period = 1; period <= 14; period++) {
@@ -1056,9 +1056,11 @@ static void RunInterruptSynchro (void) {
 	TestStatistics stats;
 	alt_u32 ticks_start, ticks_end, time_elapsed;
 	int period, duty, grain, iter;
+	//alt_u32 response_duration;	//us
 	const int grain_size[] = {20, 200, 400, 800, 1600};
 
 	//init timers
+	//InitTimers();
 
 	//vary grain size: 20, 200, 400, 800, 1600
 	//vary period from 1-14
@@ -1066,7 +1068,7 @@ static void RunInterruptSynchro (void) {
 	printf("ACTIVE SYNCHRONIZATION\n\n");
 	//printf("grain size, period, duty | rel latency,   latency ( lat res),   missed events, tasks completed\n");
 	//for CSV
-	printf("grain size, period, duty cycle, rel latency, latency, lat res, missed events, time elapsed, tasks completed\n");
+	printf("grain size, period [us], duty cycle, relative latency (1/1024 periods), latency [us], latency resolution [us], missed events, time elapsed [ms], tasks completed\n");
 
 	InitEGMPulseEdgeTrigger();
 
@@ -1076,6 +1078,7 @@ static void RunInterruptSynchro (void) {
 				//do stuff
 				init(period, duty, &stats);
 				stats.grain_size = grain_size[grain];
+
 
 				ticks_start = alt_nticks();
 				for (iter = 0; iter < 16000/grain_size[grain]; iter += 1) {
