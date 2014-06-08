@@ -59,13 +59,28 @@ static void TestLCD( void );
  * upon exiting the Main Menu.
  */
 
-/*
+/*************************************************
+ *
  * Timers
- */
+ *
+ *************************************************/
+
+volatile int timer0, timer1;	//these become nonzero when timer has gone off
+
 static void SetTimer0(alt_u32);
 static void SetTimer1(alt_u32);
 static void init_timers(void);
 
+/*************************************************
+ *
+ * EGM Pulse Edge-Trigger
+ *
+ *************************************************/
+
+volatile alt_u8 egm_pulse;
+
+static void InitEGMPulseEdgeTrigger (void);
+static void handle_egm_pulse_interrupt(void*, alt_u32);
 
 /*************************************************
  *
@@ -78,16 +93,16 @@ typedef struct BitTicker {
 	alt_u8 counter;	//when zero there are no bits left
 } BitTicker;
 
-static void init_ticker(BitTicker* t) {
+static void init_ticker(volatile BitTicker* t) {
 	t->counter = 0;
 }
 
-static void start_ticker(BitTicker* t, alt_u8 new_sequence) {
+static void start_ticker(volatile BitTicker* t, alt_u8 new_sequence) {
 	t->bit_sequence = new_sequence;
 	t->counter = 8;
 }
 
-static void update_ticker(BitTicker* t) {
+static void update_ticker(volatile BitTicker* t) {
 	if (t->counter > 0){
 		t->bit_sequence = (t->bit_sequence) >> 1;
 		(t->counter)--;
