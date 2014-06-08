@@ -255,7 +255,9 @@ static char TopMenu( void )
     MenuItem( 'f', "Test DIP Switches" );
     MenuItem( 'g', "TestEGM" );
     MenuItem( 'h', "Lab 1 Phase 1" );
-    MenuItem( 'i', "Lab 1 Phase 2 Test Fixture" );
+    MenuItem( 'i', "Lab 1 Phase 2 Tight Polling" );
+    MenuItem( 'j', "Lab 1 Phase 2 Periodic Polling" );
+    MenuItem( 'k', "Lab 1 Phase 2 Active Synch" );
 
     ch = MenuEnd('a', 'e');
 
@@ -281,6 +283,8 @@ static char TopMenu( void )
       MenuCase('g',TestEGM);
       MenuCase('h',Lab1Phase1Main);
       MenuCase('i',RunTightPolling);
+      MenuCase('j',RunPeriodicPolling);
+      MenuCase('k',RunInterruptSynchro);
       case 'q':	break;
       default:	printf("\n -ERROR: %c is an invalid entry.  Please try again\n", ch); break;
     }
@@ -849,7 +853,7 @@ static void Lab1Phase1Main (void) {
 	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_PIO_BASE, 0xf);
 
 	//init timers
-	init_timers();
+	InitTimers();
 
 	//init tickers
 	init_ticker(&led_ticker);
@@ -912,7 +916,7 @@ static void TestEGM (void) {
 	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0x0);
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);
 
-    InitEGMPulseEdgeTrigger();
+    InitEGMPulseEdgeTriggerTest();
 
 	init(0, 8, &stats);
 	IOWR_ALTERA_AVALON_PIO_DATA(RED_LED_PIO_BASE, 0xC0);
@@ -990,6 +994,64 @@ static void RunTightPolling (void) {
 	}
 }
 
+static void RunPeriodicPolling (void) {
+	TestStatistics stats;
+	alt_u32 ticks_start, ticks_end, time_elapsed;
+	int period, duty, grain, iter;
+	const int grain_size[] = {20, 200, 400, 800, 1600};
+
+	//init timers
+
+	//vary grain size: 20, 200, 400, 800, 1600
+	//vary period from 1-14
+	//vary duty cycle: 2, 5, 8, 11, 14
+	printf("PERIODIC POLLING\n\n");
+	//printf("grain size, period, duty | rel latency,   latency ( lat res),   missed events, tasks completed\n");
+	//for CSV
+	printf("grain size, period, duty cycle, rel latency, latency, lat res, missed events, time elapsed, tasks completed\n");
+
+	for (grain = 0; grain < 5; grain++) {
+		for (period = 1; period <= 14; period++) {
+			for (duty = 2; duty <= 14; duty += 2) {
+				//do stuff
+				init(period, duty, &stats);
+				stats.grain_size = grain_size[grain];
+
+				ticks_start = alt_nticks();
+				for (iter = 0; iter < 16000/grain_size[grain]; iter += 1) {
+					if ( IORD_ALTERA_AVALON_PIO_DATA(PIO_PULSE_BASE) ) {
+						IOWR(PIO_RESPONSE_BASE, 0, 1);
+					} else {
+						IOWR(PIO_RESPONSE_BASE, 0, 0);
+					}
+
+					background(grain_size[grain]);
+				}
+
+				ticks_end = alt_nticks();
+				time_elapsed = (1000*(ticks_end - ticks_start))/alt_ticks_per_second();	//ms
+				if (ticks_end < 0 || ticks_start < 0)
+					printf("error");
+				finalize(&stats);
+
+				/*
+				printf("%4d batch, %4d us, %2d%% | %6d/1024, %6d us (%5d us), %8d events, took %6d ms to complete %6d iterations.\n",
+						stats.grain_size, stats.period, stats.duty_cycle,
+						stats.rel_latency, stats.latency, stats.latency_res, stats.events_missed,
+						time_elapsed, stats.tasks_compelete);
+				*/
+				//For CSV
+				printf("%4d, %4d, %2d%%, %6d, %6d, %5d, %8d, %6d, %6d\n",
+						stats.grain_size, stats.period, stats.duty_cycle,
+						stats.rel_latency, stats.latency, stats.latency_res,
+						stats.events_missed, time_elapsed, stats.tasks_compelete);
+
+			}
+		}
+	}
+}
+
+
 static void RunInterruptSynchro (void) {
 	TestStatistics stats;
 	alt_u32 ticks_start, ticks_end, time_elapsed;
@@ -1001,10 +1063,13 @@ static void RunInterruptSynchro (void) {
 	//vary grain size: 20, 200, 400, 800, 1600
 	//vary period from 1-14
 	//vary duty cycle: 2, 5, 8, 11, 14
-	printf("TIGHT POLLING\n\n");
-	printf("grain size, period, duty | rel latency,   latency ( lat res),   missed events, tasks completed\n");
+	printf("ACTIVE SYNCHRONIZATION\n\n");
+	//printf("grain size, period, duty | rel latency,   latency ( lat res),   missed events, tasks completed\n");
 	//for CSV
-	//printf("grain size, period, duty cycle, rel latency, latency, lat res, missed events, time elapsed, tasks completed\n");
+	printf("grain size, period, duty cycle, rel latency, latency, lat res, missed events, time elapsed, tasks completed\n");
+
+	InitEGMPulseEdgeTrigger();
+
 	for (grain = 0; grain < 5; grain++) {
 		for (period = 1; period <= 14; period++) {
 			for (duty = 2; duty <= 14; duty += 2) {
@@ -1013,12 +1078,7 @@ static void RunInterruptSynchro (void) {
 				stats.grain_size = grain_size[grain];
 
 				ticks_start = alt_nticks();
-				for (iter = 0; iter < 16000/grain_size[grain]; iter += 2) {
-					while(IORD(PIO_PULSE_BASE, 0) == 0);
-					IOWR(PIO_RESPONSE_BASE, 0, 1);
-					background(grain_size[grain]);
-					while(IORD(PIO_PULSE_BASE, 0) == 1);
-					IOWR(PIO_RESPONSE_BASE, 0, 0);
+				for (iter = 0; iter < 16000/grain_size[grain]; iter += 1) {
 					background(grain_size[grain]);
 				}
 
@@ -1028,17 +1088,19 @@ static void RunInterruptSynchro (void) {
 					printf("error");
 				finalize(&stats);
 
+				/*
 				printf("%4d batch, %4d us, %2d%% | %6d/1024, %6d us (%5 us), %8d events, took %6d ms to complete %6d iterations.\n",
 						stats.grain_size, stats.period, stats.duty_cycle,
 						stats.rel_latency, stats.latency, stats.latency_res, stats.events_missed,
 						time_elapsed, stats.tasks_compelete);
-				/*
-				//For CSV
-				printf("%4d batch, %4d us, %2d%%, %6d, %6d, %5 us, %8d, %6d, %6d",
-										stats.grain_size, stats.period, stats.duty_cycle,
-										stats.rel_latency, stats.latency, stats.latency_res, stats.events_missed,
-										time_elapsed, stats.tasks_compelete);
 				*/
+
+				//For CSV
+				printf("%4d, %4d, %2d%%, %6d, %6d, %5d, %8d, %6d, %6d\n",
+						stats.grain_size, stats.period, stats.duty_cycle,
+						stats.rel_latency, stats.latency, stats.latency_res,
+						stats.events_missed, time_elapsed, stats.tasks_compelete);
+
 			}
 		}
 	}
@@ -1081,15 +1143,13 @@ static void Lab1Phase2Main (void) {
 
 volatile alt_u8 ledbits;
 
-
-static void InitEGMPulseEdgeTrigger (void){
-	void* edge_capture_ptr = (void*) &egm_pulse;
+static void InitEGMPulseEdgeTriggerTest (void){
 
 	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x1);
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_PULSE_BASE, 0x0);	//reset the register
 
 	//Register the ISR
-	alt_irq_register( PIO_PULSE_IRQ, NULL, handle_egm_pulse_interrupt);
+	alt_irq_register( PIO_PULSE_IRQ, NULL, handle_egm_pulse_interrupt_test);
 	ledbits = 0;
 
 	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LED_PIO_BASE, 0x0);	//LEDs
@@ -1097,7 +1157,7 @@ static void InitEGMPulseEdgeTrigger (void){
 
 }
 
-static void handle_egm_pulse_interrupt(void* context, alt_u32 id) {
+static void handle_egm_pulse_interrupt_test(void* context, alt_u32 id) {
 	alt_u8 pulse;
 	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x0);
 
@@ -1113,6 +1173,34 @@ static void handle_egm_pulse_interrupt(void* context, alt_u32 id) {
 
 	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x1);
 }
+
+static void InitEGMPulseEdgeTrigger (void){
+
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x1);
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_PULSE_BASE, 0x0);	//reset the register
+
+	//Register the ISR
+	alt_irq_register( PIO_PULSE_IRQ, NULL, handle_egm_pulse_interrupt);
+}
+
+static void handle_egm_pulse_interrupt(void* context, alt_u32 id) {
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x0);	//disable the interrupt
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_PULSE_BASE);
+
+	egm_pulse = IORD_ALTERA_AVALON_PIO_DATA(PIO_PULSE_BASE);
+	//egm_pulse_trigger = 1;
+
+	if ( egm_pulse ) {
+		IOWR(PIO_RESPONSE_BASE, 0, 1);
+	} else {
+		IOWR(PIO_RESPONSE_BASE, 0, 0);
+	}
+
+
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_PULSE_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_PULSE_BASE, 0x1);	//re-enable the interrupt
+}
+
 
 /*************************************************
  *
@@ -1176,7 +1264,7 @@ static void handle_timer1_interrupt (void* context, alt_u32 id) {
 	timer1 = 0xf;
 }
 
-static void init_timers(void) {
+static void InitTimers(void) {
 	timer0 = 0;
 	timer1 = 0;
 

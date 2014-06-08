@@ -69,7 +69,7 @@ volatile int timer0, timer1;	//these become nonzero when timer has gone off
 
 static void SetTimer0(alt_u32);
 static void SetTimer1(alt_u32);
-static void init_timers(void);
+static void InitTimers(void);
 
 /*************************************************
  *
@@ -78,9 +78,13 @@ static void init_timers(void);
  *************************************************/
 
 volatile alt_u8 egm_pulse;
+//volatile alt_u8 egm_pulse_trigger;	//is non-zero if egm_pulse has changed
 
 static void InitEGMPulseEdgeTrigger (void);
 static void handle_egm_pulse_interrupt(void*, alt_u32);
+
+static void InitEGMPulseEdgeTriggerTest (void);
+static void handle_egm_pulse_interrupt_test(void*, alt_u32);
 
 /*************************************************
  *
@@ -123,6 +127,8 @@ static void Respond(int period);
 
 static void TestEGM( void );
 static void RunTightPolling( void );
+static void RunPeriodicPolling( void );
+static void RunInterruptSynchro( void );
 
 static void Lab1Phase2Main( void );
 
