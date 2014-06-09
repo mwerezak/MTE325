@@ -1,5 +1,5 @@
-PERIODIC POLLING,
-,
+PERIODIC POLLING,,,,,,,,
+,,,,,,,,
 grain size, period [us], duty cycle, relative latency (1/1024 periods), latency [us], latency resolution [us], missed events, time elapsed [ms], tasks completed
   20,  164, 12%,  26744,   6418,   160,      527,    102,  16000
   20,  164, 25%,   6354,   1524,   160,      441,    102,  16000
