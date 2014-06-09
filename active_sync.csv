@@ -1,5 +1,5 @@
-ACTIVE SYNCHRONIZATION,
-,
+ACTIVE SYNCHRONIZATION,,,,,,,,
+,,,,,,,,
 grain size, period [us], duty cycle, relative latency (1/1024 periods), latency [us], latency resolution [us], missed events, time elapsed [ms], tasks completed
   20,  164, 12%,   4223,   1013,   160,      283,    143,  16000
   20,  164, 25%,   1164,    279,   160,       17,    168,  16000
