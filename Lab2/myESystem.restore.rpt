@@ -1,0 +1,118 @@
+Restore Archived Project report for myESystem
+Wed Jun 25 13:52:59 2014
+Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Wed Jun 25 13:52:59 2014 ;
+; Revision Name                   ; myESystem                             ;
+; Top-level Entity Name           ; myESystem                             ;
+; Family                          ; Cyclone II                            ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'N:/MTE325/MTE325/Lab1/myESystem_tmp_archive.qar' into the 'N:/MTE325/MTE325/Lab2' directory
+Info: Generated report 'myESystem.restore.rpt'
+
+
++------------------------------------------------------+
+; Files Restored                                       ;
++------------------------------------------------------+
+; File Name                                            ;
++------------------------------------------------------+
+; button_pio.v                                         ;
+; cpu_0.ocp                                            ;
+; cpu_0.sdc                                            ;
+; cpu_0.v                                              ;
+; cpu_0_ic_tag_ram.mif                                 ;
+; cpu_0_jtag_debug_module_sysclk.v                     ;
+; cpu_0_jtag_debug_module_tck.v                        ;
+; cpu_0_jtag_debug_module_wrapper.v                    ;
+; cpu_0_oci_test_bench.v                               ;
+; cpu_0_ociram_default_contents.mif                    ;
+; cpu_0_rf_ram_a.mif                                   ;
+; cpu_0_rf_ram_b.mif                                   ;
+; cpu_0_test_bench.v                                   ;
+; files/ece324_clock_divider.vhd                       ;
+; files/ece324_egm.bdf                                 ;
+; files/ece324_latency_tracker.vhd                     ;
+; files/ece324_pulse_generator.vhd                     ;
+; green_led_pio.v                                      ;
+; incremental_db/compiled_partitions/myESystem.db_info ;
+; jtag_uart_0.v                                        ;
+; lcd_display.v                                        ;
+; led_pio.v                                            ;
+; myESystem.bdf                                        ;
+; myESystem.qpf                                        ;
+; myESystem.qsf                                        ;
+; my_controller.qip                                    ;
+; my_controller.sopc                                   ;
+; my_controller.v                                      ;
+; pio_dutycycle.v                                      ;
+; pio_egmenable.v                                      ;
+; pio_egmreset.v                                       ;
+; pio_latency.v                                        ;
+; pio_missed.v                                         ;
+; pio_period.v                                         ;
+; pio_pulse.v                                          ;
+; pio_response.v                                       ;
+; red_led_pio.v                                        ;
+; sdram_0.v                                            ;
+; sdram_pll.bsf                                        ;
+; sdram_pll.cmp                                        ;
+; sdram_pll.ppf                                        ;
+; sdram_pll.qip                                        ;
+; sdram_pll.vhd                                        ;
+; seven_seg_middle_pio.v                               ;
+; seven_seg_pio.v                                      ;
+; seven_seg_right_pio.v                                ;
+; switch_pio.v                                         ;
+; sysid.v                                              ;
+; timer_0.v                                            ;
+; timer_1.v                                            ;
+; assignment_defaults.qdf                              ;
++------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

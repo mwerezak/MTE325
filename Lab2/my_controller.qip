@@ -1,0 +1,37 @@
+# clk_0
+# cpu_0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
+# sysid
+# jtag_uart_0
+# sdram_0
+# lcd_display
+# led_pio
+# seven_seg_pio
+# button_pio
+# timer_0
+# timer_1
+# green_led_pio
+# red_led_pio
+# seven_seg_middle_pio
+# seven_seg_right_pio
+# switch_pio
+# null
+# aud_full
+# sd_dat
+# sd_cmd
+# sd_clk
+# audio_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) files/audio/Audio_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) files/audio/hdl/Audio.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) files/audio/hdl/AUDIO_DAC_FIFO.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) files/audio/hdl/FIFO_16_256.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) audio_0.v]
+# open_i2c_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) files/open_i2c/i2c_master_top_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) files/open_i2c/hdl/i2c_master_top.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) files/open_i2c/hdl/i2c_master_bit_ctrl.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) files/open_i2c/hdl/i2c_master_byte_ctrl.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) open_i2c_0.vhd]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 60A44C53E6E500000146D4355568 
+ 

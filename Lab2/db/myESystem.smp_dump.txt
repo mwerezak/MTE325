@@ -1,0 +1,74 @@
+
+State Machine - |myESystem|my_controller:inst|sdram_0:the_sdram_0|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|sdram_0:the_sdram_0|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|sdram_0:the_sdram_0|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|sdram_0:the_sdram_0|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|open_i2c_0:the_open_i2c_0|i2c_master_top:open_i2c_0|i2c_master_byte_ctrl:byte_ctrl|\statemachine:c_state
+Name \statemachine:c_state.st_stop \statemachine:c_state.st_ack \statemachine:c_state.st_write \statemachine:c_state.st_read \statemachine:c_state.st_start \statemachine:c_state.st_idle 
+\statemachine:c_state.st_idle 0 0 0 0 0 0 
+\statemachine:c_state.st_start 0 0 0 0 1 1 
+\statemachine:c_state.st_read 0 0 0 1 0 1 
+\statemachine:c_state.st_write 0 0 1 0 0 1 
+\statemachine:c_state.st_ack 0 1 0 0 0 1 
+\statemachine:c_state.st_stop 1 0 0 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|open_i2c_0:the_open_i2c_0|i2c_master_top:open_i2c_0|i2c_master_byte_ctrl:byte_ctrl|i2c_master_bit_ctrl:bit_ctrl|c_state
+Name c_state.wr_d c_state.wr_c c_state.wr_b c_state.wr_a c_state.rd_d c_state.rd_c c_state.rd_b c_state.rd_a c_state.stop_d c_state.stop_c c_state.stop_b c_state.stop_a c_state.start_e c_state.start_d c_state.start_c c_state.start_b c_state.start_a c_state.idle 
+c_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+c_state.start_a 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+c_state.start_b 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+c_state.start_c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+c_state.start_d 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+c_state.start_e 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+c_state.stop_a 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+c_state.stop_b 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+c_state.stop_c 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+c_state.stop_d 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+c_state.rd_a 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+c_state.rd_b 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+c_state.rd_c 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+c_state.rd_d 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+c_state.wr_a 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+c_state.wr_b 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+c_state.wr_c 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+c_state.wr_d 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

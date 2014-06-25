@@ -1,0 +1,68 @@
+Quartus II Archive log --	N:/MTE325/MTE325/Lab1/myESystem_tmp_archive.qarlog
+
+Archive:	N:/MTE325/MTE325/Lab1/myESystem_tmp_archive.qar
+Date:		Wed Jun 25 13:52:53 2014
+Quartus II 64-Bit		10.1 Build 197 01/19/2011 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+N:/MTE325/MTE325/Lab1/button_pio.v
+N:/MTE325/MTE325/Lab1/cpu_0.ocp
+N:/MTE325/MTE325/Lab1/cpu_0.sdc
+N:/MTE325/MTE325/Lab1/cpu_0.v
+N:/MTE325/MTE325/Lab1/cpu_0_ic_tag_ram.mif
+N:/MTE325/MTE325/Lab1/cpu_0_jtag_debug_module_sysclk.v
+N:/MTE325/MTE325/Lab1/cpu_0_jtag_debug_module_tck.v
+N:/MTE325/MTE325/Lab1/cpu_0_jtag_debug_module_wrapper.v
+N:/MTE325/MTE325/Lab1/cpu_0_oci_test_bench.v
+N:/MTE325/MTE325/Lab1/cpu_0_ociram_default_contents.mif
+N:/MTE325/MTE325/Lab1/cpu_0_rf_ram_a.mif
+N:/MTE325/MTE325/Lab1/cpu_0_rf_ram_b.mif
+N:/MTE325/MTE325/Lab1/cpu_0_test_bench.v
+N:/MTE325/MTE325/Lab1/files/ece324_clock_divider.vhd
+N:/MTE325/MTE325/Lab1/files/ece324_egm.bdf
+N:/MTE325/MTE325/Lab1/files/ece324_latency_tracker.vhd
+N:/MTE325/MTE325/Lab1/files/ece324_pulse_generator.vhd
+N:/MTE325/MTE325/Lab1/green_led_pio.v
+N:/MTE325/MTE325/Lab1/incremental_db/compiled_partitions/myESystem.db_info
+N:/MTE325/MTE325/Lab1/jtag_uart_0.v
+N:/MTE325/MTE325/Lab1/lcd_display.v
+N:/MTE325/MTE325/Lab1/led_pio.v
+N:/MTE325/MTE325/Lab1/myESystem.bdf
+N:/MTE325/MTE325/Lab1/myESystem.qpf
+N:/MTE325/MTE325/Lab1/myESystem.qsf
+N:/MTE325/MTE325/Lab1/my_controller.qip
+N:/MTE325/MTE325/Lab1/my_controller.sopc
+N:/MTE325/MTE325/Lab1/my_controller.v
+N:/MTE325/MTE325/Lab1/pio_dutycycle.v
+N:/MTE325/MTE325/Lab1/pio_egmenable.v
+N:/MTE325/MTE325/Lab1/pio_egmreset.v
+N:/MTE325/MTE325/Lab1/pio_latency.v
+N:/MTE325/MTE325/Lab1/pio_missed.v
+N:/MTE325/MTE325/Lab1/pio_period.v
+N:/MTE325/MTE325/Lab1/pio_pulse.v
+N:/MTE325/MTE325/Lab1/pio_response.v
+N:/MTE325/MTE325/Lab1/red_led_pio.v
+N:/MTE325/MTE325/Lab1/sdram_0.v
+N:/MTE325/MTE325/Lab1/sdram_pll.bsf
+N:/MTE325/MTE325/Lab1/sdram_pll.cmp
+N:/MTE325/MTE325/Lab1/sdram_pll.ppf
+N:/MTE325/MTE325/Lab1/sdram_pll.qip
+N:/MTE325/MTE325/Lab1/sdram_pll.vhd
+N:/MTE325/MTE325/Lab1/seven_seg_middle_pio.v
+N:/MTE325/MTE325/Lab1/seven_seg_pio.v
+N:/MTE325/MTE325/Lab1/seven_seg_right_pio.v
+N:/MTE325/MTE325/Lab1/switch_pio.v
+N:/MTE325/MTE325/Lab1/sysid.v
+N:/MTE325/MTE325/Lab1/timer_0.v
+N:/MTE325/MTE325/Lab1/timer_1.v
+c:/software/altera/10.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 51 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Jun 25 13:52:58 2014
+Source archive file:	N:/MTE325/MTE325/Lab1/myESystem_tmp_archive.qar
+Archive was extracted into	N:/MTE325/MTE325/Lab2/
+		 - successfully.

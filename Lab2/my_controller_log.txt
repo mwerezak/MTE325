@@ -1,0 +1,117 @@
+Altera SOPC Builder Version 10.11 Build 197
+Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
+
+
+No .sopc_builder configuration file(!)
+# 2014.06.25 14:08:46 (*) mk_custom_sdk starting
+# 2014.06.25 14:08:46 (*) Reading project N:/MTE325/MTE325/Lab2/my_controller.ptf.
+
+# 2014.06.25 14:08:46 (*) Finding all CPUs
+# 2014.06.25 14:08:46 (*) Finding all available components
+
+# 2014.06.25 14:08:46 (*) Reading N:/MTE325/MTE325/Lab2/.sopc_builder/install.ptf
+
+# 2014.06.25 14:08:46 (*) Found 63 components
+
+# 2014.06.25 14:08:47 (*) Finding all peripherals
+
+# 2014.06.25 14:08:47 (*) Finding software components
+
+# 2014.06.25 14:08:47 (*) (Legacy SDK Generation Skipped)
+# 2014.06.25 14:08:47 (*) (All TCL Script Generation Skipped)
+# 2014.06.25 14:08:47 (*) (No Libraries Built)
+# 2014.06.25 14:08:47 (*) (Contents Generation Skipped)
+# 2014.06.25 14:08:47 (*) mk_custom_sdk finishing
+# 2014.06.25 14:08:47 (*) Starting generation for system: my_controller.
+
+.
+.
+.
+.
+.
+...
+.
+..........
+
+# 2014.06.25 14:08:49 (*) Running Generator Program for cpu_0
+
+# 2014.06.25 14:08:50 (*) Starting Nios II generation
+# 2014.06.25 14:08:50 (*)   Checking for plaintext license.
+# 2014.06.25 14:08:50 (*)   Couldn't query license setup in Quartus directory c:/software/altera/10.1/quartus
+# 2014.06.25 14:08:50 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+# 2014.06.25 14:08:51 (*)   Plaintext license not found.
+# 2014.06.25 14:08:51 (*)   Checking for encrypted license (non-evaluation).
+# 2014.06.25 14:08:52 (*)   Couldn't query license setup in Quartus directory c:/software/altera/10.1/quartus
+
+# 2014.06.25 14:08:52 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+# 2014.06.25 14:08:53 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2014.06.25 14:08:53 (*)   Getting CPU configuration settings
+# 2014.06.25 14:08:53 (*)   Elaborating CPU configuration settings
+# 2014.06.25 14:08:53 (*)   Creating all objects for CPU
+# 2014.06.25 14:08:54 (*)     Pipeline frontend
+# 2014.06.25 14:08:55 (*)   Generating HDL from CPU objects
+# 2014.06.25 14:08:57 (*)   Creating encrypted HDL
+
+# 2014.06.25 14:08:58 (*) Done Nios II generation
+
+# 2014.06.25 14:08:58 (*) Running Generator Program for sysid
+
+# 2014.06.25 14:08:59 (*) Running Generator Program for jtag_uart_0
+
+# 2014.06.25 14:09:00 (*) Running Generator Program for sdram_0
+
+# 2014.06.25 14:09:01 (*) Running Generator Program for lcd_display
+
+# 2014.06.25 14:09:02 (*) Running Generator Program for led_pio
+
+# 2014.06.25 14:09:03 (*) Running Generator Program for seven_seg_pio
+
+# 2014.06.25 14:09:03 (*) Running Generator Program for button_pio
+
+# 2014.06.25 14:09:04 (*) Running Generator Program for timer_0
+
+# 2014.06.25 14:09:05 (*) Running Generator Program for timer_1
+
+# 2014.06.25 14:09:06 (*) Running Generator Program for green_led_pio
+
+# 2014.06.25 14:09:07 (*) Running Generator Program for red_led_pio
+
+# 2014.06.25 14:09:08 (*) Running Generator Program for seven_seg_middle_pio
+
+# 2014.06.25 14:09:08 (*) Running Generator Program for seven_seg_right_pio
+
+# 2014.06.25 14:09:09 (*) Running Generator Program for switch_pio
+
+# 2014.06.25 14:09:10 (*) Running Generator Program for aud_full
+
+# 2014.06.25 14:09:11 (*) Running Generator Program for sd_dat
+
+# 2014.06.25 14:09:12 (*) Running Generator Program for sd_cmd
+
+# 2014.06.25 14:09:13 (*) Running Generator Program for sd_clk
+
+.
+
+# 2014.06.25 14:09:13 (*) Running Test Generator Program for sdram_0
+
+# 2014.06.25 14:09:14 (*) Making arbitration and system (top) modules.
+
+# 2014.06.25 14:09:20 (*) Generating Quartus symbol for top level: my_controller
+
+# 2014.06.25 14:09:20 (*) Generating Symbol N:/MTE325/MTE325/Lab2/my_controller.bsf
+
+# 2014.06.25 14:09:20 (*) Creating command-line system-generation script: N:/MTE325/MTE325/Lab2/my_controller_generation_script
+
+# 2014.06.25 14:09:20 (*) Running setup for HDL simulator: modelsim
+
+
+# 2014.06.25 14:09:21 (*) Completed generation for system: my_controller.
+# 2014.06.25 14:09:21 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : N:/MTE325/MTE325/Lab2/my_controller.ptf 
+  System HDL Model : N:/MTE325/MTE325/Lab2/my_controller.v 
+  System Generation Script : N:/MTE325/MTE325/Lab2/my_controller_generation_script 
+
+# 2014.06.25 14:09:21 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.
