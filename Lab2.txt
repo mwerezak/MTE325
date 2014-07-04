@@ -1,0 +1,15 @@
+Overview of complete system design
+
+A discussion of issues faced when designing hardware or software interfacing. Choices made.
+
+Alternative design decisions.
+
+Testing and debugging strategy, with at least one alternative.
+
+Issues that impacted the audio playback, for each of the playback modes. Design decisions made, with alternatives.
+
+A discussion of writing efficient software.
+
+Testing and debugging strategy, specifically with regards to audio playback, with at least one alternative.
+
+Brief discussion of how the project can be improved or extended further.
