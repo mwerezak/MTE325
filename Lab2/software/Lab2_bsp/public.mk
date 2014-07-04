@@ -87,7 +87,7 @@ ACDS_VERSION := 10.1sp1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := N:/MTE325/MTE325/Lab2/myESystem.jdi
+JDI_FILE := N:/MTE325/Lab2/myESystem.jdi
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

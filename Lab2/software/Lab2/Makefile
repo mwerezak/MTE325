@@ -140,17 +140,20 @@ ACDS_VERSION := 10.1sp1
 ELF := Lab2.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := board_diag.c
+C_SRCS += board_diag.c
 CXX_SRCS :=
 ASM_SRCS :=
 
+SDIR_C_SRCS :=
+SDIR_CXX_SRCS :=
+SDIR_ASM_SRCS :=
 
 # Path to root of object file tree.
 OBJ_ROOT_DIR := obj
 
 # Options to control objdump.
 CREATE_OBJDUMP := 1
-OBJDUMP_INCLUDE_SOURCE := 1
+OBJDUMP_INCLUDE_SOURCE := 0
 OBJDUMP_FULL_CONTENTS := 0
 
 # Options to enable/disable optional files.
@@ -185,6 +188,7 @@ APP_LIBRARY_NAMES :=
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
+OBJDUMP_INCLUDE_SOURCE := 1
 QUARTUS_PROJECT_DIR := ../../
 
 

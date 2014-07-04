@@ -100,7 +100,7 @@ ACDS_VERSION := 10.1sp1
 # BUILD_NUMBER: 197
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := N:/MTE325/MTE325/Lab2/my_controller.sopcinfo
+SOPC_FILE := N:/MTE325/Lab2/my_controller.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

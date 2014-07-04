@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'my_controller'
- * SOPC Builder design path: N:/MTE325/MTE325/Lab2/my_controller.sopcinfo
+ * SOPC Builder design path: N:/MTE325/Lab2/my_controller.sopcinfo
  *
- * Generated: Wed Jun 25 15:09:03 EDT 2014
+ * Generated: Fri Jul 04 14:29:46 EDT 2014
  */
 
 /*
