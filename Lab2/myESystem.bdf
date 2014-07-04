@@ -91,7 +91,7 @@ applicable agreement for further details.
 	(input)
 	(rect -352 424 -184 440)
 	(text "INPUT" (rect 133 0 166 12)(font "Arial" (font_size 6)))
-	(text "CLOCK_27" (rect 5 0 68 13)(font "Arial" ))
+	(text "CLOCK_27" (rect 5 0 67 13)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -102,6 +102,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 159 19)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -416 440 -352 456))
 )
 (pin
 	(output)
@@ -224,7 +225,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1368 608 1544 624)
+	(rect 1128 616 1304 632)
 	(text "OUTPUT" (rect 1 0 44 12)(font "Arial" (font_size 6)))
 	(text "LEDR[7..0]" (rect 90 0 150 13)(font "Arial" ))
 	(pt 0 8)
@@ -237,11 +238,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1544 624 1616 640))
+	(annotation_block (location)(rect 1304 632 1376 648))
 )
 (pin
 	(output)
-	(rect 1328 744 1504 760)
+	(rect 1136 728 1312 744)
 	(text "OUTPUT" (rect 1 0 44 12)(font "Arial" (font_size 6)))
 	(text "LEDR[15..8]" (rect 90 0 157 13)(font "Arial" ))
 	(pt 0 8)
@@ -254,7 +255,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1504 760 1576 776))
+	(annotation_block (location)(rect 1312 744 1384 760))
 )
 (pin
 	(output)
@@ -458,6 +459,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 432 440 488 456))
 )
 (pin
 	(output)
@@ -474,6 +476,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1280 408 1336 424))
 )
 (pin
 	(output)
@@ -490,6 +493,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1281 424 1337 440))
 )
 (pin
 	(output)
@@ -522,38 +526,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-)
-(pin
-	(output)
-	(rect 1136 792 1312 808)
-	(text "OUTPUT" (rect 1 0 44 12)(font "Arial" (font_size 6)))
-	(text "SD_CMD" (rect 90 0 140 13)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 1136 824 1312 840)
-	(text "OUTPUT" (rect 1 0 44 12)(font "Arial" (font_size 6)))
-	(text "SD_DAT" (rect 90 0 138 13)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
+	(annotation_block (location)(rect 1312 776 1384 792))
 )
 (pin
 	(bidir)
@@ -593,7 +566,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 1360 648 1536 664)
+	(rect 1680 648 1856 664)
 	(text "BIDIR" (rect 1 0 31 12)(font "Arial" (font_size 6)))
 	(text "I2C_SCLK" (rect 90 0 147 13)(font "Arial" ))
 	(pt 0 8)
@@ -607,10 +580,11 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 27 19)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1856 664 1912 680))
 )
 (pin
 	(bidir)
-	(rect 1360 664 1536 680)
+	(rect 1680 664 1856 680)
 	(text "BIDIR" (rect 1 0 31 12)(font "Arial" (font_size 6)))
 	(text "I2C_SDAT" (rect 90 0 149 13)(font "Arial" ))
 	(pt 0 8)
@@ -624,6 +598,43 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 27 19)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1856 680 1912 696))
+)
+(pin
+	(bidir)
+	(rect 1136 792 1312 808)
+	(text "BIDIR" (rect 1 0 31 12)(font "Arial" (font_size 6)))
+	(text "SD_CMD" (rect 90 0 140 13)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 27 19)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1376 800 1440 816))
+)
+(pin
+	(bidir)
+	(rect 1136 824 1312 840)
+	(text "BIDIR" (rect 1 0 31 12)(font "Arial" (font_size 6)))
+	(text "SD_DAT" (rect 90 0 138 13)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 27 19)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1360 832 1432 848))
 )
 (symbol
 	(rect 232 96 472 264)
@@ -1046,7 +1057,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1168 624 1328 752)
+	(rect 1488 624 1648 752)
 	(text "I2C_tri" (rect 5 0 41 13)(font "Arial" ))
 	(text "inst3" (rect 8 112 33 125)(font "Arial" ))
 	(port
@@ -1257,36 +1268,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1104 656)
-	(pt 1168 656)
-)
-(connector
-	(pt 1104 672)
-	(pt 1168 672)
-)
-(connector
-	(pt 1104 688)
-	(pt 1168 688)
-)
-(connector
-	(pt 1104 704)
-	(pt 1168 704)
-)
-(connector
-	(text "scl" (rect 1338 640 1352 653)(font "Arial" ))
-	(pt 1328 656)
-	(pt 1360 656)
-)
-(connector
-	(text "sda" (rect 1338 656 1356 669)(font "Arial" ))
-	(pt 1328 672)
-	(pt 1360 672)
-)
-(connector
-	(pt 1104 768)
-	(pt 1136 768)
-)
-(connector
 	(pt 1104 800)
 	(pt 1136 800)
 )
@@ -1350,33 +1331,43 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1104 624)
-	(pt 1136 624)
-	(bus)
-)
-(connector
-	(pt 1136 624)
-	(pt 1136 616)
-	(bus)
-)
-(connector
-	(pt 1368 616)
-	(pt 1136 616)
-	(bus)
-)
-(connector
 	(pt 1104 736)
 	(pt 1136 736)
 	(bus)
 )
 (connector
-	(pt 1328 752)
-	(pt 1136 752)
-	(bus)
+	(pt 1104 768)
+	(pt 1136 768)
 )
 (connector
-	(pt 1136 736)
-	(pt 1136 752)
+	(text "scl" (rect 1658 640 1672 653)(font "Arial" ))
+	(pt 1648 656)
+	(pt 1680 656)
+)
+(connector
+	(text "sda" (rect 1658 656 1676 669)(font "Arial" ))
+	(pt 1648 672)
+	(pt 1680 672)
+)
+(connector
+	(pt 1104 688)
+	(pt 1488 688)
+)
+(connector
+	(pt 1104 704)
+	(pt 1488 704)
+)
+(connector
+	(pt 1104 656)
+	(pt 1488 656)
+)
+(connector
+	(pt 1104 672)
+	(pt 1488 672)
+)
+(connector
+	(pt 1104 624)
+	(pt 1128 624)
 	(bus)
 )
 (junction (pt 224 432))
@@ -1389,7 +1380,7 @@ applicable agreement for further details.
 	(section (rect 0 48 368 72)(text "DESIGNER" (rect 2 0 64 13)(font "Arial" ))(text "MICHAEL DANIEL WEREZAK" (rect 56 2 338 23)(font "Arial" (font_size 12)))(border))
 	(section (rect 0 72 280 96)(text "NUMBER" (rect 2 0 53 13)(font "Arial" ))(text "1.00" (rect 56 1 89 18)(font "Arial" (font_size 10)))(border))
 	(section (rect 280 72 368 96)(text "REV" (rect 2 1 26 14)(font "Arial" ))(text "A" (rect 43 1 53 18)(font "Arial" (font_size 10)))(border))
-	(section (rect 0 96 240 120)(text "DATE" (rect 2 0 35 13)(font "Arial" ))(text "Wed Jun 25 14:54:09 2014" (rect 56 3 261 20)(font "Arial" (font_size 10)))(date)(border))
+	(section (rect 0 96 240 120)(text "DATE" (rect 2 0 35 13)(font "Arial" ))(text "Fri Jul 04 15:55:03 2014" (rect 56 3 238 20)(font "Arial" (font_size 10)))(date)(border))
 	(section (rect 240 96 310 120)(text "SHEET" (rect 2 0 43 13)(font "Arial" ))(text "1" (rect 55 5 64 22)(font "Arial" (font_size 10))))
 	(section (rect 310 96 368 120)(text "OF" (rect 10 0 26 13)(font "Arial" ))(text "1" (rect 34 4 43 21)(font "Arial" (font_size 10))))
 	(drawing

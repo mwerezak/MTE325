@@ -1,5 +1,5 @@
 Analysis & Synthesis report for myESystem
-Wed Jun 25 15:01:12 2014
+Fri Jul 04 15:50:03 2014
 Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 
 
@@ -118,13 +118,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 25 15:01:12 2014          ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 04 15:50:03 2014          ;
 ; Quartus II 64-Bit Version          ; 10.1 Build 197 01/19/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; myESystem                                      ;
 ; Top-level Entity Name              ; myESystem                                      ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 3,775                                          ;
-;     Total combinational functions  ; 3,134                                          ;
+; Total logic elements               ; 3,771                                          ;
+;     Total combinational functions  ; 3,130                                          ;
 ;     Dedicated logic registers      ; 2,071                                          ;
 ; Total registers                    ; 2071                                           ;
 ; Total pins                         ; 171                                            ;
@@ -238,79 +238,79 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+
 ; File Name with User-Entered Path            ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                      ;
 +---------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+
-; files/I2C_tri.vhd                           ; yes             ; User VHDL File                         ; N:/MTE325/MTE325/Lab2/files/I2C_tri.vhd                                           ;
-; files/audio/hdl/Audio.v                     ; yes             ; User Verilog HDL File                  ; N:/MTE325/MTE325/Lab2/files/audio/hdl/Audio.v                                     ;
-; files/audio/hdl/AUDIO_DAC_FIFO.v            ; yes             ; User Verilog HDL File                  ; N:/MTE325/MTE325/Lab2/files/audio/hdl/AUDIO_DAC_FIFO.v                            ;
-; files/audio/hdl/FIFO_16_256.v               ; yes             ; User Wizard-Generated File             ; N:/MTE325/MTE325/Lab2/files/audio/hdl/FIFO_16_256.v                               ;
-; audio_0.v                                   ; yes             ; User Verilog HDL File                  ; N:/MTE325/MTE325/Lab2/audio_0.v                                                   ;
-; files/open_i2c/hdl/i2c_master_top.vhd       ; yes             ; User VHDL File                         ; N:/MTE325/MTE325/Lab2/files/open_i2c/hdl/i2c_master_top.vhd                       ;
-; files/open_i2c/hdl/i2c_master_bit_ctrl.vhd  ; yes             ; User VHDL File                         ; N:/MTE325/MTE325/Lab2/files/open_i2c/hdl/i2c_master_bit_ctrl.vhd                  ;
-; files/open_i2c/hdl/i2c_master_byte_ctrl.vhd ; yes             ; User VHDL File                         ; N:/MTE325/MTE325/Lab2/files/open_i2c/hdl/i2c_master_byte_ctrl.vhd                 ;
-; open_i2c_0.vhd                              ; yes             ; User VHDL File                         ; N:/MTE325/MTE325/Lab2/open_i2c_0.vhd                                              ;
-; sdram_pll.vhd                               ; yes             ; User Wizard-Generated File             ; N:/MTE325/MTE325/Lab2/sdram_pll.vhd                                               ;
-; myESystem.bdf                               ; yes             ; User Block Diagram/Schematic File      ; N:/MTE325/MTE325/Lab2/myESystem.bdf                                               ;
-; aud_pll.vhd                                 ; yes             ; User Wizard-Generated File             ; N:/MTE325/MTE325/Lab2/aud_pll.vhd                                                 ;
+; files/I2C_tri.vhd                           ; yes             ; User VHDL File                         ; N:/MTE325/Lab2/files/I2C_tri.vhd                                                  ;
+; files/audio/hdl/Audio.v                     ; yes             ; User Verilog HDL File                  ; N:/MTE325/Lab2/files/audio/hdl/Audio.v                                            ;
+; files/audio/hdl/AUDIO_DAC_FIFO.v            ; yes             ; User Verilog HDL File                  ; N:/MTE325/Lab2/files/audio/hdl/AUDIO_DAC_FIFO.v                                   ;
+; files/audio/hdl/FIFO_16_256.v               ; yes             ; User Wizard-Generated File             ; N:/MTE325/Lab2/files/audio/hdl/FIFO_16_256.v                                      ;
+; audio_0.v                                   ; yes             ; User Verilog HDL File                  ; N:/MTE325/Lab2/audio_0.v                                                          ;
+; files/open_i2c/hdl/i2c_master_top.vhd       ; yes             ; User VHDL File                         ; N:/MTE325/Lab2/files/open_i2c/hdl/i2c_master_top.vhd                              ;
+; files/open_i2c/hdl/i2c_master_bit_ctrl.vhd  ; yes             ; User VHDL File                         ; N:/MTE325/Lab2/files/open_i2c/hdl/i2c_master_bit_ctrl.vhd                         ;
+; files/open_i2c/hdl/i2c_master_byte_ctrl.vhd ; yes             ; User VHDL File                         ; N:/MTE325/Lab2/files/open_i2c/hdl/i2c_master_byte_ctrl.vhd                        ;
+; open_i2c_0.vhd                              ; yes             ; User VHDL File                         ; N:/MTE325/Lab2/open_i2c_0.vhd                                                     ;
+; sdram_pll.vhd                               ; yes             ; User Wizard-Generated File             ; N:/MTE325/Lab2/sdram_pll.vhd                                                      ;
+; myESystem.bdf                               ; yes             ; User Block Diagram/Schematic File      ; N:/MTE325/Lab2/myESystem.bdf                                                      ;
+; aud_pll.vhd                                 ; yes             ; User Wizard-Generated File             ; N:/MTE325/Lab2/aud_pll.vhd                                                        ;
 ; altpll.tdf                                  ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/altpll.tdf                ;
-; my_controller.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/my_controller.v                                             ;
-; aud_full.v                                  ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/aud_full.v                                                  ;
+; my_controller.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/my_controller.v                                                    ;
+; aud_full.v                                  ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/aud_full.v                                                         ;
 ; dcfifo.tdf                                  ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/dcfifo.tdf                ;
-; db/dcfifo_v2j1.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/dcfifo_v2j1.tdf                                          ;
-; db/a_graycounter_g86.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/a_graycounter_g86.tdf                                    ;
-; db/a_graycounter_7fc.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/a_graycounter_7fc.tdf                                    ;
-; db/a_graycounter_6fc.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/a_graycounter_6fc.tdf                                    ;
-; db/altsyncram_vk81.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_vk81.tdf                                      ;
-; db/altsyncram_brg1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_brg1.tdf                                      ;
-; db/dffpipe_ngh.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/dffpipe_ngh.tdf                                          ;
-; db/alt_synch_pipe_jcb.tdf                   ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/alt_synch_pipe_jcb.tdf                                   ;
-; db/dffpipe_hd9.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/dffpipe_hd9.tdf                                          ;
-; db/alt_synch_pipe_nc8.tdf                   ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/alt_synch_pipe_nc8.tdf                                   ;
-; db/dffpipe_id9.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/dffpipe_id9.tdf                                          ;
-; db/cmpr_t16.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/cmpr_t16.tdf                                             ;
-; button_pio.v                                ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/button_pio.v                                                ;
-; cpu_0.v                                     ; yes             ; Encrypted Auto-Found Verilog HDL File  ; N:/MTE325/MTE325/Lab2/cpu_0.v                                                     ;
-; cpu_0_test_bench.v                          ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/cpu_0_test_bench.v                                          ;
+; db/dcfifo_v2j1.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/dcfifo_v2j1.tdf                                                 ;
+; db/a_graycounter_g86.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/a_graycounter_g86.tdf                                           ;
+; db/a_graycounter_7fc.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/a_graycounter_7fc.tdf                                           ;
+; db/a_graycounter_6fc.tdf                    ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/a_graycounter_6fc.tdf                                           ;
+; db/altsyncram_vk81.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_vk81.tdf                                             ;
+; db/altsyncram_brg1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_brg1.tdf                                             ;
+; db/dffpipe_ngh.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/dffpipe_ngh.tdf                                                 ;
+; db/alt_synch_pipe_jcb.tdf                   ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/alt_synch_pipe_jcb.tdf                                          ;
+; db/dffpipe_hd9.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/dffpipe_hd9.tdf                                                 ;
+; db/alt_synch_pipe_nc8.tdf                   ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/alt_synch_pipe_nc8.tdf                                          ;
+; db/dffpipe_id9.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/dffpipe_id9.tdf                                                 ;
+; db/cmpr_t16.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/cmpr_t16.tdf                                                    ;
+; button_pio.v                                ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/button_pio.v                                                       ;
+; cpu_0.v                                     ; yes             ; Encrypted Auto-Found Verilog HDL File  ; N:/MTE325/Lab2/cpu_0.v                                                            ;
+; cpu_0_test_bench.v                          ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/cpu_0_test_bench.v                                                 ;
 ; altsyncram.tdf                              ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/altsyncram.tdf            ;
-; db/altsyncram_qed1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_qed1.tdf                                      ;
-; db/altsyncram_d5g1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_d5g1.tdf                                      ;
-; cpu_0_ic_tag_ram.mif                        ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/MTE325/Lab2/cpu_0_ic_tag_ram.mif                                        ;
-; db/altsyncram_irf1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_irf1.tdf                                      ;
-; cpu_0_rf_ram_a.mif                          ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/MTE325/Lab2/cpu_0_rf_ram_a.mif                                          ;
-; db/altsyncram_jrf1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_jrf1.tdf                                      ;
-; cpu_0_rf_ram_b.mif                          ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/MTE325/Lab2/cpu_0_rf_ram_b.mif                                          ;
-; db/altsyncram_c572.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_c572.tdf                                      ;
-; cpu_0_ociram_default_contents.mif           ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/MTE325/Lab2/cpu_0_ociram_default_contents.mif                           ;
-; cpu_0_oci_test_bench.v                      ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/cpu_0_oci_test_bench.v                                      ;
-; db/altsyncram_e502.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_e502.tdf                                      ;
-; cpu_0_jtag_debug_module_wrapper.v           ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/cpu_0_jtag_debug_module_wrapper.v                           ;
-; cpu_0_jtag_debug_module_tck.v               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/cpu_0_jtag_debug_module_tck.v                               ;
+; db/altsyncram_qed1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_qed1.tdf                                             ;
+; db/altsyncram_d5g1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_d5g1.tdf                                             ;
+; cpu_0_ic_tag_ram.mif                        ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/Lab2/cpu_0_ic_tag_ram.mif                                               ;
+; db/altsyncram_irf1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_irf1.tdf                                             ;
+; cpu_0_rf_ram_a.mif                          ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/Lab2/cpu_0_rf_ram_a.mif                                                 ;
+; db/altsyncram_jrf1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_jrf1.tdf                                             ;
+; cpu_0_rf_ram_b.mif                          ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/Lab2/cpu_0_rf_ram_b.mif                                                 ;
+; db/altsyncram_c572.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_c572.tdf                                             ;
+; cpu_0_ociram_default_contents.mif           ; yes             ; Auto-Found Memory Initialization File  ; N:/MTE325/Lab2/cpu_0_ociram_default_contents.mif                                  ;
+; cpu_0_oci_test_bench.v                      ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/cpu_0_oci_test_bench.v                                             ;
+; db/altsyncram_e502.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_e502.tdf                                             ;
+; cpu_0_jtag_debug_module_wrapper.v           ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/cpu_0_jtag_debug_module_wrapper.v                                  ;
+; cpu_0_jtag_debug_module_tck.v               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/cpu_0_jtag_debug_module_tck.v                                      ;
 ; altera_std_synchronizer.v                   ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/altera_std_synchronizer.v ;
-; cpu_0_jtag_debug_module_sysclk.v            ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/cpu_0_jtag_debug_module_sysclk.v                            ;
+; cpu_0_jtag_debug_module_sysclk.v            ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/cpu_0_jtag_debug_module_sysclk.v                                   ;
 ; sld_virtual_jtag_basic.v                    ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v  ;
-; green_led_pio.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/green_led_pio.v                                             ;
-; jtag_uart_0.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/jtag_uart_0.v                                               ;
+; green_led_pio.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/green_led_pio.v                                                    ;
+; jtag_uart_0.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/jtag_uart_0.v                                                      ;
 ; scfifo.tdf                                  ; yes             ; Megafunction                           ; c:/software/altera/10.1/quartus/libraries/megafunctions/scfifo.tdf                ;
-; db/scfifo_1n21.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/scfifo_1n21.tdf                                          ;
-; db/a_dpfifo_8t21.tdf                        ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/a_dpfifo_8t21.tdf                                        ;
-; db/a_fefifo_7cf.tdf                         ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/a_fefifo_7cf.tdf                                         ;
-; db/cntr_rj7.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/cntr_rj7.tdf                                             ;
-; db/dpram_5h21.tdf                           ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/dpram_5h21.tdf                                           ;
-; db/altsyncram_9tl1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/altsyncram_9tl1.tdf                                      ;
-; db/cntr_fjb.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/MTE325/Lab2/db/cntr_fjb.tdf                                             ;
+; db/scfifo_1n21.tdf                          ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/scfifo_1n21.tdf                                                 ;
+; db/a_dpfifo_8t21.tdf                        ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/a_dpfifo_8t21.tdf                                               ;
+; db/a_fefifo_7cf.tdf                         ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/a_fefifo_7cf.tdf                                                ;
+; db/cntr_rj7.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/cntr_rj7.tdf                                                    ;
+; db/dpram_5h21.tdf                           ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/dpram_5h21.tdf                                                  ;
+; db/altsyncram_9tl1.tdf                      ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/altsyncram_9tl1.tdf                                             ;
+; db/cntr_fjb.tdf                             ; yes             ; Auto-Generated Megafunction            ; N:/MTE325/Lab2/db/cntr_fjb.tdf                                                    ;
 ; alt_jtag_atlantic.v                         ; yes             ; Encrypted Megafunction                 ; c:/software/altera/10.1/quartus/libraries/megafunctions/alt_jtag_atlantic.v       ;
-; lcd_display.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/lcd_display.v                                               ;
-; led_pio.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/led_pio.v                                                   ;
-; red_led_pio.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/red_led_pio.v                                               ;
-; sd_clk.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/sd_clk.v                                                    ;
-; sd_cmd.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/sd_cmd.v                                                    ;
-; sd_dat.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/sd_dat.v                                                    ;
-; sdram_0.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/sdram_0.v                                                   ;
-; seven_seg_middle_pio.v                      ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/seven_seg_middle_pio.v                                      ;
-; seven_seg_pio.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/seven_seg_pio.v                                             ;
-; seven_seg_right_pio.v                       ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/seven_seg_right_pio.v                                       ;
-; switch_pio.v                                ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/switch_pio.v                                                ;
-; sysid.v                                     ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/sysid.v                                                     ;
-; timer_0.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/timer_0.v                                                   ;
-; timer_1.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/MTE325/Lab2/timer_1.v                                                   ;
+; lcd_display.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/lcd_display.v                                                      ;
+; led_pio.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/led_pio.v                                                          ;
+; red_led_pio.v                               ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/red_led_pio.v                                                      ;
+; sd_clk.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/sd_clk.v                                                           ;
+; sd_cmd.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/sd_cmd.v                                                           ;
+; sd_dat.v                                    ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/sd_dat.v                                                           ;
+; sdram_0.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/sdram_0.v                                                          ;
+; seven_seg_middle_pio.v                      ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/seven_seg_middle_pio.v                                             ;
+; seven_seg_pio.v                             ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/seven_seg_pio.v                                                    ;
+; seven_seg_right_pio.v                       ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/seven_seg_right_pio.v                                              ;
+; switch_pio.v                                ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/switch_pio.v                                                       ;
+; sysid.v                                     ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/sysid.v                                                            ;
+; timer_0.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/timer_0.v                                                          ;
+; timer_1.v                                   ; yes             ; Auto-Found Verilog HDL File            ; N:/MTE325/Lab2/timer_1.v                                                          ;
 ; sld_hub.vhd                                 ; yes             ; Encrypted Megafunction                 ; c:/software/altera/10.1/quartus/libraries/megafunctions/sld_hub.vhd               ;
 ; sld_rom_sr.vhd                              ; yes             ; Encrypted Megafunction                 ; c:/software/altera/10.1/quartus/libraries/megafunctions/sld_rom_sr.vhd            ;
 +---------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+
@@ -321,16 +321,16 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------+
 ; Resource                                    ; Usage                                         ;
 +---------------------------------------------+-----------------------------------------------+
-; Estimated Total logic elements              ; 3,775                                         ;
+; Estimated Total logic elements              ; 3,771                                         ;
 ;                                             ;                                               ;
-; Total combinational functions               ; 3134                                          ;
+; Total combinational functions               ; 3130                                          ;
 ; Logic element usage by number of LUT inputs ;                                               ;
 ;     -- 4 input functions                    ; 1719                                          ;
-;     -- 3 input functions                    ; 941                                           ;
-;     -- <=2 input functions                  ; 474                                           ;
+;     -- 3 input functions                    ; 939                                           ;
+;     -- <=2 input functions                  ; 472                                           ;
 ;                                             ;                                               ;
 ; Logic elements by mode                      ;                                               ;
-;     -- normal mode                          ; 2820                                          ;
+;     -- normal mode                          ; 2816                                          ;
 ;     -- arithmetic mode                      ; 314                                           ;
 ;                                             ;                                               ;
 ; Total registers                             ; 2071                                          ;
@@ -344,7 +344,7 @@ applicable agreement for further details.
 ;                                             ;                                               ;
 ; Maximum fan-out node                        ; sdram_pll:inst2|altpll:altpll_component|_clk0 ;
 ; Maximum fan-out                             ; 1993                                          ;
-; Total fan-out                               ; 21933                                         ;
+; Total fan-out                               ; 21923                                         ;
 ; Average fan-out                             ; 3.94                                          ;
 +---------------------------------------------+-----------------------------------------------+
 
@@ -354,10 +354,10 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                          ; Library Name ;
 +---------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |myESystem                                                                                                                ; 3134 (2)          ; 2071 (0)     ; 50816       ; 0            ; 0       ; 0         ; 171  ; 0            ; |myESystem                                                                                                                                                                                                                                                                   ;              ;
+; |myESystem                                                                                                                ; 3130 (2)          ; 2071 (0)     ; 50816       ; 0            ; 0       ; 0         ; 171  ; 0            ; |myESystem                                                                                                                                                                                                                                                                   ;              ;
 ;    |aud_pll:inst1|                                                                                                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|aud_pll:inst1                                                                                                                                                                                                                                                     ;              ;
 ;       |altpll:altpll_component|                                                                                           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|aud_pll:inst1|altpll:altpll_component                                                                                                                                                                                                                             ;              ;
-;    |my_controller:inst|                                                                                                   ; 3010 (1)          ; 1995 (0)     ; 50816       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst                                                                                                                                                                                                                                                ;              ;
+;    |my_controller:inst|                                                                                                   ; 3006 (1)          ; 1995 (0)     ; 50816       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst                                                                                                                                                                                                                                                ;              ;
 ;       |aud_full:the_aud_full|                                                                                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|aud_full:the_aud_full                                                                                                                                                                                                                          ;              ;
 ;       |audio_0:the_audio_0|                                                                                               ; 95 (0)            ; 141 (0)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|audio_0:the_audio_0                                                                                                                                                                                                                            ;              ;
 ;          |Audio:audio_0|                                                                                                  ; 95 (0)            ; 141 (0)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|audio_0:the_audio_0|Audio:audio_0                                                                                                                                                                                                              ;              ;
@@ -379,7 +379,7 @@ applicable agreement for further details.
 ;       |audio_0_avalon_slave_0_arbitrator:the_audio_0_avalon_slave_0|                                                      ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|audio_0_avalon_slave_0_arbitrator:the_audio_0_avalon_slave_0                                                                                                                                                                                   ;              ;
 ;       |button_pio:the_button_pio|                                                                                         ; 14 (14)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|button_pio:the_button_pio                                                                                                                                                                                                                      ;              ;
 ;       |button_pio_s1_arbitrator:the_button_pio_s1|                                                                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|button_pio_s1_arbitrator:the_button_pio_s1                                                                                                                                                                                                     ;              ;
-;       |cpu_0:the_cpu_0|                                                                                                   ; 1399 (1133)       ; 880 (694)    ; 45696       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0                                                                                                                                                                                                                                ;              ;
+;       |cpu_0:the_cpu_0|                                                                                                   ; 1398 (1132)       ; 880 (694)    ; 45696       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0                                                                                                                                                                                                                                ;              ;
 ;          |cpu_0_ic_data_module:cpu_0_ic_data|                                                                             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_ic_data_module:cpu_0_ic_data                                                                                                                                                                                             ;              ;
 ;             |altsyncram:the_altsyncram|                                                                                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_ic_data_module:cpu_0_ic_data|altsyncram:the_altsyncram                                                                                                                                                                   ;              ;
 ;                |altsyncram_qed1:auto_generated|                                                                           ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_ic_data_module:cpu_0_ic_data|altsyncram:the_altsyncram|altsyncram_qed1:auto_generated                                                                                                                                    ;              ;
@@ -409,10 +409,10 @@ applicable agreement for further details.
 ;             |altsyncram:the_altsyncram|                                                                                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram                                                                                                                                                   ;              ;
 ;                |altsyncram_jrf1:auto_generated|                                                                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram|altsyncram_jrf1:auto_generated                                                                                                                    ;              ;
 ;          |cpu_0_test_bench:the_cpu_0_test_bench|                                                                          ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|cpu_0_test_bench:the_cpu_0_test_bench                                                                                                                                                                                          ;              ;
-;       |cpu_0_data_master_arbitrator:the_cpu_0_data_master|                                                                ; 316 (316)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master                                                                                                                                                                                             ;              ;
+;       |cpu_0_data_master_arbitrator:the_cpu_0_data_master|                                                                ; 313 (313)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master                                                                                                                                                                                             ;              ;
 ;       |cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master|                                                  ; 45 (45)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master                                                                                                                                                                               ;              ;
 ;       |cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module|                                                    ; 37 (37)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module                                                                                                                                                                                 ;              ;
-;       |green_led_pio:the_green_led_pio|                                                                                   ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|green_led_pio:the_green_led_pio                                                                                                                                                                                                                ;              ;
+;       |green_led_pio:the_green_led_pio|                                                                                   ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|green_led_pio:the_green_led_pio                                                                                                                                                                                                                ;              ;
 ;       |green_led_pio_s1_arbitrator:the_green_led_pio_s1|                                                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|green_led_pio_s1_arbitrator:the_green_led_pio_s1                                                                                                                                                                                               ;              ;
 ;       |jtag_uart_0:the_jtag_uart_0|                                                                                       ; 142 (40)          ; 107 (13)     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|jtag_uart_0:the_jtag_uart_0                                                                                                                                                                                                                    ;              ;
 ;          |alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic|                                                                ; 51 (51)           ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic                                                                                                                                                                    ;              ;
@@ -455,9 +455,9 @@ applicable agreement for further details.
 ;       |sd_cmd_s1_arbitrator:the_sd_cmd_s1|                                                                                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sd_cmd_s1_arbitrator:the_sd_cmd_s1                                                                                                                                                                                                             ;              ;
 ;       |sd_dat:the_sd_dat|                                                                                                 ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sd_dat:the_sd_dat                                                                                                                                                                                                                              ;              ;
 ;       |sd_dat_s1_arbitrator:the_sd_dat_s1|                                                                                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sd_dat_s1_arbitrator:the_sd_dat_s1                                                                                                                                                                                                             ;              ;
-;       |sdram_0:the_sdram_0|                                                                                               ; 262 (211)         ; 238 (152)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0:the_sdram_0                                                                                                                                                                                                                            ;              ;
+;       |sdram_0:the_sdram_0|                                                                                               ; 260 (209)         ; 238 (152)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0:the_sdram_0                                                                                                                                                                                                                            ;              ;
 ;          |sdram_0_input_efifo_module:the_sdram_0_input_efifo_module|                                                      ; 51 (51)           ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0:the_sdram_0|sdram_0_input_efifo_module:the_sdram_0_input_efifo_module                                                                                                                                                                  ;              ;
-;       |sdram_0_s1_arbitrator:the_sdram_0_s1|                                                                              ; 112 (62)          ; 42 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1                                                                                                                                                                                                           ;              ;
+;       |sdram_0_s1_arbitrator:the_sdram_0_s1|                                                                              ; 111 (61)          ; 42 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1                                                                                                                                                                                                           ;              ;
 ;          |rdv_fifo_for_cpu_0_data_master_to_sdram_0_s1_module:rdv_fifo_for_cpu_0_data_master_to_sdram_0_s1|               ; 33 (33)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1|rdv_fifo_for_cpu_0_data_master_to_sdram_0_s1_module:rdv_fifo_for_cpu_0_data_master_to_sdram_0_s1                                                                                                          ;              ;
 ;          |rdv_fifo_for_cpu_0_instruction_master_to_sdram_0_s1_module:rdv_fifo_for_cpu_0_instruction_master_to_sdram_0_s1| ; 17 (17)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|sdram_0_s1_arbitrator:the_sdram_0_s1|rdv_fifo_for_cpu_0_instruction_master_to_sdram_0_s1_module:rdv_fifo_for_cpu_0_instruction_master_to_sdram_0_s1                                                                                            ;              ;
 ;       |seven_seg_middle_pio:the_seven_seg_middle_pio|                                                                     ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|seven_seg_middle_pio:the_seven_seg_middle_pio                                                                                                                                                                                                  ;              ;
@@ -472,7 +472,7 @@ applicable agreement for further details.
 ;       |timer_0:the_timer_0|                                                                                               ; 123 (123)         ; 120 (120)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|timer_0:the_timer_0                                                                                                                                                                                                                            ;              ;
 ;       |timer_0_s1_arbitrator:the_timer_0_s1|                                                                              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|timer_0_s1_arbitrator:the_timer_0_s1                                                                                                                                                                                                           ;              ;
 ;       |timer_1:the_timer_1|                                                                                               ; 123 (123)         ; 120 (120)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|timer_1:the_timer_1                                                                                                                                                                                                                            ;              ;
-;       |timer_1_s1_arbitrator:the_timer_1_s1|                                                                              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|timer_1_s1_arbitrator:the_timer_1_s1                                                                                                                                                                                                           ;              ;
+;       |timer_1_s1_arbitrator:the_timer_1_s1|                                                                              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|my_controller:inst|timer_1_s1_arbitrator:the_timer_1_s1                                                                                                                                                                                                           ;              ;
 ;    |sdram_pll:inst2|                                                                                                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|sdram_pll:inst2                                                                                                                                                                                                                                                   ;              ;
 ;       |altpll:altpll_component|                                                                                           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|sdram_pll:inst2|altpll:altpll_component                                                                                                                                                                                                                           ;              ;
 ;    |sld_hub:auto_hub|                                                                                                     ; 122 (81)          ; 76 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |myESystem|sld_hub:auto_hub                                                                                                                                                                                                                                                  ;              ;
@@ -498,15 +498,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                           ;
-+--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+--------------------------------------+
-; Vendor ; IP Core Name                  ; Version ; Release Date ; License Type ; Entity Instance                                         ; IP Include File                      ;
-+--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+--------------------------------------+
-; Altera ; ALTPLL                        ; 10.1    ; N/A          ; N/A          ; |myESystem|aud_pll:inst1                                ; N:/MTE325/MTE325/Lab2/aud_pll.vhd    ;
-; Altera ; Nios II Processor (6AF7_00A2) ; N/A     ; Apr 2004     ; Licensed     ; |myESystem|my_controller:inst|cpu_0:the_cpu_0           ; N:/MTE325/MTE325/Lab2/cpu_0.v        ;
-; Altera ; N/A                           ; N/A     ; N/A          ; N/A          ; |myESystem|my_controller:inst|open_i2c_0:the_open_i2c_0 ; N:/MTE325/MTE325/Lab2/open_i2c_0.vhd ;
-+--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+--------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                    ;
++--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+-------------------------------+
+; Vendor ; IP Core Name                  ; Version ; Release Date ; License Type ; Entity Instance                                         ; IP Include File               ;
++--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+-------------------------------+
+; Altera ; ALTPLL                        ; 10.1    ; N/A          ; N/A          ; |myESystem|aud_pll:inst1                                ; N:/MTE325/Lab2/aud_pll.vhd    ;
+; Altera ; Nios II Processor (6AF7_00A2) ; N/A     ; Apr 2004     ; Licensed     ; |myESystem|my_controller:inst|cpu_0:the_cpu_0           ; N:/MTE325/Lab2/cpu_0.v        ;
+; Altera ; N/A                           ; N/A     ; N/A          ; N/A          ; |myESystem|my_controller:inst|open_i2c_0:the_open_i2c_0 ; N:/MTE325/Lab2/open_i2c_0.vhd ;
++--------+-------------------------------+---------+--------------+--------------+---------------------------------------------------------+-------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -827,7 +827,7 @@ Encoding Type:  One-Hot
 ; my_controller:inst|sdram_0:the_sdram_0|m_cmd[0]                                                                                                                                             ; 2       ;
 ; my_controller:inst|cpu_0:the_cpu_0|M_pipe_flush                                                                                                                                             ; 10      ;
 ; my_controller:inst|cpu_0:the_cpu_0|hbreak_enabled                                                                                                                                           ; 12      ;
-; my_controller:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master|cpu_0_data_master_waitrequest                                                                                         ; 20      ;
+; my_controller:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master|cpu_0_data_master_waitrequest                                                                                         ; 24      ;
 ; my_controller:inst|sdram_0:the_sdram_0|i_cmd[1]                                                                                                                                             ; 2       ;
 ; my_controller:inst|sdram_0:the_sdram_0|i_cmd[3]                                                                                                                                             ; 2       ;
 ; my_controller:inst|sdram_0:the_sdram_0|i_cmd[2]                                                                                                                                             ; 2       ;
@@ -971,13 +971,6 @@ Encoding Type:  One-Hot
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |myESystem|my_controller:inst|cpu_0:the_cpu_0|E_wrctl_data_ienable_reg_irq3                                                                                                                                              ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |myESystem|my_controller:inst|sdram_0:the_sdram_0|Selector35                                                                                                                                                             ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |myESystem|my_controller:inst|sdram_0:the_sdram_0|Selector27                                                                                                                                                             ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|irf_reg[2][4]                                                                                                                                                                                ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|irf_reg[1][0]                                                                                                                                                                                ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|word_counter[2]                                                                                                                                                      ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|shadow_irf_reg[2][3]                                                                                                                                                                         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|shadow_irf_reg[1][2]                                                                                                                                                                         ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|irsr_reg[2]                                                                                                                                                                                  ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |myESystem|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                                                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2916,14 +2909,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:16     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:15     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -2932,7 +2924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Jun 25 15:00:21 2014
+    Info: Processing started: Fri Jul 04 15:49:18 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off myESystem -c myESystem
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 2 design units, including 1 entities, in source file files/i2c_tri.vhd
@@ -3068,7 +3060,6 @@ Warning (10230): Verilog HDL assignment warning at AUDIO_DAC_FIFO.v(89): truncat
 Warning (10230): Verilog HDL assignment warning at AUDIO_DAC_FIFO.v(97): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at AUDIO_DAC_FIFO.v(146): truncated value with size 32 to match size of target (4)
 Info: Elaborating entity "FIFO_16_256" for hierarchy "my_controller:inst|audio_0:the_audio_0|Audio:audio_0|AUDIO_DAC_FIFO:wrapper|FIFO_16_256:u0"
-Warning: Number of metastability protection registers is not specified. Based on the parameter value CLOCKS_ARE_SYNCHRONIZED=FALSE, the synchronization register chain length between read and write clock domains will be 2
 Info: Elaborating entity "dcfifo" for hierarchy "my_controller:inst|audio_0:the_audio_0|Audio:audio_0|AUDIO_DAC_FIFO:wrapper|FIFO_16_256:u0|dcfifo:dcfifo_component"
 Info: Elaborated megafunction instantiation "my_controller:inst|audio_0:the_audio_0|Audio:audio_0|AUDIO_DAC_FIFO:wrapper|FIFO_16_256:u0|dcfifo:dcfifo_component"
 Info: Instantiated megafunction "my_controller:inst|audio_0:the_audio_0|Audio:audio_0|AUDIO_DAC_FIFO:wrapper|FIFO_16_256:u0|dcfifo:dcfifo_component" with the following parameter:
@@ -3287,7 +3278,6 @@ Info: Elaborating entity "cpu_0_nios2_oci_fifocount_inc" for hierarchy "my_contr
 Warning: Using design file cpu_0_oci_test_bench.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: cpu_0_oci_test_bench
 Info: Elaborating entity "cpu_0_oci_test_bench" for hierarchy "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo|cpu_0_oci_test_bench:the_cpu_0_oci_test_bench"
-Warning: Entity "cpu_0_oci_test_bench" contains only dangling pins
 Info: Elaborating entity "cpu_0_nios2_oci_pib" for hierarchy "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_pib:the_cpu_0_nios2_oci_pib"
 Info: Elaborating entity "cpu_0_nios2_oci_im" for hierarchy "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im"
 Info: Elaborating entity "cpu_0_traceram_lpm_dram_bdp_component_module" for hierarchy "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component"
@@ -3564,9 +3554,6 @@ Warning: Synthesized away the following node(s):
         Warning (14320): Synthesized away node "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram|altsyncram_e502:auto_generated|q_a[34]"
         Warning (14320): Synthesized away node "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram|altsyncram_e502:auto_generated|q_a[35]"
 Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "my_controller:inst|sd_cmd:the_sd_cmd|bidir_port" to the node "my_controller:inst|sd_cmd:the_sd_cmd|read_mux_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "my_controller:inst|sd_dat:the_sd_dat|bidir_port" to the node "my_controller:inst|sd_dat:the_sd_dat|read_mux_out" into an OR gate
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning: Output pins are stuck at VCC or GND
@@ -3647,29 +3634,27 @@ Info: 73 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|DRsize~4" lost all its fanouts during netlist optimizations.
     Info: Register "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|DRsize~5" lost all its fanouts during netlist optimizations.
     Info: Register "my_controller:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|DRsize.101" lost all its fanouts during netlist optimizations.
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info: Generated suppressed messages file N:/MTE325/MTE325/Lab2/myESystem.map.smsg
+Info: Generated suppressed messages file N:/MTE325/Lab2/myESystem.map.smsg
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
     Info: Adding node "sdram_pll:inst2|altpll:altpll_component|pll"
     Info: Adding node "aud_pll:inst1|altpll:altpll_component|pll"
-Info: Implemented 4382 device resources after synthesis - the final resource count might be different
+Info: Implemented 4378 device resources after synthesis - the final resource count might be different
     Info: Implemented 26 input pins
-    Info: Implemented 123 output pins
-    Info: Implemented 26 bidirectional pins
-    Info: Implemented 4023 logic cells
+    Info: Implemented 121 output pins
+    Info: Implemented 28 bidirectional pins
+    Info: Implemented 4019 logic cells
     Info: Implemented 181 RAM segments
     Info: Implemented 2 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 469 megabytes
-    Info: Processing ended: Wed Jun 25 15:01:13 2014
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 72 warnings
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Fri Jul 04 15:50:03 2014
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in N:/MTE325/MTE325/Lab2/myESystem.map.smsg.
+The suppressed messages can be found in N:/MTE325/Lab2/myESystem.map.smsg.
 
 
