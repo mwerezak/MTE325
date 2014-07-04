@@ -30,11 +30,11 @@ int init_fileio() {
 
 void print_file_info(data_file* file) {
 	printf("Filename: %s\n", file->Name);
-	printf("Attr: %X\n", file->Attr);
+	printf("Attr: %#x\n", file->Attr);
 	printf("Start Sluster: %d\n", file->Clus);
 	printf("File Size: %d\n", file->FileSize);
 	printf("Start Sector: %d\n", file->Sector);
-	printf("Absolute Byte Addr: %X\n", file->Posn);
+	printf("Absolute Byte Addr: %#x\n", file->Posn);
 }
 
 //Tests
@@ -46,14 +46,12 @@ int main () {
 		printf("Failed to init file I/O.");
 		return 1;
 	}
-	printf("\n\n");
 
 	//look for files
-	if (!search_for_filetype(file_ext, &df_buf, 0, 1)) {
-		printf("Found a .wav file!\n");
+	printf("Searching for .wav files...\n");
+	while (!search_for_filetype(file_ext, &df_buf, 0, 1)) {
+		printf("\nFound a .wav file!\n");
 		print_file_info(&df_buf);
-	} else {
-		printf("No .wav files were found.\n");
 	}
 
 }

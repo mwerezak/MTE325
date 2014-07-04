@@ -1,5 +1,5 @@
 Flow report for myESystem
-Wed Jun 25 15:01:50 2014
+Fri Jul 04 15:50:42 2014
 Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 
 
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 25 15:01:49 2014          ;
+; Flow Status                        ; Successful - Fri Jul 04 15:50:40 2014          ;
 ; Quartus II 64-Bit Version          ; 10.1 Build 197 01/19/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; myESystem                                      ;
 ; Top-level Entity Name              ; myESystem                                      ;
 ; Family                             ; Cyclone II                                     ;
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 3,453 / 33,216 ( 10 % )                        ;
-;     Total combinational functions  ; 3,140 / 33,216 ( 9 % )                         ;
+; Total logic elements               ; 3,450 / 33,216 ( 10 % )                        ;
+;     Total combinational functions  ; 3,136 / 33,216 ( 9 % )                         ;
 ;     Dedicated logic registers      ; 2,037 / 33,216 ( 6 % )                         ;
 ; Total registers                    ; 2105                                           ;
 ; Total pins                         ; 171 / 475 ( 36 % )                             ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/25/2014 15:00:22 ;
+; Start date & time ; 07/04/2014 15:49:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; myESystem           ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 106258771470053.140372282205212       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 106258771469396.140450335906268       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 10.1                                  ; --            ; --          ; --         ;
@@ -88,6 +88,7 @@ applicable agreement for further details.
 ; MISC_FILE                           ; aud_pll.bsf                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; aud_pll.cmp                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; aud_pll.ppf                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; N:/MTE325/MTE325/Lab2/myESystem.dpf   ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
@@ -102,11 +103,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:45     ; 1.0                     ; 469 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:00:18     ; 1.1                     ; 501 MB              ; 00:00:16                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 378 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.3                     ; 403 MB              ; 00:00:04                           ;
-; Total                     ; 00:01:16     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 475 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:18     ; 1.3                     ; 508 MB              ; 00:00:17                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.3                     ; 403 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:11     ; --                      ; --                  ; 00:00:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,10 +116,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; ECE-CPUIO15      ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; ECE-CPUIO15      ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; ECE-CPUIO15      ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; ECE-CPUIO15      ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; ECE-CPUIO13      ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; ECE-CPUIO13      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; ECE-CPUIO13      ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; ECE-CPUIO13      ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

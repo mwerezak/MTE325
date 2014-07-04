@@ -25,6 +25,8 @@ SW[16] => inst4.IN0
 CLOCK_27 => aud_pll:inst1.inclk0
 I2C_SCLK <> I2C_tri:inst3.I2C_CLK
 I2C_SDAT <> I2C_tri:inst3.I2C_DATA
+SD_CMD <> my_controller:inst.bidir_port_to_and_from_the_sd_cmd
+SD_DAT <> my_controller:inst.bidir_port_to_and_from_the_sd_dat
 KEY[0] => my_controller:inst.in_port_to_the_button_pio[0]
 KEY[1] => my_controller:inst.in_port_to_the_button_pio[1]
 KEY[2] => my_controller:inst.in_port_to_the_button_pio[2]
@@ -69,8 +71,6 @@ AUD_BCLK <= my_controller:inst.oAUD_BCK_from_the_audio_0
 AUD_DACDAT <= my_controller:inst.oAUD_DATA_from_the_audio_0
 DACLRCK <= my_controller:inst.oAUD_LRCK_from_the_audio_0
 SD_CLK <= my_controller:inst.out_port_from_the_sd_clk
-SD_CMD <= my_controller:inst.bidir_port_to_and_from_the_sd_cmd
-SD_DAT <= my_controller:inst.bidir_port_to_and_from_the_sd_dat
 DRAM_ADDR[0] <= my_controller:inst.zs_addr_from_the_sdram_0[0]
 DRAM_ADDR[1] <= my_controller:inst.zs_addr_from_the_sdram_0[1]
 DRAM_ADDR[2] <= my_controller:inst.zs_addr_from_the_sdram_0[2]
