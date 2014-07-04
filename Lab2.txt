@@ -5,6 +5,8 @@ A discussion of issues faced when designing hardware or software interfacing. Ch
 At least one alternative design decisions, regarding hardware or software interfacing.
 
 Testing and debugging strategy, with at least one alternative. Intermediate design stages.
+	Intermediate design stages:
+		First, wrote a program that read the SD card and listed all the filenames to the terminal.
 
 Issues that impacted the audio playback, for each of the playback modes. Design decisions made, with alternatives.
 
