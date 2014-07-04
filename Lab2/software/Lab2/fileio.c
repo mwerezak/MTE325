@@ -24,6 +24,7 @@ int init_fileio() {
 	}
 
 	info_bs();
+	printf("\n\n");
 
 	return 0;
 }
@@ -48,10 +49,10 @@ int main () {
 	}
 
 	//look for files
-	printf("Searching for .wav files...\n");
+	printf("Searching for .wav files...\n\n");
 	while (!search_for_filetype(file_ext, &df_buf, 0, 1)) {
-		printf("\nFound a .wav file!\n");
 		print_file_info(&df_buf);
+		printf("\n");
 	}
 
 	return 0;

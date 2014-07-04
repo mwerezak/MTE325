@@ -11,3 +11,7 @@
 #include "basic_io.h"
 #include "fat.h"
 
+
+int init_fileio ( void );
+
+void print_file_info ( data_file* file );
