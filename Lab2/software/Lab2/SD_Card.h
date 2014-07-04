@@ -137,8 +137,9 @@ BYTE SD_card_init(void)
     cmd_buffer[x]=cmd3[x];
     y = send_cmd(cmd_buffer);
     Ncr();
-    if(response_R(6)>1)
-    return 1;         
+    if(response_R(6)>1){
+    printf("FAIL: response_R(6)>1\n");
+    return 1;}
     RCA[0]=response_buffer[1];
     RCA[1]=response_buffer[2];
     Ncc();
@@ -149,7 +150,7 @@ BYTE SD_card_init(void)
     y = send_cmd(cmd_buffer);
     Ncr();
     if(response_R(2)>1)
-    return 1; 
+    return 1;
     Ncc();
     for(x=0;x<5;x++)
     cmd_buffer[x]=cmd7[x];

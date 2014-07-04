@@ -1,5 +1,9 @@
 #ifndef _FAT_H_
 #define _FAT_H_
+
+#include <string.h>
+#include <math.h>
+
 //-------------------------------------------------------------------------
 // data_file Data Structure
 typedef struct {

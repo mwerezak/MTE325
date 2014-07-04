@@ -7,8 +7,7 @@
 #include "altera_avalon_pio_regs.h"
 
 //FAT and SD card stuff
-#include "mte325_types.h"
-#include "basic_io.h"
 #include "SD_Card.h"
+#include "basic_io.h"
 #include "fat.h"
 
