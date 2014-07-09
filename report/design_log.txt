@@ -1,0 +1,21 @@
+== Required items for report ==
+- discussion of issues faced when designing hardware or software
+  interfacing, and the choices made
+- alternative design decisions
+- testing/debug strategy, with at least one alternative
+- issues that impacted audio playback, for each of the playback modes,
+  design decisions, alternatives
+- discussion of writing efficient software
+- testing and debugging strategy, specifically with regards to audio
+  playback, for each of the playback modes, alternatives
+- how project can be improved or extended further
+
+== Lab Log ==
+=== Friday, July 4th, 2014 ===
+- Added in BYTE data type to get fat.h to compile
+- Init SD card and FAT 
+  > Failed to init SD card for some reason
+  > SOLUTION: Check the hardware, saw that SD card ports were not
+  > bidirectional
+- Created a print_file_info function to easily read off file information
+  from the filesystem
