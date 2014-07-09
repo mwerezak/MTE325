@@ -29,6 +29,21 @@ int init_fileio() {
 	return 0;
 }
 
+//returns the length of the cluster chain for a given file
+UINT32 cluster_count (data_file* file) {
+	return 1 + ceil(file->FileSize / CLUSTER_SIZE);
+}
+
+/*
+void read_file (data_file* file, BYTE* data_buf) {
+	UINT32 ccount = cluster_count(file);
+	int cluster_chain[ccount];
+
+	build_cluster_chain( cluster_chain, ccount, file );
+}
+*/
+
+
 void print_file_info(data_file* file) {
 	printf("Filename: %s\n", file->Name);
 	printf("Attr: %#x\n", file->Attr);
@@ -38,15 +53,9 @@ void print_file_info(data_file* file) {
 	printf("Absolute Byte Addr: %#x\n", file->Posn);
 }
 
-//Tests
-int main () {
-	BYTE* file_ext = "WAV";
-	data_file df_buf;
 
-	if(init_fileio()) {
-		printf("Failed to init file I/O.");
-		return 1;
-	}
+void list_all_files (BYTE* file_ext) {
+	data_file df_buf;
 
 	//look for files
 	printf("Searching for .wav files...\n\n");
@@ -54,6 +63,19 @@ int main () {
 		print_file_info(&df_buf);
 		printf("\n");
 	}
+}
+
+//Tests
+int main () {
+	BYTE* file_ext = "WAV";
+
+	if(init_fileio()) {
+		printf("Failed to init file I/O.\n");
+		return 1;
+	}
+
+	list_all_files(file_ext);
 
 	return 0;
 }
+

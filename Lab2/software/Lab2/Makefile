@@ -144,6 +144,7 @@ C_SRCS += LCD.c
 C_SRCS += Open_I2C.c
 C_SRCS += board_diag.c
 C_SRCS += fileio.c
+C_SRCS += main.c
 C_SRCS += wm8731.c
 CXX_SRCS :=
 ASM_SRCS :=

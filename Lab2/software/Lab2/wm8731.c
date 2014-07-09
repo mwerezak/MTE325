@@ -10,7 +10,7 @@ void init_audio_codec()
 	//  Check Audio CODEC on I2C Bus, Address = 0x34
 	if(I2C_Send(0x34,1,0))
 	{
-    int count = 0;
+		int count = 0;
     	printf("\nFind Audio CODEC on I2C Bus, Address = 0x34.\n");
 	    //Reset Device
 		  //    I2C_Send(0xFE, 0, 0); //Reset MSB

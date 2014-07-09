@@ -1,5 +1,8 @@
 #ifndef   __SD_Card_H__
 #define   __SD_Card_H__
+
+#include "typedefs.h"
+
 //-------------------------------------------------------------------------
 //  SD Card Set I/O Direction
 #define SD_CMD_IN   IOWR(SD_CMD_BASE, 1, 0)
@@ -21,11 +24,6 @@
 #define MASTER_BOOT_RECORD_ID2  0xAA
 
 
-
-//-------------------------------------------------------------------------
-#define BYTE    unsigned char
-#define UINT16  unsigned int
-#define UINT32  unsigned long
 //-------------------------------------------------------------------------
 void Ncr(void);
 void Ncc(void);
