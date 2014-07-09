@@ -34,14 +34,33 @@ UINT32 cluster_count (data_file* file) {
 	return 1 + ceil(file->FileSize / CLUSTER_SIZE);
 }
 
-/*
-void read_file (data_file* file, BYTE* data_buf) {
+
+//reads a file to data_buf and returns the number of bytes read.
+int read_file (data_file* file, BYTE* data_buf, int start_idx) {
+	int sector_idx = 0;
+	int byte_count;
+	int bytes_read = 0;
+
 	UINT32 ccount = cluster_count(file);
 	int cluster_chain[ccount];
 
 	build_cluster_chain( cluster_chain, ccount, file );
+
+	//read the ENTIRE file
+	while (1) {
+		byte_count = get_rel_sector( file, data_buf[sector_idx + start_idx], cluster_chain, sector_idx);
+		sector_idx++;
+
+		if (byte_count == -1)
+			return -1;
+		else if (byte_count == 0)
+			bytes_read += SECTOR_SIZE;
+		else {
+			bytes_read += byte_count;
+			return bytes_read;
+		}
+	}
 }
-*/
 
 
 void print_file_info(data_file* file) {
@@ -65,16 +84,42 @@ void list_all_files (BYTE* file_ext) {
 	}
 }
 
+//returns 1 if a file was found, 0 otherwise
+int next_file (BYTE* file_ext, data_file* file) {
+	return !search_for_filetype(file_ext, file, 0, 1);
+}
+
+
 //Tests
 int main () {
+	data_file file;
 	BYTE* file_ext = "WAV";
+	BYTE file_data[6000000];
+	int bytes_read;
+	int i;
 
 	if(init_fileio()) {
 		printf("Failed to init file I/O.\n");
 		return 1;
 	}
 
-	list_all_files(file_ext);
+
+	if (next_file(file_ext, &file)) {
+		printf("Reading from file \"%s\"...\n", file.Name);
+
+		bytes_read = read_file(&file, &file_data, 0);
+
+		/*
+		printf("Read %d bytes of data:\n\n", bytes_read);
+
+		for (i = 0; i <= 200; i += 4){
+			printf(
+				"%#x %#x %#x %#x\n",
+				file_data[i], file_data[i+1], file_data[i+2], file_data[i+3]
+			);
+		}
+		*/
+	}
 
 	return 0;
 }
