@@ -100,18 +100,11 @@ void list_all_files (BYTE* file_ext) {
 	}
 }
 
-//returns 1 if a file was found, 0 otherwise
-int next_file (BYTE* file_ext, data_file* file) {
-	return !search_for_filetype(file_ext, file, 0, 1);
-}
-
 
 //Tests
 int main () {
 	data_file file;
 	BYTE* file_ext = "WAV";
-	BYTE file_data[6000000];
-	int bytes_read;
 	int i;
 	int is_full = 0;
 
@@ -122,8 +115,62 @@ int main () {
 		return 1;
 	}
 
+	// init audio codec. this call doesn't return anything so... i guess it works?
+	init_audio_codec();
 
-	if (next_file(file_ext, &file)) {
+	//Returns 1 if success
+	if (search_for_filetype(file_ext, &file, 0, 1)) {
+		printf("Failed to find a file\n");
+	}
+	if (search_for_filetype(file_ext, &file, 0, 1)) {
+		printf("Failed to find a file\n");
+	}
+
+	// Sanity Check on the file
+	print_file_info(&file);
+
+	// Get byte from the file
+	// First, create the cluster chain
+	UINT32 ccount = cluster_count(&file); //describes the size of our cluster chain
+	int cluster_chain[3000]; //kindof correct maybe sortof?
+	// Sanity check on build_cluster_chain parameters
+	printf("ccount: %d\n cluster_chain: %d\n", ccount, cluster_chain);
+	// Build cluster chain
+	build_cluster_chain(cluster_chain, ccount, &file); //returns void
+	// TODO: Inspect cluster chain!
+
+	// Send data to the audio codec
+	// 1. Get data
+	// 2. Send data to audio codec
+	// 3. Rinse and repeat
+
+	int sector_idx = 0; //start from sector zero
+	BYTE buffer[SECTOR_SIZE]; //set buffer size to sector size
+	//int i = 0; //for for loop. but already exists
+	//UINT16 tmp = 0; //already declared
+
+	// get_rel_sector
+	// return -1 if we fucked up
+	// return 0 if we didn't fuck up
+	// return >0 if complete
+	while(1) {
+		if (get_rel_sector(&file, buffer, cluster_chain, sector_idx) == -1) {
+			printf ("FAIL.\n");
+			return 0;
+		}
+		for(i = 0; i < SECTOR_SIZE; i += 2) {
+			// Send data to the FIFO queue
+			while(IORD(AUD_FULL_BASE,0)) {
+				printf("FIFO queue full\n");
+			}
+			printf("FIFO queue not full\n");
+			tmp = (buffer[i+1] << 8) | (buffer[i]);
+			IOWR(AUDIO_0_BASE, 0, tmp);
+		}
+		sector_idx++;
+	}
+
+	/*if (next_file(file_ext, &file)) {
 
 		bytes_read = read_file(&file, &file_data, 0);
 
@@ -156,7 +203,7 @@ int main () {
 		}
 
 
-	}
+	}*/
 
 
 

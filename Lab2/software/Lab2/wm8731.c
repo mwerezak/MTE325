@@ -13,7 +13,7 @@ void init_audio_codec()
 		int count = 0;
     	printf("\nFind Audio CODEC on I2C Bus, Address = 0x34.\n");
 	    //Reset Device
-		  //    I2C_Send(0xFE, 0, 0); //Reset MSB
+		//    I2C_Send(0xFE, 0, 0); //Reset MSB
   		//    I2C_Send(0x00, 0, 1); //Write 0 to Reset LSB
     
     	count += I2C_Send(0x08, 0, 0); //Analog Audio Path Control MSB
@@ -26,11 +26,9 @@ void init_audio_codec()
     	count += I2C_Send(0x00, 0, 1); //Power Down Control LSB
     	I2C_Send(0x34,1,0);
 	    count += I2C_Send(0x0E, 0, 0); //Digital Audio Interface Format MSB
-	    //count += I2C_Send(0x80, 0, 1); //Set to 1000 0000
 	    count += I2C_Send(0x10, 0, 1); //Digital Audio Interface Format LSB
 	    I2C_Send(0x34,1,0);
     	count += I2C_Send(0x10, 0, 0); //Sampling Control Register MSB
-    	//count += I2C_Send(0x20, 0, 1); //Set to 0010 0000
     	count += I2C_Send(0x22, 0, 1); //Sampling Control Register LSB
     	I2C_Send(0x34,1,0);
 	    count += I2C_Send(0x12, 0, 0); //Active Control Register MSB
