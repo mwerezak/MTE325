@@ -2,6 +2,8 @@
 
 #include "fileio.h"
 
+#include "wm8731.h"
+
 /*
  * Does all the initialization required to read *.wav files off the SD card.
  */
@@ -41,22 +43,36 @@ int read_file (data_file* file, BYTE* data_buf, int start_idx) {
 	int byte_count;
 	int bytes_read = 0;
 
+	int progress_step;
+	int progress;
+
 	UINT32 ccount = cluster_count(file);
 	int cluster_chain[ccount];
+
+	printf("Reading from file \"%s\" ...\n", file->Name);
 
 	build_cluster_chain( cluster_chain, ccount, file );
 
 	//read the ENTIRE file
+	progress_step = floor(file->FileSize/10);
+	progress = progress_step;
 	while (1) {
-		byte_count = get_rel_sector( file, data_buf[sector_idx + start_idx], cluster_chain, sector_idx);
+		byte_count = get_rel_sector( file, data_buf[bytes_read + start_idx], cluster_chain, sector_idx);
 		sector_idx++;
 
 		if (byte_count == -1)
 			return -1;
-		else if (byte_count == 0)
+		else if (byte_count == 0) {
 			bytes_read += SECTOR_SIZE;
-		else {
+
+
+			if (bytes_read >= progress) {
+				printf("... %d bytes read ...\n", bytes_read);
+				progress += progress_step;
+			}
+		} else {
 			bytes_read += byte_count;
+			printf("... done! Read %d bytes.\n\n", bytes_read);
 			return bytes_read;
 		}
 	}
@@ -97,6 +113,9 @@ int main () {
 	BYTE file_data[6000000];
 	int bytes_read;
 	int i;
+	int is_full = 0;
+
+	UINT16 tmp;
 
 	if(init_fileio()) {
 		printf("Failed to init file I/O.\n");
@@ -105,11 +124,9 @@ int main () {
 
 
 	if (next_file(file_ext, &file)) {
-		printf("Reading from file \"%s\"...\n", file.Name);
 
 		bytes_read = read_file(&file, &file_data, 0);
 
-		/*
 		printf("Read %d bytes of data:\n\n", bytes_read);
 
 		for (i = 0; i <= 200; i += 4){
@@ -118,8 +135,30 @@ int main () {
 				file_data[i], file_data[i+1], file_data[i+2], file_data[i+3]
 			);
 		}
-		*/
+
+		printf("\n\n");
+		printf("Initializing audio codec...\n");
+		init_audio_codec();
+
+		//write stuff to codec
+		for (i = 0; i < bytes_read; i += 2) {
+			is_full = 0;
+			while(IORD( AUD_FULL_BASE, 0 ) ) {
+				//if (!is_full) {
+				//	printf ("Codec FIFO is full!\n");
+				//	is_full = 1;
+				//}
+			}
+
+			tmp = ( file_data[ i + 1 ] << 8 ) | ( file_data[ i ] );
+
+			IOWR( AUDIO_0_BASE, 0, tmp );
+		}
+
+
 	}
+
+
 
 	return 0;
 }
