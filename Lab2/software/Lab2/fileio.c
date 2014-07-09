@@ -31,9 +31,9 @@ int init_fileio() {
 void print_file_info(data_file* file) {
 	printf("Filename: %s\n", file->Name);
 	printf("Attr: %#x\n", file->Attr);
-	printf("Start Sluster: %d\n", file->Clus);
-	printf("File Size: %d\n", file->FileSize);
-	printf("Start Sector: %d\n", file->Sector);
+	printf("Start Cluster: %u\n", file->Clus);
+	printf("File Size: %u\n", file->FileSize);
+	printf("Start Sector: %u\n", file->Sector);
 	printf("Absolute Byte Addr: %#x\n", file->Posn);
 }
 
@@ -54,4 +54,5 @@ int main () {
 		print_file_info(&df_buf);
 	}
 
+	return 0;
 }
