@@ -35,7 +35,7 @@ int init_fileio() {
 
 
 void print_file_info(data_file* file) {
-	printf("Filename: %s\n", file->Name);
+	printf("Filename: \"%s\"\n", file->Name);
 	printf("Attr: %#x\n", file->Attr);
 	printf("Start Cluster: %u\n", file->Clus);
 	printf("File Size: %u\n", file->FileSize);
@@ -91,40 +91,41 @@ int main () {
 	printf("\n");
 
 	//Returns 1 if success
-	if (search_for_filetype(file_ext, &file, 0, 1)) {
-		printf("Failed to find a file\n");
-	}
+	while (!search_for_filetype(file_ext, &file, 0, 1)) {
 
-	// Sanity Check on the file
-	print_file_info(&file);
+		// Sanity Check on the file
+		print_file_info(&file);
 
-	UINT32 cc_length = 1 + ((UINT32) (ceil(file.FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
-	printf("Cluster Chain Length: %d\n", cc_length);
+		UINT32 cc_length = 1 + ((UINT32) (ceil(file.FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
+		printf("Cluster Chain Length: %d\n", cc_length);
 
-	// Build cluster chain
-	int cluster_chain[3000];
-	build_cluster_chain(cluster_chain, cc_length, &file); //returns void
+		// Build cluster chain
+		int cluster_chain[3000];
+		build_cluster_chain(cluster_chain, cc_length, &file); //returns void
 
-	int sector_idx = 0; //start from sector zero
-	BYTE buffer[SECTOR_SIZE]; //set buffer size to sector size
+		int sector_idx = 0; //start from sector zero
+		BYTE buffer[SECTOR_SIZE]; //set buffer size to sector size
 
 
-	int rs;	//check the return value from get_rel_sector
+		int rs;	//check the return value from get_rel_sector
 
-	while(1) {
+		while(1) {
 
-		rs = get_rel_sector(&file, buffer, cluster_chain, sector_idx++);
+			rs = get_rel_sector(&file, buffer, cluster_chain, sector_idx++);
 
-		if (rs == -1) {
-			printf ("DONE.\n");
-			return 0;
-		} else if (rs == 0) {
-			write_to_codec(buffer, SECTOR_SIZE);
-		} else {
-			write_to_codec(buffer, rs);
+			if (rs == -1) {
+				printf ("DONE.\n\n");
+				break;
+			} else if (rs == 0) {
+				write_to_codec(buffer, SECTOR_SIZE);
+			} else {
+				write_to_codec(buffer, rs);
+			}
 		}
+
 	}
 
+	printf ("NO MORE FILES FOUND.\n");
 	return 0;
 }
 
