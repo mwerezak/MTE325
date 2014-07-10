@@ -277,7 +277,7 @@ RESERVED_INPUT               : C2        :        :                   :         
 RESERVED_INPUT               : C3        :        :                   :         : 2         :                
 RESERVED_INPUT               : C4        :        :                   :         : 3         :                
 RESERVED_INPUT               : C5        :        :                   :         : 3         :                
-RESERVED_INPUT               : C6        :        :                   :         : 3         :                
+AUD_DACLRCK                  : C6        : output : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : C7        :        :                   :         : 3         :                
 RESERVED_INPUT               : C8        :        :                   :         : 3         :                
 RESERVED_INPUT               : C9        :        :                   :         : 3         :                
@@ -307,7 +307,7 @@ RESERVED_INPUT               : D6        :        :                   :         
 RESERVED_INPUT               : D7        :        :                   :         : 3         :                
 RESERVED_INPUT               : D8        :        :                   :         : 3         :                
 RESERVED_INPUT               : D9        :        :                   :         : 3         :                
-DACLRCK                      : D10       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : D10       :        :                   :         : 3         :                
 RESERVED_INPUT               : D11       :        :                   :         : 3         :                
 RESERVED_INPUT               : D12       :        :                   :         : 3         :                
 CLOCK_27                     : D13       : input  : 3.3-V LVTTL       :         : 3         : Y              

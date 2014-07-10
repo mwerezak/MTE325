@@ -1,5 +1,5 @@
 Analysis & Synthesis report for myESystem
-Fri Jul 04 15:50:03 2014
+Thu Jul 10 14:43:21 2014
 Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 
 
@@ -118,7 +118,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 04 15:50:03 2014          ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 10 14:43:20 2014          ;
 ; Quartus II 64-Bit Version          ; 10.1 Build 197 01/19/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; myESystem                                      ;
 ; Top-level Entity Name              ; myESystem                                      ;
@@ -2914,7 +2914,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -2924,7 +2924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jul 04 15:49:18 2014
+    Info: Processing started: Thu Jul 10 14:42:38 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off myESystem -c myESystem
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 2 design units, including 1 entities, in source file files/i2c_tri.vhd
@@ -3646,10 +3646,10 @@ Info: Implemented 4378 device resources after synthesis - the final resource cou
     Info: Implemented 181 RAM segments
     Info: Implemented 2 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 475 megabytes
-    Info: Processing ended: Fri Jul 04 15:50:03 2014
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 454 megabytes
+    Info: Processing ended: Thu Jul 10 14:43:21 2014
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

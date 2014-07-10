@@ -1,5 +1,5 @@
 Assembler report for myESystem
-Fri Jul 04 15:50:40 2014
+Thu Jul 10 14:43:56 2014
 Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Jul 04 15:50:40 2014 ;
+; Assembler Status      ; Successful - Thu Jul 10 14:43:56 2014 ;
 ; Revision Name         ; myESystem                             ;
 ; Top-level Entity Name ; myESystem                             ;
 ; Family                ; Cyclone II                            ;
@@ -107,7 +107,7 @@ applicable agreement for further details.
 +----------------+---------------------------------------+
 ; Device         ; EP2C35F672C6                          ;
 ; JTAG usercode  ; 0xFFFFFFFF                            ;
-; Checksum       ; 0x005C5B73                            ;
+; Checksum       ; 0x005BBC40                            ;
 +----------------+---------------------------------------+
 
 
@@ -118,7 +118,7 @@ applicable agreement for further details.
 +--------------------+-----------------------------------+
 ; Device             ; EPCS16                            ;
 ; JTAG usercode      ; 0x00000000                        ;
-; Checksum           ; 0x1C29E88C                        ;
+; Checksum           ; 0x1C2C7392                        ;
 ; Compression Ratio  ; 2                                 ;
 +--------------------+-----------------------------------+
 
@@ -129,14 +129,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jul 04 15:50:34 2014
+    Info: Processing started: Thu Jul 10 14:43:50 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off myESystem -c myESystem
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 379 megabytes
-    Info: Processing ended: Fri Jul 04 15:50:40 2014
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Thu Jul 10 14:43:57 2014
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:02
 
 

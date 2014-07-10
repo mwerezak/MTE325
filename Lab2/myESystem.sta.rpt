@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for myESystem
-Fri Jul 04 15:50:42 2014
+Thu Jul 10 14:43:58 2014
 Quartus II 64-Bit Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
 
 
@@ -79,12 +79,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.33        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2 processors           ;  20.0%      ;
+;     2 processors           ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -93,7 +93,7 @@ applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; cpu_0.sdc     ; OK     ; Fri Jul 04 15:50:38 2014 ;
+; cpu_0.sdc     ; OK     ; Thu Jul 10 14:43:54 2014 ;
 +---------------+--------+--------------------------+
 
 
@@ -306,7 +306,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 10.1 Build 197 01/19/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jul 04 15:50:34 2014
+    Info: Processing started: Thu Jul 10 14:43:50 2014
 Info: Command: quartus_sta myESystem -c myESystem
 Info: qsta_default_script.tcl version: #4
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -436,8 +436,8 @@ Warning: Found 148 output pins without output pin load capacitance assignment
     Info: Pin "AUD_XCK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "AUD_BCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "AUD_DACDAT" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DACLRCK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "SD_CLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "AUD_DACLRCK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "DRAM_ADDR[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "DRAM_ADDR[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "DRAM_ADDR[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -558,8 +558,8 @@ Info: The selected device family is not supported by the report_metastability co
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 403 megabytes
-    Info: Processing ended: Fri Jul 04 15:50:42 2014
+    Info: Peak virtual memory: 406 megabytes
+    Info: Processing ended: Thu Jul 10 14:43:58 2014
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:04
 

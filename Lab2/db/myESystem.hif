@@ -11584,26 +11584,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-myESystem
-# storage
-db|myESystem.(0).cnf
-db|myESystem.(0).cnf
-# case_insensitive
-# source_file
-myesystem.bdf
-46dc4494d6f7353a3372d01f8561311d
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 audio_0
 # storage
 db|myESystem.(7).cnf
@@ -12153,6 +12133,26 @@ my_controller:inst|open_i2c_0:the_open_i2c_0
 # lmf
 c:|software|altera|10.1|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+myESystem
+# storage
+db|myESystem.(0).cnf
+db|myESystem.(0).cnf
+# case_insensitive
+# source_file
+myesystem.bdf
+87390343fdcf9f9ac8c9a1efff9efb1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end
