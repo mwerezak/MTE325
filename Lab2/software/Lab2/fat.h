@@ -624,8 +624,10 @@ int get_rel_sector(data_file *df, BYTE *buffer, int cc[], int sector)
   {
     //get sector
     Return_Sector = (sector % BPB_SecPerClus) + FirstSectorofCluster(cc[(int)(floor(sector / BPB_SecPerClus))]);
-    SD_read_lba(buffer,Return_Sector,1);
     
+    //printf("Reading from SD card logical block address #%d ...\n", Return_Sector);
+    SD_read_lba(buffer, Return_Sector, 1);
+
     if(sector == (Total_Sectors - 1) )
     {
       return (df->FileSize - ((sector+1) * BPB_BytsPerSec));

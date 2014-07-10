@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>4-Jul-2014 2:29:45 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1404498585115</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>10-Jul-2014 2:30:15 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1405017015818</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>N:\MTE325\Lab2\software\Lab2_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>N:\MTE325\Lab2\my_controller.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu_0</Cpu>
@@ -1002,52 +1002,17 @@
         <DriverPackageInfo>
                 <name>altera_avalon_timer_driver</name>
                 <version>default</version>
-                <moduleName>timer_0</moduleName>
+                <moduleName>timer_1</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
                 <name>altera_avalon_timer_driver</name>
                 <version>default</version>
-                <moduleName>timer_1</moduleName>
+                <moduleName>timer_0</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
-                <name>altera_avalon_lcd_16207_driver</name>
+                <name>altera_avalon_sysid_driver</name>
                 <version>default</version>
-                <moduleName>lcd_display</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>led_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>seven_seg_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>button_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>green_led_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>red_led_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>seven_seg_middle_pio</moduleName>
-        </DriverPackageInfo>
-        <DriverPackageInfo>
-                <name>altera_avalon_pio_driver</name>
-                <version>default</version>
-                <moduleName>seven_seg_right_pio</moduleName>
+                <moduleName>sysid</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
                 <name>altera_avalon_pio_driver</name>
@@ -1057,7 +1022,17 @@
         <DriverPackageInfo>
                 <name>altera_avalon_pio_driver</name>
                 <version>default</version>
-                <moduleName>aud_full</moduleName>
+                <moduleName>seven_seg_right_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>seven_seg_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>seven_seg_middle_pio</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
                 <name>altera_avalon_pio_driver</name>
@@ -1075,9 +1050,34 @@
                 <moduleName>sd_clk</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
-                <name>altera_avalon_sysid_driver</name>
+                <name>altera_avalon_pio_driver</name>
                 <version>default</version>
-                <moduleName>sysid</moduleName>
+                <moduleName>red_led_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>led_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>green_led_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>button_pio</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_pio_driver</name>
+                <version>default</version>
+                <moduleName>aud_full</moduleName>
+        </DriverPackageInfo>
+        <DriverPackageInfo>
+                <name>altera_avalon_lcd_16207_driver</name>
+                <version>default</version>
+                <moduleName>lcd_display</moduleName>
         </DriverPackageInfo>
         <DriverPackageInfo>
                 <name>altera_avalon_jtag_uart_driver</name>
