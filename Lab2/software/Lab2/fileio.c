@@ -55,6 +55,22 @@ void list_all_files (BYTE* file_ext) {
 	}
 }
 
+//writes length bytes from a buffer to the audio CODEC
+void write_to_codec (BYTE* buffer, int length)
+{
+	UINT16 word;
+	int i;
+
+	for(i = 0; i+1 < length; i += 2)
+	{
+		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
+
+		word = (buffer[i+1] << 8) | (buffer[i]);
+
+		IOWR(AUDIO_0_BASE, 0, word);
+	}
+}
+
 
 //Tests
 int main () {
@@ -81,65 +97,33 @@ int main () {
 
 	// Sanity Check on the file
 	print_file_info(&file);
-	printf("\n");
-
-	// Get byte from the file
-	// First, create the cluster chain
-	printf("CLUSTER_SIZE: %d\n", CLUSTER_SIZE);
 
 	UINT32 cc_length = 1 + ((UINT32) (ceil(file.FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
-	printf("cc_length: %d\n", cc_length);
+	printf("Cluster Chain Length: %d\n", cc_length);
 
 	// Build cluster chain
 	int cluster_chain[3000];
 	build_cluster_chain(cluster_chain, cc_length, &file); //returns void
 
-	printf("cluster_chain (first 100): ");
-	for (i = 0; i < 100; i++) {
-		printf("%d, ", cluster_chain[i]);
-	}
-	printf("\n");
-
-
-	// Send data to the audio codec
-	// 1. Get data
-	// 2. Send data to audio codec
-	// 3. Rinse and repeat
-
 	int sector_idx = 0; //start from sector zero
 	BYTE buffer[SECTOR_SIZE]; //set buffer size to sector size
-	//int i = 0; //for for loop. but already exists
-	//UINT16 tmp = 0; //already declared
 
-	// get_rel_sector
-	// return -1 if we fucked up
-	// return 0 if we didn't fuck up
-	// return >0 if complete
-	int rs;
+
+	int rs;	//check the return value from get_rel_sector
 
 	while(1) {
 
-		rs = get_rel_sector(&file, buffer, cluster_chain, sector_idx);
+		rs = get_rel_sector(&file, buffer, cluster_chain, sector_idx++);
 
 		if (rs == -1) {
-			printf ("FAIL.\n");
+			printf ("DONE.\n");
 			return 0;
+		} else if (rs == 0) {
+			write_to_codec(buffer, SECTOR_SIZE);
+		} else {
+			write_to_codec(buffer, rs);
 		}
-
-		//printf("Writing %d bytes to CODEC...\n", SECTOR_SIZE);
-		for(i = 0; i+1 < SECTOR_SIZE; i += 2) {
-			// Send data to the FIFO queue
-			//printf ("Waiting for FIFO...\n");
-			while(IORD(AUD_FULL_BASE,0));
-
-			tmp = (buffer[i+1] << 8) | (buffer[i]);
-			//printf ("Writing %#X to CODEC.\n", tmp);
-			IOWR(AUDIO_0_BASE, 0, tmp);
-		}
-		sector_idx++;
 	}
-
-
 
 	return 0;
 }
