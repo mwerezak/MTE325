@@ -1,8 +1,5 @@
 #ifndef   __SD_Card_H__
 #define   __SD_Card_H__
-
-#include "typedefs.h"
-
 //-------------------------------------------------------------------------
 //  SD Card Set I/O Direction
 #define SD_CMD_IN   IOWR(SD_CMD_BASE, 1, 0)
@@ -24,6 +21,11 @@
 #define MASTER_BOOT_RECORD_ID2  0xAA
 
 
+
+//-------------------------------------------------------------------------
+#define BYTE    unsigned char
+#define UINT16  unsigned int
+#define UINT32  unsigned long
 //-------------------------------------------------------------------------
 void Ncr(void);
 void Ncc(void);
@@ -135,9 +137,8 @@ BYTE SD_card_init(void)
     cmd_buffer[x]=cmd3[x];
     y = send_cmd(cmd_buffer);
     Ncr();
-    if(response_R(6)>1){
-    printf("FAIL: response_R(6)>1\n");
-    return 1;}
+    if(response_R(6)>1)
+    return 1;         
     RCA[0]=response_buffer[1];
     RCA[1]=response_buffer[2];
     Ncc();
@@ -148,7 +149,7 @@ BYTE SD_card_init(void)
     y = send_cmd(cmd_buffer);
     Ncr();
     if(response_R(2)>1)
-    return 1;
+    return 1; 
     Ncc();
     for(x=0;x<5;x++)
     cmd_buffer[x]=cmd7[x];
