@@ -9,6 +9,9 @@
 #define DOUBLE_SPEED	2
 
 
+/*********************************************************************
+ * FILE IO
+ *********************************************************************/
 
 
 /*
@@ -60,12 +63,9 @@ void list_all_files (BYTE* file_ext) {
 	}
 }
 
-void print_lcd (char* line1, char* line2) {
-	LCD_Init();
-	LCD_Show_Text(line1);
-	LCD_Line2();
-	LCD_Show_Text(line2);
-}
+/*********************************************************************
+ * AUDIO PLAYBACK
+ *********************************************************************/
 
 //writes length bytes from a buffer to the audio CODEC
 void write_to_codec (BYTE* buffer, int length)
@@ -292,9 +292,21 @@ void write_to_codec_reverse (BYTE* buffer, int length)
 	}
 }
 
+/*********************************************************************
+ * MEDIA PLAYER
+ *********************************************************************/
 
+void print_lcd (char* line1, char* line2) {
+	LCD_Init();
+	LCD_Show_Text(line1);
+	LCD_Line2();
+	LCD_Show_Text(line2);
+}
 
-//Tests
+/*********************************************************************
+ * MAIN
+ *********************************************************************/
+
 int main () {
 	data_file file;
 	BYTE* file_ext = "WAV";
