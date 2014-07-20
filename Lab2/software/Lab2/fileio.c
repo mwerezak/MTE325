@@ -9,6 +9,8 @@
 #define DOUBLE_SPEED	2
 
 
+
+
 /*
  * Does all the initialization required to read *.wav files off the SD card.
  */
@@ -56,6 +58,13 @@ void list_all_files (BYTE* file_ext) {
 		print_file_info(&df_buf);
 		printf("\n");
 	}
+}
+
+void print_lcd (char* line1, char* line2) {
+	LCD_Init();
+	LCD_Show_Text(line1);
+	LCD_Line2();
+	LCD_Show_Text(line2);
 }
 
 //writes length bytes from a buffer to the audio CODEC
@@ -152,6 +161,7 @@ void playback_channel_offset (data_file* file) {
 
 	BYTE temp;
 	int delay_idx = 0;
+	int end_idx = 0;
 	int delay_buffer_size = 88200;
 	BYTE delay_buffer[delay_buffer_size];
 
@@ -172,7 +182,7 @@ void playback_channel_offset (data_file* file) {
 			printf ("DONE.\n\n");
 			break;
 		} else if (rs == 0) {
-			for (i = 2; i < SECTOR_SIZE; i += 4) {
+			for (i = 0; i < SECTOR_SIZE; i += 4) {
 				temp = delay_buffer[delay_idx];
 				delay_buffer[delay_idx++] = buffer[i];
 				buffer[i] = temp;
@@ -187,7 +197,7 @@ void playback_channel_offset (data_file* file) {
 			write_to_codec(buffer, SECTOR_SIZE);
 			offset_counter += SECTOR_SIZE/4;
 		} else {
-			for (i = 2; i < rs; i += 4) {
+			for (i = 0; i < rs; i += 4) {
 				temp = delay_buffer[delay_idx];
 				delay_buffer[delay_idx++] = buffer[i];
 				buffer[i] = temp;
@@ -202,6 +212,21 @@ void playback_channel_offset (data_file* file) {
 			write_to_codec(buffer, rs);
 		}
 	}
+	// Play out the rest of the buffer
+	end_idx = delay_idx;
+	do {
+		for (i = 0; i < SECTOR_SIZE; i += 4) {
+			buffer[i] = delay_buffer[delay_idx];
+			delay_buffer[delay_idx++] = 0;
+
+			buffer[i+1] = delay_buffer[delay_idx];
+			delay_buffer[delay_idx++] = 0;
+
+			if (delay_idx >= delay_buffer_size) delay_idx = 0;
+		}
+
+		write_to_codec(buffer, SECTOR_SIZE);
+	} while (delay_idx != end_idx);
 }
 
 
@@ -279,28 +304,45 @@ int main () {
 
 	UINT16 tmp;
 
+	printf("\n");
+	LCD_Init();
+	printf("\n");
+
+	print_lcd("Initializing SD Card...","");
 	if(init_fileio()) {
 		printf("Failed to init file I/O.\n");
 		return 1;
 	}
 
 	// init audio codec. this call doesn't return anything so... i guess it works?
+	print_lcd("Initializing audio codec...","");
 	init_audio_codec();
-	printf("\n");
 
 	//Returns 1 if success
 	while (!search_for_filetype(file_ext, &file, 0, 1)) {
+		LCD_File_Buffering(file.Name);
 
 		// Sanity Check on the file
 		print_file_info(&file);
 
 		playback_mode = IORD(SWITCH_PIO_BASE, 0) & 0x7;
-		if (playback_mode == 0x4)
+
+		if (playback_mode == 0x4) {
+			LCD_Display(file.Name, 4);
 			playback_file_reverse(&file);
-		else if (playback_mode == 0x5)
+		} else if (playback_mode == 0x5) {
+			LCD_Display(file.Name, 3);
 			playback_channel_offset(&file);
-		else
+		} else {
+			if (playback_mode == HALF_SPEED)
+				LCD_Display(file.Name, 2);
+			else if (playback_mode == DOUBLE_SPEED)
+				LCD_Display(file.Name, 1);
+			else
+				LCD_Display(file.Name, 0);
+
 			playback_file(&file, playback_mode);
+		}
 	}
 
 	printf ("NO MORE FILES FOUND.\n");
