@@ -566,7 +566,7 @@ UINT32  search_for_filetype(BYTE *extension, data_file *df, int sub_directory, i
           df->Sector = FirstSectorofCluster(df->Clus);
           df->Posn = 0;
           file_count = 0;
-          file_number = file_number + 1;
+          //file_number = file_number + 1;	//NO.
           return 0; //file found
         }
         file_count++;

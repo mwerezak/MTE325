@@ -230,8 +230,6 @@ void playback_channel_offset (data_file* file) {
 }
 
 
-// If we wanted to be fancy, we can have a playback speed option in the original function
-
 void write_to_codec_half_speed (BYTE* buffer, int length) {
 	UINT16 word;
 	int i;
@@ -303,6 +301,48 @@ void print_lcd (char* line1, char* line2) {
 	LCD_Show_Text(line2);
 }
 
+void seek_next_file(data_file* file, char* file_ext) {
+	file_number++;	//select the next file.
+	search_for_filetype(file_ext, file, 0, 1);
+}
+
+void seek_previous_file(data_file* file, char* file_ext) {
+	if (file_number == 0)
+		return;	//too bad
+
+	file_number--;
+	search_for_filetype(file_ext, file, 0, 1);
+}
+
+void play_file(data_file* file) {
+	int playback_mode = NORMAL_SPEED;
+	char* file_name = file->Name;
+
+	LCD_File_Buffering(file_name);
+
+	// Sanity Check on the file
+	print_file_info(file);
+
+	playback_mode = IORD(SWITCH_PIO_BASE, 0) & 0x7;
+
+	if (playback_mode == 0x4) {
+		LCD_Display(file_name, 4);
+		playback_file_reverse(file);
+	} else if (playback_mode == 0x5) {
+		LCD_Display(file_name, 3);
+		playback_channel_offset(file);
+	} else {
+		if (playback_mode == HALF_SPEED)
+			LCD_Display(file_name, 2);
+		else if (playback_mode == DOUBLE_SPEED)
+			LCD_Display(file_name, 1);
+		else
+			LCD_Display(file_name, 0);
+
+		playback_file(file, playback_mode);
+	}
+}
+
 /*********************************************************************
  * MAIN
  *********************************************************************/
@@ -310,54 +350,35 @@ void print_lcd (char* line1, char* line2) {
 int main () {
 	data_file file;
 	BYTE* file_ext = "WAV";
-	int i;
-	int is_full = 0;
-	int playback_mode = NORMAL_SPEED;
-
-	UINT16 tmp;
 
 	printf("\n");
 	LCD_Init();
 	printf("\n");
 
-	print_lcd("Initializing SD Card...","");
+	print_lcd("Initializing...","SD Card");
 	if(init_fileio()) {
-		printf("Failed to init file I/O.\n");
+		print_lcd("Could not load","SD card");
 		return 1;
 	}
 
 	// init audio codec. this call doesn't return anything so... i guess it works?
-	print_lcd("Initializing audio codec...","");
+	print_lcd("Initializing...","audio codec");
 	init_audio_codec();
 
-	//Returns 1 if success
-	while (!search_for_filetype(file_ext, &file, 0, 1)) {
-		LCD_File_Buffering(file.Name);
-
-		// Sanity Check on the file
-		print_file_info(&file);
-
-		playback_mode = IORD(SWITCH_PIO_BASE, 0) & 0x7;
-
-		if (playback_mode == 0x4) {
-			LCD_Display(file.Name, 4);
-			playback_file_reverse(&file);
-		} else if (playback_mode == 0x5) {
-			LCD_Display(file.Name, 3);
-			playback_channel_offset(&file);
-		} else {
-			if (playback_mode == HALF_SPEED)
-				LCD_Display(file.Name, 2);
-			else if (playback_mode == DOUBLE_SPEED)
-				LCD_Display(file.Name, 1);
-			else
-				LCD_Display(file.Name, 0);
-
-			playback_file(&file, playback_mode);
-		}
+	// seek to the first file
+	file_number = 0;
+	if (search_for_filetype(file_ext, &file, 0, 1)){
+		print_lcd("No *.wav files","found on card");
+		while(1);	//wait until restart
 	}
 
-	printf ("NO MORE FILES FOUND.\n");
+	file_number = 13;
+	while (1) {
+		seek_previous_file(&file, file_ext);
+		printf("file_number = %d\n");
+		play_file(&file);
+	}
+
 	return 0;
 }
 
