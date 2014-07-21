@@ -214,18 +214,23 @@ void playback_channel_offset (data_file* file) {
 	}
 	// Play out the rest of the buffer
 	end_idx = delay_idx;
+	int num_bytes;
 	do {
+		num_bytes = 0;
 		for (i = 0; i < SECTOR_SIZE; i += 4) {
 			buffer[i] = delay_buffer[delay_idx];
 			delay_buffer[delay_idx++] = 0;
 
 			buffer[i+1] = delay_buffer[delay_idx];
 			delay_buffer[delay_idx++] = 0;
+			num_bytes += 2;
 
 			if (delay_idx >= delay_buffer_size) delay_idx = 0;
+
+			if (delay_idx == end_idx) break;
 		}
 
-		write_to_codec(buffer, SECTOR_SIZE);
+		write_to_codec(buffer, num_bytes);
 	} while (delay_idx != end_idx);
 }
 
@@ -304,6 +309,7 @@ void print_lcd (char* line1, char* line2) {
 void seek_next_file(data_file* file, char* file_ext) {
 	file_number++;	//select the next file.
 	search_for_filetype(file_ext, file, 0, 1);
+	LCD_File_Buffering(file->Name);
 }
 
 void seek_previous_file(data_file* file, char* file_ext) {
@@ -312,13 +318,12 @@ void seek_previous_file(data_file* file, char* file_ext) {
 
 	file_number--;
 	search_for_filetype(file_ext, file, 0, 1);
+	LCD_File_Buffering(file->Name);
 }
 
 void play_file(data_file* file) {
 	int playback_mode = NORMAL_SPEED;
 	char* file_name = file->Name;
-
-	LCD_File_Buffering(file_name);
 
 	// Sanity Check on the file
 	print_file_info(file);
@@ -344,12 +349,137 @@ void play_file(data_file* file) {
 }
 
 /*********************************************************************
+ * PUSH BUTTONS
+ *********************************************************************/
+
+volatile int edge_capture;
+
+static void handle_button_interrupts(void* context, alt_u32 id)
+{
+	/* Cast context to edge_capture's type.
+	* It is important to keep this volatile,
+	* to avoid compiler optimization issues.
+	*/
+	volatile int* edge_capture_ptr = (volatile int*) context;
+
+	volatile int transition = IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
+	volatile int pushbutton = (*edge_capture_ptr) ^ transition;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, pushbutton);	//debug
+
+	//handle stop
+
+	/* Store the value in the Button's edge capture register in *context. */
+	*edge_capture_ptr = pushbutton;
+	/* Reset the Button's edge capture register. */
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE, 0);
+
+	/*
+	* Read the PIO to delay ISR exit. This is done to prevent a spurious
+	* interrupt in systems with high processor -> pio latency and fast
+	* interrupts.
+	*/
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
+}
+
+
+static void init_button_pio()
+{
+	/* Recast the edge_capture pointer to match the alt_irq_register() function
+	* prototype. */
+	void* edge_capture_ptr = (void*) &edge_capture;
+	/* Enable all 4 button interrupts. */
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_PIO_BASE, 0xf);
+	/* Reset the edge capture register. */
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE, 0x0);
+
+	alt_irq_register( BUTTON_PIO_IRQ, edge_capture_ptr, handle_button_interrupts);
+}
+
+static void disable_button_pio()
+{
+	/* Disable interrupts from the button_pio PIO component. */
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_PIO_BASE, 0x0);
+	/* Un-register the IRQ handler by passing a null handler. */
+	alt_irq_register( BUTTON_PIO_IRQ, NULL, NULL );
+}
+
+/*************************************************
+ *
+ * 	Timer crap
+ *
+ *************************************************/
+
+static void SetTimer0(alt_u32 milliseconds) {
+	alt_u32 timer_period = milliseconds*(TIMER_0_FREQ/1000);
+
+	//clear the timer done flag
+	timer0 = 0;
+
+	//write the duration to the timer
+	IOWR(TIMER_0_BASE, 2, (alt_u16)timer_period);			//low bits
+	IOWR(TIMER_0_BASE, 3, (alt_u16)(timer_period >> 16));	//high bits
+
+	// clear timer interrupt bit in status register
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0x0);
+
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_ITO_MSK
+											      | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK
+												  | ALTERA_AVALON_TIMER_CONTROL_START_MSK);
+}
+
+static void SetTimer1(alt_u32 microseconds) {
+	alt_u32 timer_period = microseconds*(TIMER_1_FREQ/1000000);
+
+	//clear the timer done flag
+	timer1 = 0;
+
+	//write the duration to the timer
+	IOWR(TIMER_1_BASE, 2, (alt_u16)timer_period);			//low bits
+	IOWR(TIMER_1_BASE, 3, (alt_u16)(timer_period >> 16));	//high bits
+
+	// clear timer interrupt bit in status register
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_1_BASE, 0x0);
+
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_1_BASE, ALTERA_AVALON_TIMER_CONTROL_ITO_MSK
+											      | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK
+												  | ALTERA_AVALON_TIMER_CONTROL_START_MSK);
+}
+
+
+//Timer ISRs
+static void handle_timer0_interrupt (void* context, alt_u32 id) {
+	// acknowledge the interrupt by clearing the TO bit in the status register
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0x0);
+
+	// set the flag with a non zero value
+	timer0 = 0xf;
+}
+
+static void handle_timer1_interrupt (void* context, alt_u32 id) {
+	// acknowledge the interrupt by clearing the TO bit in the status register
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_1_BASE, 0x0);
+
+	// set the flag with a non zero value
+	timer1 = 0xf;
+}
+
+static void init_timers(void) {
+	timer0 = 0;
+	timer1 = 0;
+
+	alt_irq_register(TIMER_0_IRQ, (void*)0, handle_timer0_interrupt);
+	alt_irq_register(TIMER_1_IRQ, (void*)0, handle_timer1_interrupt);
+}
+
+/*********************************************************************
  * MAIN
  *********************************************************************/
 
 int main () {
 	data_file file;
 	BYTE* file_ext = "WAV";
+	int play = 0;
 
 	printf("\n");
 	LCD_Init();
@@ -372,11 +502,42 @@ int main () {
 		while(1);	//wait until restart
 	}
 
-	file_number = 13;
+	init_timers();		//timers
+	init_button_pio();	//enable interrupts
+
 	while (1) {
-		seek_previous_file(&file, file_ext);
-		printf("file_number = %d\n");
 		play_file(&file);
+
+		if (stop_playing) {
+			edge_capture = 0;
+			timer0 = 0;
+			while(1) {
+				if (edge_capture == 0x2) {	//PB1: play the selected file
+					break;
+				}
+
+				if (edge_capture == 0x4) {	//PB2: seek to next file
+					seek_next_file(&file, file_ext);
+
+					//debounce
+					SetTimer0(500);
+					while(!timer0);	//wait for timer before looping.
+					edge_capture = 0;
+				}
+
+
+				if (edge_capture == 0x8) { //PB3: seek to previous file
+					seek_previous_file(&file, file_ext);
+
+					//debounce
+					SetTimer0(500);
+					while(!timer0);	//wait for timer before looping.
+					edge_capture = 0;
+				}
+			}
+		} else {
+			seek_next_file(&file, file_ext);
+		}
 	}
 
 	return 0;
