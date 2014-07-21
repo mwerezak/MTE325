@@ -75,7 +75,15 @@ void playback_file (data_file* file, int playback_mode) {
 	UINT32 cc_length = 1 + ((UINT32) (ceil(file->FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
 
 	// Build cluster chain
+	LCD_File_Buffering(file->Name);
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
+
+	if (playback_mode == HALF_SPEED)
+		LCD_Display(file->Name, 2);
+	else if (playback_mode == DOUBLE_SPEED)
+		LCD_Display(file->Name, 1);
+	else
+		LCD_Display(file->Name, 0);
 
 	int rs;	//check the return value from get_rel_sector
 	while(!stop_playing) {
@@ -116,7 +124,9 @@ void playback_file_reverse (data_file* file) {
 	UINT32 cc_length = 1 + ((UINT32) (ceil(file->FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
 
 	// Build cluster chain
+	LCD_File_Buffering(file->Name);
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
+	LCD_Display(file->Name, 4);
 
 	int rs;	//check the return value from get_rel_sector
 	while(!stop_playing) {
@@ -154,7 +164,9 @@ void playback_channel_offset (data_file* file) {
 	UINT32 cc_length = 1 + ((UINT32) (ceil(file->FileSize / (BPB_BytsPerSec*BPB_SecPerClus)))); //describes the size of our cluster chain
 
 	// Build cluster chain
+	LCD_File_Buffering(file->Name);
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
+	LCD_Display(file->Name, 3);
 
 	int rs;	//check the return value from get_rel_sector
 	while(!stop_playing) {
@@ -320,7 +332,7 @@ void print_lcd (char* line1, char* line2) {
 void seek_next_file(data_file* file, char* file_ext) {
 	file_number++;	//select the next file.
 	search_for_filetype(file_ext, file, 0, 1);
-	LCD_File_Buffering(file->Name);
+	print_lcd(file->Name, "");
 }
 
 void seek_previous_file(data_file* file, char* file_ext) {
@@ -329,7 +341,7 @@ void seek_previous_file(data_file* file, char* file_ext) {
 
 	file_number--;
 	search_for_filetype(file_ext, file, 0, 1);
-	LCD_File_Buffering(file->Name);
+	print_lcd(file->Name, "");
 }
 
 void play_file(data_file* file) {
@@ -342,19 +354,10 @@ void play_file(data_file* file) {
 	playback_mode = IORD(SWITCH_PIO_BASE, 0) & 0x7;
 
 	if (playback_mode == 0x4) {
-		LCD_Display(file_name, 4);
 		playback_file_reverse(file);
 	} else if (playback_mode == 0x5) {
-		LCD_Display(file_name, 3);
 		playback_channel_offset(file);
 	} else {
-		if (playback_mode == HALF_SPEED)
-			LCD_Display(file_name, 2);
-		else if (playback_mode == DOUBLE_SPEED)
-			LCD_Display(file_name, 1);
-		else
-			LCD_Display(file_name, 0);
-
 		playback_file(file, playback_mode);
 	}
 }
@@ -517,6 +520,8 @@ int main () {
 		print_lcd("No *.wav files","found on card");
 		while(1);	//wait until restart
 	}
+	print_lcd(file.Name, "");
+
 
 	init_timers();		//timers
 	init_button_pio();	//enable interrupts
