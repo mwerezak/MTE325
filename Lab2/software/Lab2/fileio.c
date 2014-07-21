@@ -67,24 +67,6 @@ void list_all_files (BYTE* file_ext) {
  * AUDIO PLAYBACK
  *********************************************************************/
 
-//writes length bytes from a buffer to the audio CODEC
-void write_to_codec (BYTE* buffer, int length)
-{
-	UINT16 word;
-	int i;
-
-	for(i = 0; i+1 < length; i += 4)
-	{
-		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
-		word = (buffer[i+1] << 8) | (buffer[i]);
-		IOWR(AUDIO_0_BASE, 0, word);
-
-		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
-		word = (buffer[i+3] << 8) | (buffer[i+2]);
-		IOWR(AUDIO_0_BASE, 0, word);
-	}
-}
-
 void playback_file (data_file* file, int playback_mode) {
 	int cluster_chain[3000];
 	BYTE buffer[SECTOR_SIZE]; //set buffer size to sector size
@@ -96,7 +78,7 @@ void playback_file (data_file* file, int playback_mode) {
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
 
 	int rs;	//check the return value from get_rel_sector
-	while(1) {
+	while(!stop_playing) {
 		rs = get_rel_sector(file, buffer, cluster_chain, sector_idx++);
 
 		if (rs == -1) {
@@ -137,7 +119,7 @@ void playback_file_reverse (data_file* file) {
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
 
 	int rs;	//check the return value from get_rel_sector
-	while(1) {
+	while(!stop_playing) {
 		rs = get_rel_sector(file, buffer, cluster_chain, sector_idx--);
 
 		if (rs == -1) {
@@ -175,7 +157,7 @@ void playback_channel_offset (data_file* file) {
 	build_cluster_chain(cluster_chain, cc_length, file); //returns void
 
 	int rs;	//check the return value from get_rel_sector
-	while(1) {
+	while(!stop_playing) {
 		rs = get_rel_sector(file, buffer, cluster_chain, sector_idx++);
 
 		if (rs == -1) {
@@ -212,6 +194,9 @@ void playback_channel_offset (data_file* file) {
 			write_to_codec(buffer, rs);
 		}
 	}
+
+	if (stop_playing) return;
+
 	// Play out the rest of the buffer
 	end_idx = delay_idx;
 	int num_bytes;
@@ -231,9 +216,29 @@ void playback_channel_offset (data_file* file) {
 		}
 
 		write_to_codec(buffer, num_bytes);
-	} while (delay_idx != end_idx);
+	} while (delay_idx != end_idx && !stop_playing);
 }
 
+
+//writes length bytes from a buffer to the audio CODEC
+void write_to_codec (BYTE* buffer, int length)
+{
+	UINT16 word;
+	int i;
+
+	for(i = 0; i+1 < length; i += 4)
+	{
+		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
+		word = (buffer[i+1] << 8) | (buffer[i]);
+		IOWR(AUDIO_0_BASE, 0, word);
+
+		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
+		word = (buffer[i+3] << 8) | (buffer[i+2]);
+		IOWR(AUDIO_0_BASE, 0, word);
+
+		if (stop_playing) return;
+	}
+}
 
 void write_to_codec_half_speed (BYTE* buffer, int length) {
 	UINT16 word;
@@ -257,6 +262,8 @@ void write_to_codec_half_speed (BYTE* buffer, int length) {
 		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
 		word = (buffer[i+3] << 8) | (buffer[i+2]);
 		IOWR(AUDIO_0_BASE, 0, word);
+
+		if (stop_playing) return;
 	}
 }
 
@@ -274,6 +281,8 @@ void write_to_codec_double_speed (BYTE* buffer, int length) {
 		while(IORD(AUD_FULL_BASE, 0));	//wait until the CODEC FIFO is not full
 		word = (buffer[i+3] << 8) | (buffer[i+2]);
 		IOWR(AUDIO_0_BASE, 0, word);
+
+		if (stop_playing) return;
 	}
 }
 
@@ -292,6 +301,8 @@ void write_to_codec_reverse (BYTE* buffer, int length)
 		while(IORD(AUD_FULL_BASE,0));	//wait until the CODEC FIFO is not full
 		word = (buffer[i+3] << 8) | (buffer[i+2]);
 		IOWR(AUDIO_0_BASE, 0, word);
+
+		if (stop_playing) return;
 	}
 }
 
@@ -365,9 +376,14 @@ static void handle_button_interrupts(void* context, alt_u32 id)
 	volatile int transition = IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_PIO_BASE);
 	volatile int pushbutton = (*edge_capture_ptr) ^ transition;
 
-	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, pushbutton);	//debug
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, pushbutton);	//LED debug
 
 	//handle stop
+	if (transition == 0x1)	//PB0: Stop playback
+	{
+		stop_playing = 1;
+	}
+
 
 	/* Store the value in the Button's edge capture register in *context. */
 	*edge_capture_ptr = pushbutton;
@@ -506,17 +522,15 @@ int main () {
 	init_button_pio();	//enable interrupts
 
 	while (1) {
-		play_file(&file);
-
 		if (stop_playing) {
 			edge_capture = 0;
 			timer0 = 0;
 			while(1) {
-				if (edge_capture == 0x2) {	//PB1: play the selected file
+				if (edge_capture & 0x2) {	//PB1: play the selected file
 					break;
 				}
 
-				if (edge_capture == 0x4) {	//PB2: seek to next file
+				if (edge_capture & 0x4) {	//PB2: seek to next file
 					seek_next_file(&file, file_ext);
 
 					//debounce
@@ -526,7 +540,7 @@ int main () {
 				}
 
 
-				if (edge_capture == 0x8) { //PB3: seek to previous file
+				if (edge_capture & 0x8) { //PB3: seek to previous file
 					seek_previous_file(&file, file_ext);
 
 					//debounce
@@ -538,6 +552,9 @@ int main () {
 		} else {
 			seek_next_file(&file, file_ext);
 		}
+
+		stop_playing = 0;
+		play_file(&file);
 	}
 
 	return 0;

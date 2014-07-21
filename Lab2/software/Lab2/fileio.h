@@ -21,7 +21,7 @@
 #define CLUSTER_SIZE	BPB_BytsPerSec*BPB_SecPerClus	//the number of bytes in a cluster
 #define SECTOR_SIZE		BPB_BytsPerSec
 
-int stop_playing = 0;
+int stop_playing = 1;
 
 /*************************************************
  *
@@ -42,3 +42,11 @@ int init_fileio ( void );
 void print_file_info ( data_file* file );
 
 void print_lcd (char* line1, char* line2);
+
+void playback_file (data_file* file, int playback_mode);
+void playback_file_reverse (data_file* file);
+void playback_channel_offset (data_file* file);
+void write_to_codec (BYTE* buffer, int length);
+void write_to_codec_half_speed (BYTE* buffer, int length);
+void write_to_codec_double_speed (BYTE* buffer, int length);
+void write_to_codec_reverse (BYTE* buffer, int length);
